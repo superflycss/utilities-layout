@@ -1,0 +1,46 @@
+/** @define utilities */
+
+@each $dimension in left, right, top, bottom {
+  :root {
+        --u-padding-$(dimension)-halfx {
+            padding-$(dimension): 0.5rem;
+        }
+  }
+  .u-padding-$(dimension)-halfx {
+      padding-$(dimension): 0.5rem !important;
+  }
+}
+
+@each $dimension in left, right, top, bottom {
+    @for $factor from 0 to 20 {
+      :root {
+            --u-padding-$(dimension)-$(factor)x {
+                padding-$(dimension): $(factor)rem;
+            }
+      }
+      .u-padding-$(dimension)-$(factor)x {
+          padding-$(dimension): $(factor)rem !important;
+      }
+    }
+}
+
+.u-padding-halfx {
+    padding: 0.5rem !important;
+}
+
+:root {
+  --u-padding-halfx {
+      padding: 0.5rem;
+  }
+}
+
+@for $factor from 0 to 20 {
+  :root {
+      --u-padding-$(factor)x {
+          padding: $(factor)rem;
+      }
+  }
+  .u-padding-$(factor)x {
+      padding: $(factor)rem !important;
+  }
+}

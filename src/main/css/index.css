@@ -1,0 +1,50 @@
+/*!  |   superflycss/utilities-layout |
+     |   MIT License                  |
+     |   https://github.com/superflycss/utilities-layout/blob/master/LICENSE.md */
+
+@import "@superflycss/variables-dimension";
+@import "./flex.css";
+@import "./sm-flex.css";
+@import "./md-flex.css";
+@import "./lg-flex.css";
+@import "./padding.css";
+@import "./margins.css";
+@import "./height-width.css";
+@import "./zindex.css";
+@import "./position.css";
+@import "./borders.css";
+@import "./text.css";
+
+:root {
+  --position-fixed: {
+    position: fixed;
+  };
+  --position-absolute: {
+    position: absolute;
+  }
+}
+
+.u-full-screen {
+  @apply(--position-absolute);
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+}
+
+.u-fill-container {
+    @apply(--position-absolute);
+    height:100%;
+    width: 100%;
+}
+
+.u-sticky-header {
+    @apply(--position-fixed);
+    z-index: var(--zindex-sticky);
+    top: 0px;
+}
+
+.u-overflow-hidden {
+    overflow: hidden;
+}

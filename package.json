@@ -1,0 +1,40 @@
+{
+  "name": "@superflycss/utilities-layout",
+  "version": "1.0.0",
+  "description": "Layout utilities",
+  "main": "src/main/css/index.css",
+  "scripts": {
+    "update": "ncu -a && npm i",
+    "build": "gulp clean && gulp build:css",
+    "test": "gulp clean && gulp build:css && gulp test:css",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superflycss/utilities-layout.git"
+  },
+  "keywords": [
+    "superfly-css",
+    "layout",
+    "css",
+    "utilities",
+    "flexbox"
+  ],
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superflycss/utilities-layout/issues"
+  },
+  "homepage": "https://github.com/superflycss/utilities-layout#readme",
+  "devDependencies": {
+    "@superflycss/task-build": "^1.0.2",
+    "@superflycss/task-clean": "^1.0.0",
+    "@superflycss/task-deploy": "^1.0.0",
+    "@superflycss/task-test": "^1.0.0",
+    "gulp": "^3.9.1",
+    "npm-check-updates": "^2.11.3"
+  },
+  "dependencies": {
+    "@superflycss/variables-dimension": "^1.0.0"
+  }
+}

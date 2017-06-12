@@ -1,0 +1,61 @@
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-word-break {
+  word-wrap: break-word !important;
+}
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-text-inherit-color {
+  color: inherit !important;
+}
+
+/**
+ * Prevent whitespace wrapping
+ */
+
+.u-text-no-wrap {
+  white-space: nowrap !important;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+  max-width: 100%; /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; /* 2 */
+}
