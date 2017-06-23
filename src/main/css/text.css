@@ -1,3 +1,7 @@
+/** @define utilities */
+
+@import "@superflycss/variables-layout";
+
 /**
  * Word breaking
  *
@@ -5,7 +9,7 @@
  */
 
 .u-word-break {
-  word-wrap: break-word !important;
+  @apply(--u-word-break) !important;
 }
 
 /**
@@ -13,15 +17,15 @@
  */
 
 .u-text-center {
-  text-align: center !important;
+  @apply(--u-text-center) !important;
 }
 
 .u-text-left {
-  text-align: left !important;
+  @apply(--u-text-left) !important;
 }
 
 .u-text-right {
-  text-align: right !important;
+  @apply(--u-text-right) !important;
 }
 
 /**
@@ -29,7 +33,7 @@
  */
 
 .u-text-inherit-color {
-  color: inherit !important;
+  @apply(--u-text-inherit-color) !important;
 }
 
 /**
@@ -37,7 +41,7 @@
  */
 
 .u-text-no-wrap {
-  white-space: nowrap !important;
+  @apply(--u-text-no-wrap) !important;
 }
 
 /**
@@ -52,7 +56,7 @@
  *    nodes.
  */
 
-.u-textTruncate {
+.u-text-truncate {
   max-width: 100%; /* 1 */
   overflow: hidden !important;
   text-overflow: ellipsis !important;

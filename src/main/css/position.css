@@ -1,12 +1,9 @@
 /** @define utilities */
+@import "@superflycss/variables-layout";
+
 @each $position in static, relative, absolute, fixed {
-  :root {
-      --u-position-$(position) {
-          position: $(position);
-      }
-  }
   .u-position-$(position) {
-      position: $(position) !important;
+      @apply(--u-position-$(position)) !important;
   }
 }
 
@@ -16,49 +13,16 @@
   right: 0 !important;
 }
 
-:root {
-  --u-top-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
-:root {
-  --u-top-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 .u-top-left {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
 }
 
-
-:root {
-  --u-bottom-right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-}
-
 .u-bottom-right {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
-}
-
-:root {
-  --u-bottom-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 }
 
 .u-bottom-left {

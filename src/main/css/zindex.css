@@ -1,12 +1,8 @@
-@import "@superflycss/variables-dimension";
+/** @define utilities */
+@import "@superflycss/variables-layout";
 
 @each $type in zindex-dropdown-backdrop, zindex-navbar, zindex-dropdown, zindex-fixed, zindex-modal-backdrop, zindex-modal, zindex-popover, zindex-tooltip {
-  :root {
-    --u-$(type) {
-        z-index: var(--$(type));
-    }
-  }
   .u-$(type) {
-      z-index: var(--$(type)) !important;
+      @apply(--u-$(type)) !important;
   }
 }

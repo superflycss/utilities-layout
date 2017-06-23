@@ -1,6 +1,6 @@
 {
   "name": "@superflycss/utilities-layout",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Layout utilities",
   "main": "src/main/css/index.css",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/superflycss/utilities-layout.git"
   },
   "keywords": [
-    "superfly-css",
+    "superflycss",
     "layout",
     "css",
     "utilities",
@@ -27,14 +27,15 @@
   },
   "homepage": "https://github.com/superflycss/utilities-layout#readme",
   "devDependencies": {
-    "@superflycss/task-build": "^1.0.2",
+    "@superflycss/task-build": "^1.0.5",
     "@superflycss/task-clean": "^1.0.0",
-    "@superflycss/task-deploy": "^1.0.0",
-    "@superflycss/task-test": "^1.0.0",
+    "@superflycss/task-deploy": "^1.0.2",
+    "@superflycss/task-test": "^1.0.1",
     "gulp": "^3.9.1",
-    "npm-check-updates": "^2.11.3"
+    "npm-check-updates": "^2.12.0"
   },
   "dependencies": {
-    "@superflycss/variables-dimension": "^1.0.0"
+    "@superflycss/variables-dimension": "^1.0.0",
+    "@superflycss/variables-layout": "^1.0.1"
   }
 }

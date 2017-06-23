@@ -1,47 +1,27 @@
 /** @define utilities */
+@import "@superflycss/variables-layout";
 
 @each $dimension in left, right, top, bottom {
-  :root {
-          --u-margin-$(dimension)-halfx {
-              margin-$(dimension): 0.5rem;
-    }
-  }
-  .u-margin-$(dimension)-halfx {
-      margin-$(dimension): 0.5rem !important;
+  .u-margin-$(dimension)-halfrem {
+      @apply(--u-margin-$(dimension)-halfrem) !important;
   }
 }
 
 @each $dimension in left, right, top, bottom {
   @for $factor from 0 to 20 {
-    :root {
-        --u-margin-$(dimension)-$(factor)x {
-              margin-$(dimension): $(factor)rem;
-        }
-      }
-      .u-margin-$(dimension)-$(factor)x {
-          margin-$(dimension): $(factor)rem !important;
+      .u-margin-$(dimension)-$(factor)rem {
+          @apply(--u-margin-$(dimension)-$(factor)rem) !important;
       }
   }
 }
 
-:root {
-  --u-margin-halfx {
-      margin: 0.5rem;
-  }
-}
-
-.u-margin-halfx {
-    margin: 0.5rem !important;
+.u-margin-halfrem {
+    @apply(--u-margin-halfrem) !important;
 }
 
 
 @for $factor from 0 to 20 {
-  :root {
-      --u-margin-$(factor)x {
-          margin: $(factor)rem;
-      }
-  }
   .u-margin-$(factor)x {
-        margin: $(factor)rem !important;
+        @apply(--u-margin-$(factor)rem) !important;
   }
 }

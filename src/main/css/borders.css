@@ -1,63 +1,34 @@
 /** @define utilities */
+@import "@superflycss/variables-layout";
 
 @for $factor from 0 to 20 {
-    :root {
-      --u-border-width-$(factor)x {
-          border-width: $(factor)px;
-      }
-    }
-    .u-border-width-$(factor)x {
-          border-width: $(factor)px !important;
+    .u-border-width-$(factor)px {
+      @apply(--u-border-width-$(factor)px) !important;
     }
 }
 
-
 @for $factor from 0 to 20 {
-  :root {
-    --u-border-radius-$(factor)x {
-          border-radius: $(factor)px;
-      }
-    }
-    .u-border-radius-$(factor)x {
-        border-radius: $(factor)px !important;
+    .u-border-radius-$(factor)px {
+        @apply(--u-border-radius-$(factor)px) !important;
     }
 }
-
 
 @each $dimension in top, bottom, left, right {
     @for $factor from 0 to 20 {
-      :root {
-        --u-border-$(dimension)-width-$(factor)x {
-            border-$(dimension)-width: $(factor)px;
-        }
-      }
-      .u-border-$(dimension)-width-$(factor)x {
-          border-$(dimension)-width: $(factor)px !important;
+      .u-border-$(dimension)-width-$(factor)px {
+          @apply(--u-border-$(dimension)-width-$(factor)px) !important;
       }
   }
 }
-
 
 @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
-    :root {
-        --u-border-style-$(style) {
-            border-style: $(style);
-        }
-    }
     .u-border-style-$(style) {
-        border-style: $(style) !important;
+        @apply(--u-border-style-$(style)) !important;
     }
 }
 
 @each $dimension in top, bottom, left, right {
-    @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
-        :root {
-          --u-border-$(dimension)-style-$(style) {
-            border-$(dimension)-style: $(style);
-      }
-    }
     .u-border-$(dimension)-style-$(style) {
-        border-$(dimension)-style: $(style) !important;
+        @apply(--u-border-$(dimension)-style-$(style)) !important;
     }
-  }
 }
