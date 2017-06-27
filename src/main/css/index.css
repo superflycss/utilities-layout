@@ -31,12 +31,55 @@
     width: 100%;
 }
 
-.u-sticky-header {
-    position: fixed !important;
-    z-index: var(--zindex-sticky) !important;
-    top: 0px;
-}
-
 .u-overflow-hidden {
     overflow: hidden;
+}
+
+.u-display-block {
+  display: block !important;
+}
+
+.u-display-hidden {
+  display: none !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-display-hidden-visually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.u-display-inline {
+  display: inline !important;
+}
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+.u-display-inline-block {
+  display: inline-block !important;
+  max-width: 100%; /* 1 */
+}
+
+.u-display-table {
+  display: table !important;
+}
+
+.u-display-table-cell {
+  display: table-cell !important;
+}
+
+.u-display-table-row {
+  display: table-row !important;
 }
