@@ -1,9 +1,8 @@
 /** @define utilities */
-@import "@superflycss/variables-layout";
 
 @each $position in static, relative, absolute, fixed {
   .u-position-$(position) {
-      @apply(--u-position-$(position)) !important;
+      position: $(position) !important;
   }
 }
 

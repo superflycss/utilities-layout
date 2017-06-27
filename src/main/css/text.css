@@ -1,47 +1,34 @@
 /** @define utilities */
 
-@import "@superflycss/variables-layout";
-
 /**
  * Word breaking
  *
  * Break strings when their length exceeds the width of their container.
  */
-
 .u-word-break {
-  @apply(--u-word-break) !important;
+  word-wrap: break-word important!;
 }
 
 /**
  * Horizontal text alignment
  */
-
 .u-text-center {
-  @apply(--u-text-center) !important;
+  text-align: center important!;
 }
 
 .u-text-left {
-  @apply(--u-text-left) !important;
+  text-align: left important!;
 }
 
 .u-text-right {
-  @apply(--u-text-right) !important;
-}
-
-/**
- * Inherit the ancestor's text color.
- */
-
-.u-text-inherit-color {
-  @apply(--u-text-inherit-color) !important;
+  text-align: right important!;
 }
 
 /**
  * Prevent whitespace wrapping
  */
-
 .u-text-no-wrap {
-  @apply(--u-text-no-wrap) !important;
+  white-space: nowrap important!;
 }
 
 /**
@@ -57,9 +44,9 @@
  */
 
 .u-text-truncate {
-  max-width: 100%; /* 1 */
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  word-wrap: normal !important; /* 2 */
+  max-width: 100% important!; /* 1 */
+  overflow: hidden important!;
+  text-overflow: ellipsis important!;
+  white-space: nowrap important!;
+  word-wrap: normal important!; /* 2 */
 }

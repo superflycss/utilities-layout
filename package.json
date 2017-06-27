@@ -1,6 +1,6 @@
 {
   "name": "@superflycss/utilities-layout",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Layout utilities",
   "main": "src/main/css/index.css",
   "scripts": {
@@ -32,10 +32,10 @@
     "@superflycss/task-deploy": "^1.0.2",
     "@superflycss/task-test": "^1.0.1",
     "gulp": "^3.9.1",
-    "npm-check-updates": "^2.12.0"
+    "npm-check-updates": "^2.12.1"
   },
   "dependencies": {
-    "@superflycss/variables-dimension": "^1.0.0",
-    "@superflycss/variables-layout": "^1.0.1"
+    "@superflycss/variables-dimension": "^1.0.1",
+    "@superflycss/variables-layout": "^1.0.3"
   }
 }

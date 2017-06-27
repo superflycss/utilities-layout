@@ -1,26 +1,25 @@
 /** @define utilities */
-@import "@superflycss/variables-layout";
-
-@each $dimension in left, right, top, bottom {
-  .u-padding-$(dimension)-halfrem {
-      @apply(--u-padding-$(dimension)-halfrem) !important;
-  }
-}
-
-@each $dimension in left, right, top, bottom {
-    @for $factor from 0 to 20 {
-      .u-padding-$(dimension)-$(factor)rem {
-          @apply(--u-padding-$(dimension)-$(factor)rem) !important;
-      }
-    }
-}
 
 .u-padding-halfrem {
-    @apply(--u-padding-halfrem) !important;
+  padding: 0.5rem !important;
 }
 
 @for $factor from 0 to 20 {
   .u-padding-$(factor)rem {
-      @apply(--u-padding-$(factor)rem) !important;
+    padding: $(factor)rem !important;
+  }
+}
+
+@each $dimension in left, right, top, bottom {
+  .u-padding-$(dimension)-halfrem {
+    padding-$(dimension): 0.5rem !important;
+  }
+}
+
+@each $dimension in left, right, top, bottom {
+  @for $factor from 0 to 20 {
+    .u-padding-$(dimension)-$(factor)rem {
+      padding-$(dimension): $(factor)rem !important;
+    }
   }
 }
