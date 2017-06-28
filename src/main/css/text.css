@@ -1,34 +1,33 @@
 /** @define utilities */
-
 /**
  * Word breaking
  *
  * Break strings when their length exceeds the width of their container.
  */
 .u-word-break {
-  word-wrap: break-word important!;
+  word-wrap: break-word !important;
 }
 
 /**
  * Horizontal text alignment
  */
 .u-text-center {
-  text-align: center important!;
+  text-align: center !important;
 }
 
 .u-text-left {
-  text-align: left important!;
+  text-align: left !important;
 }
 
 .u-text-right {
-  text-align: right important!;
+  text-align: right !important;
 }
 
 /**
  * Prevent whitespace wrapping
  */
 .u-text-no-wrap {
-  white-space: nowrap important!;
+  white-space: nowrap !important;
 }
 
 /**
@@ -44,9 +43,9 @@
  */
 
 .u-text-truncate {
-  max-width: 100% important!; /* 1 */
-  overflow: hidden important!;
-  text-overflow: ellipsis important!;
-  white-space: nowrap important!;
-  word-wrap: normal important!; /* 2 */
+  max-width: 100% !important; /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; /* 2 */
 }
