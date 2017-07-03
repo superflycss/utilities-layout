@@ -141,13 +141,13 @@
     order: 0 !important;
   }
 
-  @for $factor from 1 to 5 {
+  @for $factor from 1 to 10 {
     .u-md-flex-grow$(factor) {
       flex: $(factor) 1 0% !important;
     }
   }
 
-  @for $factor from 0 to 5 {
+  @for $factor from 0 to 10 {
     .u-md-flex-shrink$(factor) {
       flex-shrink: $(factor) !important;
     }

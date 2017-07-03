@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Test @superflycss/layout-utilities</title>
+  <link href="../css/index.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="Header--column">
+    <h1 class="Display--fs400fw600 u-font-roboto">Layout Utility Tests</h1>
+    <a class="Header_link"
+       href="https://github.com/superflycss/utilities-layout/">Github</a>
+  </header>
+
+  <!-- FLEX UTILITIES -->
+
+  <div class="Test">
+
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Flex Layout</span>
+    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex">
+  <div class="u-background-color-orange
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              First item in row</div>
+  <div class="u-background-color-orange
+              u-padding-1rem">
+              Second item in row</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-inline</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex">
+  <div class="u-background-color-orange
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              First container</div>
+  <div class="u-background-color-orange
+              u-padding-1rem">
+              Second container</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The flex <em class="Test_em">containers</em> are laid out inline.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-row</code> is applied.</div>
+        <pre class="Test_markup">
+<code class="html">
+  <div class="u-flex u-flex-row">
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        First item in row</div>
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        Second item in row</div>
+      <div class="u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px
+                  u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+  </div>
+</code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-row-reverse</code> is applied.</div>
+        <pre class="Test_markup">
+<code class="html">
+  <div class="u-flex u-flex-row-reverse">
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        First item in row</div>
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        Second item in row</div>
+      <div class="u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+   </div>
+</code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row reversed.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-column</code> is applied.</div>
+        <pre class="Test_markup">
+<code class="html">
+  <div class="u-flex u-flex-column">
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        First item in row</div>
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        Second item in row</div>
+        <div class="u-padding-1rem
+                    u-border-right-style-solid
+                    u-border-right-width-2px
+                    u-background-color-sf-charcoal-blue">
+          Third item in row</div>
+   </div>
+</code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a column.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-column-reverse</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex u-flex-column-reverse">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+              Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a column reversed.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-wrap</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex u-flex-wrap u-width-25rem">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items wrap onto the next line.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-wrap-reverse</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex u-flex-wrap-reverse u-width-25rem">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items wrap onto the next line in reverse.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-no-wrap</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex u-flex-no-wrap u-width-20rem">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items don't wrap onto the next line.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-start</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-justify-start
+                  u-min-width-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the left side of the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-end</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-justify-end
+                  u-min-width-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the right side of the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-center</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-justify-center
+                  u-min-width-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the center side of the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-between</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-justify-between
+                  u-min-width-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items have space between eachother on the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-around</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-justify-around
+                  u-min-width-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-stretch</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-align-items-stretch
+                  u-min-width-40rem
+                  u-min-height-10rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-start</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-align-items-start
+                  u-min-width-40rem
+                  u-min-height-10rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+            Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The cross-start margin edge of the items is placed on the cross-start line.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-end</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-align-items-end
+                  u-min-width-40rem
+                  u-min-height-10rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+              Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The cross-end margin edge of the items is placed on the cross-end line.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-center</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-align-items-center
+                  u-min-width-40rem
+                  u-min-height-10rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+              Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are centered in the cross-axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-baseline</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-align-items-baseline
+                  u-min-width-40rem
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-padding-top-5rem
+                      u-height-8rem
+                      u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            First item in row</div>
+          <div class="u-padding-top-3rem
+                      u-height-10rem
+                      u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+            Second item in row</div>
+            <div class="u-padding-top-6rem
+                        u-padding-bottom-2rem
+                        u-height-8rem
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+              Third item in row</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items have their baselines aligned on the cross axis.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-start</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-start
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the start of the container.</div>
+      </div>
+    </div>
+
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-end</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-end
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-background-color-orange
+            u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-background-color-orange
+            u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the end of the container.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-center
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the center of the container.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-stretch
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item stretch to take up the remaining space.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-between
+                  u-min-height-20rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items evenly distributed with the first item at the start of the container and the last one at the end.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.</div>
+        <pre class="Test_markup">
+    <code class="html">
+      <div class="u-flex
+                  u-flex-wrap
+                  u-flex-align-content-around
+                  u-min-height-40rem
+                  u-border-style-solid
+                  u-border-width-2px">
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-background-color-orange
+                      u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          <div class="u-padding-1rem
+                      u-border-right-style-solid
+                      u-border-right-width-2px
+                      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-background-color-orange
+                        u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="u-padding-1rem
+                        u-border-right-style-solid
+                        u-border-right-width-2px
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+       </div>
+    </code>
+            </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items evenly distributed with equal space around each line.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex
+            u-min-height-10rem
+            u-border-style-solid
+            u-border-width-2px">
+  <div class="u-background-color-orange
+              u-flex-align-self-start
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              u-flex-align-self-start</div>
+  <div class="u-flex-align-self-end
+              u-padding-1rem
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-end</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis start.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex
+            u-min-height-10rem
+            u-border-style-solid
+            u-border-width-2px">
+  <div class="u-background-color-orange
+              u-flex-align-self-end
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              u-flex-align-self-end</div>
+  <div class="u-flex-align-self-start
+              u-padding-1rem
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis end.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex
+            u-min-height-10rem
+            u-border-style-solid
+            u-border-width-2px">
+  <div class="u-background-color-orange
+              u-flex-align-self-center
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              u-flex-align-self-center</div>
+  <div class="u-flex-align-self-start
+              u-padding-1rem
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis center.</div>
+      </div>
+    </div>
+
+
+    <hr class="Test_separator"></hr>
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex
+            u-min-height-10rem
+            u-border-style-solid
+            u-border-width-2px">
+  <div class="u-background-color-orange
+              u-flex-align-self-stretch
+              u-padding-1rem
+              u-border-right-style-solid
+              u-border-right-width-2px">
+              u-flex-align-self-stretch</div>
+  <div class="u-flex-align-self-start
+              u-padding-1rem
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item stretches from cross axis start to end.</div>
+      </div>
+    </div>
+
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.</div>
+        <pre class="Test_markup">
+<code class="html">
+  <div class="u-flex">
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        First item in row</div>
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        Second item in row</div>
+      <div class="u-flex-order-first
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+   </div>
+</code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item is positioned at the start.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.</div>
+        <pre class="Test_markup">
+<code class="html">
+  <div class="u-flex">
+      <div class="u-flex-order-last
+                  u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        First item in row</div>
+      <div class="u-background-color-orange
+                  u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px">
+        Second item in row</div>
+      <div class="u-padding-1rem
+                  u-border-right-style-solid
+                  u-border-right-width-2px
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+   </div>
+</code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item is positioned last.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.</div>
+        <pre class="Test_markup">
+            <code class="html">
+              <div class="u-flex u-width-40rem">
+                  <div class="u-flex-grow4
+                              u-background-color-orange
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px">
+                    u-flex-grow3</div>
+                  <div class="u-flex-grow2
+                              u-background-color-orange
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px">
+                    u-flex-grow2</div>
+                  <div class="u-flex-grow5
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px
+                              u-background-color-sf-charcoal-blue">
+                    u-flex-grow5</div>
+               </div>
+            </code>
+                    </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items grow according to the flex grow factor.</div>
+      </div>
+    </div>
+
+    <hr class="Test_separator"></hr>
+    <!-- u-flex-row -->
+
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are <em class="Test_em">larger</em> than their container.</div>
+        <pre class="Test_markup">
+            <code class="html">
+              <div class="u-flex u-width-40rem">
+                  <div class="u-flex-shrink5
+                              u-width-100
+                              u-background-color-orange
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px">
+                    u-flex-shrink5</div>
+                  <div class="u-flex-shrink3
+                              u-width-100
+                              u-background-color-sf-charcoal-blue
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px">
+                    u-flex-shrink3</div>
+                  <div class="u-flex-shrink5
+                              u-width-100
+                              u-padding-1rem
+                              u-border-right-style-solid
+                              u-border-right-width-2px
+                              u-background-color-orange">
+                    u-flex-shrink5</div>
+               </div>
+            </code>
+                    </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The items shrink according to the flex shrink factor.</div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- End of Test div-->
+  </div>
+
+
+
+
+  <!-- BORDER UTILITIES -->
+  <div class="Test u-height-5rem u-test-background-color">
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Border</span>
+  </div>
+
+  <!-- PADDING UTILITIES -->
+  <div class="Test u-height-5rem u-test-background-color">
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Padding</span>
+  </div>
+
+  <!-- MARGIN UTILITIES -->
+  <div class="Test u-height-5rem u-test-background-color">
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Margin</span>
+  </div>
+
+
+  <!-- BROWSER NAMED COLOR UTILITIES -->
+  <div class="Test u-height-5rem u-test-background-color">
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Browser Named Background Colors</span>
+  </div>
+
+</body>
+
+</html>

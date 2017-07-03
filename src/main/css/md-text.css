@@ -1,0 +1,53 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+
+@media (--md-viewport) {
+  /**
+   * Word breaking
+   *
+   * Break strings when their length exceeds the width of their container.
+   */
+
+  .u-md-word-break {
+    word-wrap: break-word !important;
+  }
+  /**
+ * Horizontal text alignment
+ */
+  .u-md-text-center {
+    text-align: center !important;
+  }
+  .u-md-text-left {
+    text-align: left !important;
+  }
+  .u-md-text-right {
+    text-align: right !important;
+  }
+  /**
+ * Prevent whitespace wrapping
+ */
+  .u-md-text-no-wrap {
+    white-space: nowrap !important;
+  }
+  /**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+  .u-md-text-truncate {
+    max-width: 100% !important;
+    /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    /* 2 */
+  }
+}
