@@ -1826,7 +1826,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
-  {% for i in range(0, 20) -%}
+  {% for i in range(0, 21) -%}
   <div class="u-background-color-orange
               u-margin-bottom-1rem
               u-padding-1rem
@@ -1853,7 +1853,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
-  {% for i in range(0, 20) -%}
+  {% for i in range(0, 21) -%}
   <div class="u-background-color-sf-charcoal-blue
               u-margin-bottom-1rem
               u-padding-1rem
@@ -1877,12 +1877,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
       <div class="Test_input">
         <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-{{side}}-style-solid and u-border-{{side}}-width-{{i}}px</code> is applied.</div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-[side]-style-solid and u-border-[side]-width-[factor]px</code> is applied.</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
-  {% for i in range(0, 20) -%}
+  {% for i in range(0, 21) -%}
   <div class="u-background-color-sf-charcoal-blue
               u-margin-bottom-1rem
               u-padding-1rem
@@ -1904,14 +1904,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 
     <hr class="Test_separator"></hr>
 
-    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
       <div class="Test_input">
         <div class="Test_when"></div>
         <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
-  {% for i in range(0, 20) -%}
+  {% for i in range(0, 21) -%}
   <div class="u-background-color-orange
               u-margin-bottom-1rem
               u-padding-1rem
@@ -1934,7 +1934,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
       <div class="Test_input">
         <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-{{style}}</code> is applied.</div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
@@ -1961,7 +1961,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
       <div class="Test_input">
         <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-{{style}}</code> is applied.</div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
@@ -2032,12 +2032,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
       <div class="Test_input">
         <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-padding-{{side}}-{{i}}rem</code> is applied.</div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.</div>
         <pre class="Test_markup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
-  {% for i in range(0, 20) -%}
+  {% for i in range(0, 21) -%}
   <div class="u-background-color-orange
               u-margin-bottom-1rem
               u-padding-{{side}}-{{i}}rem
@@ -2060,9 +2060,46 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
   </div>
 
   <!-- MARGIN UTILITIES -->
-  <div class="Test u-height-5rem u-test-background-color">
+
+  <div class="Test">
     <span class="Test_counter"></span>
     <span class="Test_utilities">Margin</span>
+
+    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for i in range(0, 21) -%}
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue
+              u-margin-bottom-1rem">
+
+  <div class="u-margin-{{side}}-{{i}}rem
+              u-background-color-orange
+              u-border-style-solid
+              u-border-width-2px">
+              u-margin-{{side}}-{{i}}rem
+  </div>
+</div>
+{%- endfor %}
+{%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The correct margin dimension renders.</div>
+      </div>
+    </div>
+
+
+    <!-- End of Test div-->
   </div>
 
 </body>
