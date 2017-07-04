@@ -43,7 +43,6 @@
     "@superflycss/utilities-colors": "^2.1.1",
     "@superflycss/utilities-fonts": "^3.0.2",
     "@superflycss/utilities-format": "^1.0.0",
-    "@superflycss/utilities-layout": "^2.0.5",
     "gulp": "^3.9.1",
     "lite-server": "^2.3.0",
     "npm-check-updates": "^2.12.1",
