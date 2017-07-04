@@ -1760,13 +1760,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
       </div>
     </div>
 
-  <hr class="Test_separator"></hr>
+    <hr class="Test_separator"></hr>
 
-  <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-    <div class="Test_input">
-      <div class="Test_when"></div>
-      <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-none</code> is applied.</div>
-      <pre class="Test_markup">
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-none</code> is applied.</div>
+        <pre class="Test_markup">
           <code class="html">
             <div class="u-flex
                         u-width-30rem
@@ -1804,25 +1804,187 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               </div>
           </code>
                   </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The item sizes the item according to the width/height properties however the <em class="Test_em">flex item is no longer flexible</em>.</div>
+      </div>
     </div>
-    <div class="Test_output">
-      <div class="Test_then"></div>
-      <div class="Test_description u-md-margin-bottom-2x">The item sizes the item according to the width/height properties however the <em class="Test_em">flex item is no longer flexible</em>.</div>
-    </div>
+
+    <!-- End of Test div-->
   </div>
 
+  <!-- BORDER UTILITIES -->
 
+  <div class="Test">
+    <span class="Test_counter"></span>
+    <span class="Test_utilities">Border</span>
+    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for i in range(0, 20) -%}
+  <div class="u-background-color-orange
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-style-solid
+              u-border-width-{{i}}px">
+              u-border-width-{{i}}px</div>
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The correct border width renders.</div>
+      </div>
+    </div>
 
+    <hr class="Test_separator"></hr>
 
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for i in range(0, 20) -%}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-style-solid
+              u-border-width-4px
+              u-border-radius-{{i}}px">
+              u-border-radius-{{i}}px</div>
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The correct border radius renders.</div>
+      </div>
+    </div>
 
+    <hr class="Test_separator"></hr>
 
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-{{side}}-style-solid and u-border-{{side}}-width-{{i}}px</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for i in range(0, 20) -%}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-{{side}}-style-solid
+              u-border-{{side}}-width-{{i}}px">
+              u-border-{{side}}-style-solid
+              &nbsp u-border-{{side}}-width-{{i}}px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The correct border radius renders.</div>
+      </div>
+    </div>
 
+    <hr class="Test_separator"></hr>
 
+    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for i in range(0, 20) -%}
+  <div class="u-background-color-orange
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-style-solid
+              u-border-width-{{i}}px">
+              u-border-width-{{i}}px</div>
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The correct border width renders.</div>
+      </div>
+    </div>
 
+    <hr class="Test_separator"></hr>
 
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-{{style}}</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-style-{{style}}
+              u-border-width-5px">
+              u-border-style-{{style}}</div>
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The border style renders.</div>
+      </div>
+    </div>
 
+    <hr class="Test_separator"></hr>
 
-
+    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
+      <div class="Test_input">
+        <div class="Test_when"></div>
+        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-{{style}}</code> is applied.</div>
+        <pre class="Test_markup">
+          <code class="html">
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-{{side}}-style-{{style}}
+              u-border-{{side}}-width-5px">
+              u-border-{{side}}-style-{{style}}
+              &nbsp u-border-{{side}}-width-5px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+          </code>
+        </pre>
+      </div>
+      <div class="Test_output">
+        <div class="Test_then"></div>
+        <div class="Test_description u-md-margin-bottom-2x">The border style renders.</div>
+      </div>
+    </div>
 
 
     <!-- End of Test div-->
@@ -1831,11 +1993,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 
 
 
-  <!-- BORDER UTILITIES -->
-  <div class="Test u-height-5rem u-test-background-color">
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Border</span>
-  </div>
+
+
+
+
+
 
   <!-- PADDING UTILITIES -->
   <div class="Test u-height-5rem u-test-background-color">
@@ -1847,13 +2009,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
   <div class="Test u-height-5rem u-test-background-color">
     <span class="Test_counter"></span>
     <span class="Test_utilities">Margin</span>
-  </div>
-
-
-  <!-- BROWSER NAMED COLOR UTILITIES -->
-  <div class="Test u-height-5rem u-test-background-color">
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Browser Named Background Colors</span>
   </div>
 
 </body>
