@@ -7,6 +7,11 @@
 @import "@superflycss/component-test";
 @import "@superflycss/component-header";
 
+body {
+  counter-reset: test-counter;
+}
+
+
 /** Define a color palette */
 :root {
   --Palette--Header-background-color: #F4F3FE;
