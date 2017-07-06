@@ -33,7 +33,7 @@
     "@superflycss/component-body": "^1.0.1",
     "@superflycss/component-display": "^1.0.2",
     "@superflycss/component-header": "^1.2.22",
-    "@superflycss/component-test": "^2.0.31",
+    "@superflycss/component-test": "^2.0.32",
     "@superflycss/foundation": "^1.0.0",
     "@superflycss/task-build": "^1.0.5",
     "@superflycss/task-clean": "^1.0.2",
