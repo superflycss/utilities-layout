@@ -1,5 +1,7 @@
 # Layout utilities
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/superflycss/utilities-layout.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/superflycss/utilities-layout.svg?branch=master)](https://travis-ci.org/superflycss/utilities-layout)
 
 # Layout utilities
