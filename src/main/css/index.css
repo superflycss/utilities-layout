@@ -2,37 +2,35 @@
      |   MIT License                  |
      |   https://github.com/superflycss/utilities-layout/blob/master/LICENSE.md */
 
-@import "@superflycss/variables-dimension";
-
-@import "./flex.css";
-@import "./sm-flex.css";
-@import "./md-flex.css";
-@import "./lg-flex.css";
-@import "./padding.css";
-@import "./sm-padding.css";
-@import "./md-padding.css";
-@import "./lg-padding.css";
-@import "./margins.css";
-@import "./sm-margins.css";
-@import "./md-margins.css";
-@import "./lg-margins.css";
-@import "./height-width.css";
-@import "./sm-height-width.css";
-@import "./md-height-width.css";
-@import "./lg-height-width.css";
-@import "./position.css";
-@import "./sm-position.css";
-@import "./md-position.css";
-@import "./lg-position.css";
-@import "./borders.css";
-@import "./sm-borders.css";
-@import "./md-borders.css";
-@import "./lg-borders.css";
-@import "./text.css";
-@import "./sm-text.css";
-@import "./md-text.css";
-@import "./lg-text.css";
-@import "./zindex.css";
+@import "./flex/flex.css";
+@import "./flex/sm-flex.css";
+@import "./flex/md-flex.css";
+@import "./flex/lg-flex.css";
+@import "./padding/padding.css";
+@import "./padding/sm-padding.css";
+@import "./padding/md-padding.css";
+@import "./padding/lg-padding.css";
+@import "./margins/margins.css";
+@import "./margins/sm-margins.css";
+@import "./margins/md-margins.css";
+@import "./margins/lg-margins.css";
+@import "./dimension/height-width.css";
+@import "./dimension/sm-height-width.css";
+@import "./dimension/md-height-width.css";
+@import "./dimension/lg-height-width.css";
+@import "./dimension/zindex.css";
+@import "./position/position.css";
+@import "./position/sm-position.css";
+@import "./position/md-position.css";
+@import "./position/lg-position.css";
+@import "./borders/borders.css";
+@import "./borders/sm-borders.css";
+@import "./borders/md-borders.css";
+@import "./borders/lg-borders.css";
+@import "./text/text.css";
+@import "./text/sm-text.css";
+@import "./text/md-text.css";
+@import "./text/lg-text.css";
 
 .u-full-screen {
   position: absolute !important;

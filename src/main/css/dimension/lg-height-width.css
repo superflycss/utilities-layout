@@ -1,0 +1,1002 @@
+/** @define utilities */
+
+/*! superflycss/variables-dimension | MIT License | https://github.com/superflycss/variables-dimension/blob/master/LICENSE.md */
+
+/*! bootstrap v4.0.0-alpha | MIT License | https://github.com/twbs/bootstrap/blob/master/LICENSE */
+
+/*
+=======================================
+ DIMENSION VARIABLES
+=======================================
+ 0:  Spacers.
+ 1:  Borders.
+ 2:  Z-Index
+ 3:  Default Media Breakpoints
+================================
+*/
+
+/* 0 */
+
+:root {
+  --spacer-1x: 1rem;
+  --spacer-2x: 2rem;
+  --spacer-3x: 3rem;
+  --spacer-4x: 4rem;
+  --spacer-5x: 5rem;
+  --spacer-halfx: 0.5rem;
+}
+
+/* 1 */
+
+:root {
+  --border-width-100: 1px;
+  --border-width-200: 2px;
+  --border-width-300: 3px;
+  --border-width-400: 4px;
+  --border-width-500: 5px;
+  --border-width-600: 6px;
+  --border-width-700: 7px;
+  --border-width-800: 8px;
+  --border-width-900: 9px;
+}
+
+/* 2 */
+
+:root {
+  --zindex-dropdown-backdrop: 990;
+  --zindex-navbar: 1000;
+  --zindex-dropdown: 1000;
+  --zindex-fixed: 1030;
+  --zindex-sticky: 1030;
+  --zindex-modal-backdrop: 1040;
+  --zindex-modal: 1050;
+  --zindex-popover: 1060;
+  --zindex-tooltip: 1070;
+}
+
+/* 3 */
+
+@media (min-width: 992px) {
+  .u-lg-height-halfrem {
+    height: 0.5rem !important;
+  }
+    .u-lg-height-0rem {
+      height: 0rem !important;
+    }
+    .u-lg-height-1rem {
+      height: 1rem !important;
+    }
+    .u-lg-height-2rem {
+      height: 2rem !important;
+    }
+    .u-lg-height-3rem {
+      height: 3rem !important;
+    }
+    .u-lg-height-4rem {
+      height: 4rem !important;
+    }
+    .u-lg-height-5rem {
+      height: 5rem !important;
+    }
+    .u-lg-height-6rem {
+      height: 6rem !important;
+    }
+    .u-lg-height-7rem {
+      height: 7rem !important;
+    }
+    .u-lg-height-8rem {
+      height: 8rem !important;
+    }
+    .u-lg-height-9rem {
+      height: 9rem !important;
+    }
+    .u-lg-height-10rem {
+      height: 10rem !important;
+    }
+    .u-lg-height-11rem {
+      height: 11rem !important;
+    }
+    .u-lg-height-12rem {
+      height: 12rem !important;
+    }
+    .u-lg-height-13rem {
+      height: 13rem !important;
+    }
+    .u-lg-height-14rem {
+      height: 14rem !important;
+    }
+    .u-lg-height-15rem {
+      height: 15rem !important;
+    }
+    .u-lg-height-16rem {
+      height: 16rem !important;
+    }
+    .u-lg-height-17rem {
+      height: 17rem !important;
+    }
+    .u-lg-height-18rem {
+      height: 18rem !important;
+    }
+    .u-lg-height-19rem {
+      height: 19rem !important;
+    }
+    .u-lg-height-20rem {
+      height: 20rem !important;
+    }
+    .u-lg-height-21rem {
+      height: 21rem !important;
+    }
+    .u-lg-height-22rem {
+      height: 22rem !important;
+    }
+    .u-lg-height-23rem {
+      height: 23rem !important;
+    }
+    .u-lg-height-24rem {
+      height: 24rem !important;
+    }
+    .u-lg-height-25rem {
+      height: 25rem !important;
+    }
+    .u-lg-height-26rem {
+      height: 26rem !important;
+    }
+    .u-lg-height-27rem {
+      height: 27rem !important;
+    }
+    .u-lg-height-28rem {
+      height: 28rem !important;
+    }
+    .u-lg-height-29rem {
+      height: 29rem !important;
+    }
+    .u-lg-height-30rem {
+      height: 30rem !important;
+    }
+    .u-lg-height-31rem {
+      height: 31rem !important;
+    }
+    .u-lg-height-32rem {
+      height: 32rem !important;
+    }
+    .u-lg-height-33rem {
+      height: 33rem !important;
+    }
+    .u-lg-height-34rem {
+      height: 34rem !important;
+    }
+    .u-lg-height-35rem {
+      height: 35rem !important;
+    }
+    .u-lg-height-36rem {
+      height: 36rem !important;
+    }
+    .u-lg-height-37rem {
+      height: 37rem !important;
+    }
+    .u-lg-height-38rem {
+      height: 38rem !important;
+    }
+    .u-lg-height-39rem {
+      height: 39rem !important;
+    }
+    .u-lg-height-40rem {
+      height: 40rem !important;
+    }
+    .u-lg-height-41rem {
+      height: 41rem !important;
+    }
+    .u-lg-height-42rem {
+      height: 42rem !important;
+    }
+    .u-lg-height-43rem {
+      height: 43rem !important;
+    }
+    .u-lg-height-44rem {
+      height: 44rem !important;
+    }
+    .u-lg-height-45rem {
+      height: 45rem !important;
+    }
+    .u-lg-height-46rem {
+      height: 46rem !important;
+    }
+    .u-lg-height-47rem {
+      height: 47rem !important;
+    }
+    .u-lg-height-48rem {
+      height: 48rem !important;
+    }
+    .u-lg-height-49rem {
+      height: 49rem !important;
+    }
+    .u-lg-height-50rem {
+      height: 50rem !important;
+    }
+  .u-lg-min-height-halfrem {
+    min-height: 0.5rem !important;
+  }
+    .u-lg-min-height-0rem {
+      min-height: 0rem !important;
+    }
+    .u-lg-min-height-1rem {
+      min-height: 1rem !important;
+    }
+    .u-lg-min-height-2rem {
+      min-height: 2rem !important;
+    }
+    .u-lg-min-height-3rem {
+      min-height: 3rem !important;
+    }
+    .u-lg-min-height-4rem {
+      min-height: 4rem !important;
+    }
+    .u-lg-min-height-5rem {
+      min-height: 5rem !important;
+    }
+    .u-lg-min-height-6rem {
+      min-height: 6rem !important;
+    }
+    .u-lg-min-height-7rem {
+      min-height: 7rem !important;
+    }
+    .u-lg-min-height-8rem {
+      min-height: 8rem !important;
+    }
+    .u-lg-min-height-9rem {
+      min-height: 9rem !important;
+    }
+    .u-lg-min-height-10rem {
+      min-height: 10rem !important;
+    }
+    .u-lg-min-height-11rem {
+      min-height: 11rem !important;
+    }
+    .u-lg-min-height-12rem {
+      min-height: 12rem !important;
+    }
+    .u-lg-min-height-13rem {
+      min-height: 13rem !important;
+    }
+    .u-lg-min-height-14rem {
+      min-height: 14rem !important;
+    }
+    .u-lg-min-height-15rem {
+      min-height: 15rem !important;
+    }
+    .u-lg-min-height-16rem {
+      min-height: 16rem !important;
+    }
+    .u-lg-min-height-17rem {
+      min-height: 17rem !important;
+    }
+    .u-lg-min-height-18rem {
+      min-height: 18rem !important;
+    }
+    .u-lg-min-height-19rem {
+      min-height: 19rem !important;
+    }
+    .u-lg-min-height-20rem {
+      min-height: 20rem !important;
+    }
+    .u-lg-min-height-21rem {
+      min-height: 21rem !important;
+    }
+    .u-lg-min-height-22rem {
+      min-height: 22rem !important;
+    }
+    .u-lg-min-height-23rem {
+      min-height: 23rem !important;
+    }
+    .u-lg-min-height-24rem {
+      min-height: 24rem !important;
+    }
+    .u-lg-min-height-25rem {
+      min-height: 25rem !important;
+    }
+    .u-lg-min-height-26rem {
+      min-height: 26rem !important;
+    }
+    .u-lg-min-height-27rem {
+      min-height: 27rem !important;
+    }
+    .u-lg-min-height-28rem {
+      min-height: 28rem !important;
+    }
+    .u-lg-min-height-29rem {
+      min-height: 29rem !important;
+    }
+    .u-lg-min-height-30rem {
+      min-height: 30rem !important;
+    }
+    .u-lg-min-height-31rem {
+      min-height: 31rem !important;
+    }
+    .u-lg-min-height-32rem {
+      min-height: 32rem !important;
+    }
+    .u-lg-min-height-33rem {
+      min-height: 33rem !important;
+    }
+    .u-lg-min-height-34rem {
+      min-height: 34rem !important;
+    }
+    .u-lg-min-height-35rem {
+      min-height: 35rem !important;
+    }
+    .u-lg-min-height-36rem {
+      min-height: 36rem !important;
+    }
+    .u-lg-min-height-37rem {
+      min-height: 37rem !important;
+    }
+    .u-lg-min-height-38rem {
+      min-height: 38rem !important;
+    }
+    .u-lg-min-height-39rem {
+      min-height: 39rem !important;
+    }
+    .u-lg-min-height-40rem {
+      min-height: 40rem !important;
+    }
+    .u-lg-min-height-41rem {
+      min-height: 41rem !important;
+    }
+    .u-lg-min-height-42rem {
+      min-height: 42rem !important;
+    }
+    .u-lg-min-height-43rem {
+      min-height: 43rem !important;
+    }
+    .u-lg-min-height-44rem {
+      min-height: 44rem !important;
+    }
+    .u-lg-min-height-45rem {
+      min-height: 45rem !important;
+    }
+    .u-lg-min-height-46rem {
+      min-height: 46rem !important;
+    }
+    .u-lg-min-height-47rem {
+      min-height: 47rem !important;
+    }
+    .u-lg-min-height-48rem {
+      min-height: 48rem !important;
+    }
+    .u-lg-min-height-49rem {
+      min-height: 49rem !important;
+    }
+    .u-lg-min-height-50rem {
+      min-height: 50rem !important;
+    }
+  .u-lg-max-height-halfrem {
+    max-height: 0.5rem !important;
+  }
+  .u-lg-height-100 {
+    height: 100% !important;
+  }
+    .u-lg-max-height-0rem {
+      max-height: 0rem !important;
+    }
+    .u-lg-max-height-1rem {
+      max-height: 1rem !important;
+    }
+    .u-lg-max-height-2rem {
+      max-height: 2rem !important;
+    }
+    .u-lg-max-height-3rem {
+      max-height: 3rem !important;
+    }
+    .u-lg-max-height-4rem {
+      max-height: 4rem !important;
+    }
+    .u-lg-max-height-5rem {
+      max-height: 5rem !important;
+    }
+    .u-lg-max-height-6rem {
+      max-height: 6rem !important;
+    }
+    .u-lg-max-height-7rem {
+      max-height: 7rem !important;
+    }
+    .u-lg-max-height-8rem {
+      max-height: 8rem !important;
+    }
+    .u-lg-max-height-9rem {
+      max-height: 9rem !important;
+    }
+    .u-lg-max-height-10rem {
+      max-height: 10rem !important;
+    }
+    .u-lg-max-height-11rem {
+      max-height: 11rem !important;
+    }
+    .u-lg-max-height-12rem {
+      max-height: 12rem !important;
+    }
+    .u-lg-max-height-13rem {
+      max-height: 13rem !important;
+    }
+    .u-lg-max-height-14rem {
+      max-height: 14rem !important;
+    }
+    .u-lg-max-height-15rem {
+      max-height: 15rem !important;
+    }
+    .u-lg-max-height-16rem {
+      max-height: 16rem !important;
+    }
+    .u-lg-max-height-17rem {
+      max-height: 17rem !important;
+    }
+    .u-lg-max-height-18rem {
+      max-height: 18rem !important;
+    }
+    .u-lg-max-height-19rem {
+      max-height: 19rem !important;
+    }
+    .u-lg-max-height-20rem {
+      max-height: 20rem !important;
+    }
+    .u-lg-max-height-21rem {
+      max-height: 21rem !important;
+    }
+    .u-lg-max-height-22rem {
+      max-height: 22rem !important;
+    }
+    .u-lg-max-height-23rem {
+      max-height: 23rem !important;
+    }
+    .u-lg-max-height-24rem {
+      max-height: 24rem !important;
+    }
+    .u-lg-max-height-25rem {
+      max-height: 25rem !important;
+    }
+    .u-lg-max-height-26rem {
+      max-height: 26rem !important;
+    }
+    .u-lg-max-height-27rem {
+      max-height: 27rem !important;
+    }
+    .u-lg-max-height-28rem {
+      max-height: 28rem !important;
+    }
+    .u-lg-max-height-29rem {
+      max-height: 29rem !important;
+    }
+    .u-lg-max-height-30rem {
+      max-height: 30rem !important;
+    }
+    .u-lg-max-height-31rem {
+      max-height: 31rem !important;
+    }
+    .u-lg-max-height-32rem {
+      max-height: 32rem !important;
+    }
+    .u-lg-max-height-33rem {
+      max-height: 33rem !important;
+    }
+    .u-lg-max-height-34rem {
+      max-height: 34rem !important;
+    }
+    .u-lg-max-height-35rem {
+      max-height: 35rem !important;
+    }
+    .u-lg-max-height-36rem {
+      max-height: 36rem !important;
+    }
+    .u-lg-max-height-37rem {
+      max-height: 37rem !important;
+    }
+    .u-lg-max-height-38rem {
+      max-height: 38rem !important;
+    }
+    .u-lg-max-height-39rem {
+      max-height: 39rem !important;
+    }
+    .u-lg-max-height-40rem {
+      max-height: 40rem !important;
+    }
+    .u-lg-max-height-41rem {
+      max-height: 41rem !important;
+    }
+    .u-lg-max-height-42rem {
+      max-height: 42rem !important;
+    }
+    .u-lg-max-height-43rem {
+      max-height: 43rem !important;
+    }
+    .u-lg-max-height-44rem {
+      max-height: 44rem !important;
+    }
+    .u-lg-max-height-45rem {
+      max-height: 45rem !important;
+    }
+    .u-lg-max-height-46rem {
+      max-height: 46rem !important;
+    }
+    .u-lg-max-height-47rem {
+      max-height: 47rem !important;
+    }
+    .u-lg-max-height-48rem {
+      max-height: 48rem !important;
+    }
+    .u-lg-max-height-49rem {
+      max-height: 49rem !important;
+    }
+    .u-lg-max-height-50rem {
+      max-height: 50rem !important;
+    }
+  .u-lg-min-width-halfrem {
+    min-width: 0.5rem !important;
+  }
+    .u-lg-min-width-0rem {
+      min-width: 0rem !important;
+    }
+    .u-lg-min-width-1rem {
+      min-width: 1rem !important;
+    }
+    .u-lg-min-width-2rem {
+      min-width: 2rem !important;
+    }
+    .u-lg-min-width-3rem {
+      min-width: 3rem !important;
+    }
+    .u-lg-min-width-4rem {
+      min-width: 4rem !important;
+    }
+    .u-lg-min-width-5rem {
+      min-width: 5rem !important;
+    }
+    .u-lg-min-width-6rem {
+      min-width: 6rem !important;
+    }
+    .u-lg-min-width-7rem {
+      min-width: 7rem !important;
+    }
+    .u-lg-min-width-8rem {
+      min-width: 8rem !important;
+    }
+    .u-lg-min-width-9rem {
+      min-width: 9rem !important;
+    }
+    .u-lg-min-width-10rem {
+      min-width: 10rem !important;
+    }
+    .u-lg-min-width-11rem {
+      min-width: 11rem !important;
+    }
+    .u-lg-min-width-12rem {
+      min-width: 12rem !important;
+    }
+    .u-lg-min-width-13rem {
+      min-width: 13rem !important;
+    }
+    .u-lg-min-width-14rem {
+      min-width: 14rem !important;
+    }
+    .u-lg-min-width-15rem {
+      min-width: 15rem !important;
+    }
+    .u-lg-min-width-16rem {
+      min-width: 16rem !important;
+    }
+    .u-lg-min-width-17rem {
+      min-width: 17rem !important;
+    }
+    .u-lg-min-width-18rem {
+      min-width: 18rem !important;
+    }
+    .u-lg-min-width-19rem {
+      min-width: 19rem !important;
+    }
+    .u-lg-min-width-20rem {
+      min-width: 20rem !important;
+    }
+    .u-lg-min-width-21rem {
+      min-width: 21rem !important;
+    }
+    .u-lg-min-width-22rem {
+      min-width: 22rem !important;
+    }
+    .u-lg-min-width-23rem {
+      min-width: 23rem !important;
+    }
+    .u-lg-min-width-24rem {
+      min-width: 24rem !important;
+    }
+    .u-lg-min-width-25rem {
+      min-width: 25rem !important;
+    }
+    .u-lg-min-width-26rem {
+      min-width: 26rem !important;
+    }
+    .u-lg-min-width-27rem {
+      min-width: 27rem !important;
+    }
+    .u-lg-min-width-28rem {
+      min-width: 28rem !important;
+    }
+    .u-lg-min-width-29rem {
+      min-width: 29rem !important;
+    }
+    .u-lg-min-width-30rem {
+      min-width: 30rem !important;
+    }
+    .u-lg-min-width-31rem {
+      min-width: 31rem !important;
+    }
+    .u-lg-min-width-32rem {
+      min-width: 32rem !important;
+    }
+    .u-lg-min-width-33rem {
+      min-width: 33rem !important;
+    }
+    .u-lg-min-width-34rem {
+      min-width: 34rem !important;
+    }
+    .u-lg-min-width-35rem {
+      min-width: 35rem !important;
+    }
+    .u-lg-min-width-36rem {
+      min-width: 36rem !important;
+    }
+    .u-lg-min-width-37rem {
+      min-width: 37rem !important;
+    }
+    .u-lg-min-width-38rem {
+      min-width: 38rem !important;
+    }
+    .u-lg-min-width-39rem {
+      min-width: 39rem !important;
+    }
+    .u-lg-min-width-40rem {
+      min-width: 40rem !important;
+    }
+    .u-lg-min-width-41rem {
+      min-width: 41rem !important;
+    }
+    .u-lg-min-width-42rem {
+      min-width: 42rem !important;
+    }
+    .u-lg-min-width-43rem {
+      min-width: 43rem !important;
+    }
+    .u-lg-min-width-44rem {
+      min-width: 44rem !important;
+    }
+    .u-lg-min-width-45rem {
+      min-width: 45rem !important;
+    }
+    .u-lg-min-width-46rem {
+      min-width: 46rem !important;
+    }
+    .u-lg-min-width-47rem {
+      min-width: 47rem !important;
+    }
+    .u-lg-min-width-48rem {
+      min-width: 48rem !important;
+    }
+    .u-lg-min-width-49rem {
+      min-width: 49rem !important;
+    }
+    .u-lg-min-width-50rem {
+      min-width: 50rem !important;
+    }
+    .u-lg-max-width-0rem {
+      max-width: 0rem !important;
+    }
+    .u-lg-max-width-1rem {
+      max-width: 1rem !important;
+    }
+    .u-lg-max-width-2rem {
+      max-width: 2rem !important;
+    }
+    .u-lg-max-width-3rem {
+      max-width: 3rem !important;
+    }
+    .u-lg-max-width-4rem {
+      max-width: 4rem !important;
+    }
+    .u-lg-max-width-5rem {
+      max-width: 5rem !important;
+    }
+    .u-lg-max-width-6rem {
+      max-width: 6rem !important;
+    }
+    .u-lg-max-width-7rem {
+      max-width: 7rem !important;
+    }
+    .u-lg-max-width-8rem {
+      max-width: 8rem !important;
+    }
+    .u-lg-max-width-9rem {
+      max-width: 9rem !important;
+    }
+    .u-lg-max-width-10rem {
+      max-width: 10rem !important;
+    }
+    .u-lg-max-width-11rem {
+      max-width: 11rem !important;
+    }
+    .u-lg-max-width-12rem {
+      max-width: 12rem !important;
+    }
+    .u-lg-max-width-13rem {
+      max-width: 13rem !important;
+    }
+    .u-lg-max-width-14rem {
+      max-width: 14rem !important;
+    }
+    .u-lg-max-width-15rem {
+      max-width: 15rem !important;
+    }
+    .u-lg-max-width-16rem {
+      max-width: 16rem !important;
+    }
+    .u-lg-max-width-17rem {
+      max-width: 17rem !important;
+    }
+    .u-lg-max-width-18rem {
+      max-width: 18rem !important;
+    }
+    .u-lg-max-width-19rem {
+      max-width: 19rem !important;
+    }
+    .u-lg-max-width-20rem {
+      max-width: 20rem !important;
+    }
+    .u-lg-max-width-21rem {
+      max-width: 21rem !important;
+    }
+    .u-lg-max-width-22rem {
+      max-width: 22rem !important;
+    }
+    .u-lg-max-width-23rem {
+      max-width: 23rem !important;
+    }
+    .u-lg-max-width-24rem {
+      max-width: 24rem !important;
+    }
+    .u-lg-max-width-25rem {
+      max-width: 25rem !important;
+    }
+    .u-lg-max-width-26rem {
+      max-width: 26rem !important;
+    }
+    .u-lg-max-width-27rem {
+      max-width: 27rem !important;
+    }
+    .u-lg-max-width-28rem {
+      max-width: 28rem !important;
+    }
+    .u-lg-max-width-29rem {
+      max-width: 29rem !important;
+    }
+    .u-lg-max-width-30rem {
+      max-width: 30rem !important;
+    }
+    .u-lg-max-width-31rem {
+      max-width: 31rem !important;
+    }
+    .u-lg-max-width-32rem {
+      max-width: 32rem !important;
+    }
+    .u-lg-max-width-33rem {
+      max-width: 33rem !important;
+    }
+    .u-lg-max-width-34rem {
+      max-width: 34rem !important;
+    }
+    .u-lg-max-width-35rem {
+      max-width: 35rem !important;
+    }
+    .u-lg-max-width-36rem {
+      max-width: 36rem !important;
+    }
+    .u-lg-max-width-37rem {
+      max-width: 37rem !important;
+    }
+    .u-lg-max-width-38rem {
+      max-width: 38rem !important;
+    }
+    .u-lg-max-width-39rem {
+      max-width: 39rem !important;
+    }
+    .u-lg-max-width-40rem {
+      max-width: 40rem !important;
+    }
+    .u-lg-max-width-41rem {
+      max-width: 41rem !important;
+    }
+    .u-lg-max-width-42rem {
+      max-width: 42rem !important;
+    }
+    .u-lg-max-width-43rem {
+      max-width: 43rem !important;
+    }
+    .u-lg-max-width-44rem {
+      max-width: 44rem !important;
+    }
+    .u-lg-max-width-45rem {
+      max-width: 45rem !important;
+    }
+    .u-lg-max-width-46rem {
+      max-width: 46rem !important;
+    }
+    .u-lg-max-width-47rem {
+      max-width: 47rem !important;
+    }
+    .u-lg-max-width-48rem {
+      max-width: 48rem !important;
+    }
+    .u-lg-max-width-49rem {
+      max-width: 49rem !important;
+    }
+    .u-lg-max-width-50rem {
+      max-width: 50rem !important;
+    }
+  .u-lg-max-width-halfrem {
+    max-width: 0.5rem !important;
+  }
+  .u-lg-width-halfrem {
+    width: 0.5rem !important;
+  }
+    .u-lg-width-0rem {
+      width: 0rem !important;
+    }
+    .u-lg-width-1rem {
+      width: 1rem !important;
+    }
+    .u-lg-width-2rem {
+      width: 2rem !important;
+    }
+    .u-lg-width-3rem {
+      width: 3rem !important;
+    }
+    .u-lg-width-4rem {
+      width: 4rem !important;
+    }
+    .u-lg-width-5rem {
+      width: 5rem !important;
+    }
+    .u-lg-width-6rem {
+      width: 6rem !important;
+    }
+    .u-lg-width-7rem {
+      width: 7rem !important;
+    }
+    .u-lg-width-8rem {
+      width: 8rem !important;
+    }
+    .u-lg-width-9rem {
+      width: 9rem !important;
+    }
+    .u-lg-width-10rem {
+      width: 10rem !important;
+    }
+    .u-lg-width-11rem {
+      width: 11rem !important;
+    }
+    .u-lg-width-12rem {
+      width: 12rem !important;
+    }
+    .u-lg-width-13rem {
+      width: 13rem !important;
+    }
+    .u-lg-width-14rem {
+      width: 14rem !important;
+    }
+    .u-lg-width-15rem {
+      width: 15rem !important;
+    }
+    .u-lg-width-16rem {
+      width: 16rem !important;
+    }
+    .u-lg-width-17rem {
+      width: 17rem !important;
+    }
+    .u-lg-width-18rem {
+      width: 18rem !important;
+    }
+    .u-lg-width-19rem {
+      width: 19rem !important;
+    }
+    .u-lg-width-20rem {
+      width: 20rem !important;
+    }
+    .u-lg-width-21rem {
+      width: 21rem !important;
+    }
+    .u-lg-width-22rem {
+      width: 22rem !important;
+    }
+    .u-lg-width-23rem {
+      width: 23rem !important;
+    }
+    .u-lg-width-24rem {
+      width: 24rem !important;
+    }
+    .u-lg-width-25rem {
+      width: 25rem !important;
+    }
+    .u-lg-width-26rem {
+      width: 26rem !important;
+    }
+    .u-lg-width-27rem {
+      width: 27rem !important;
+    }
+    .u-lg-width-28rem {
+      width: 28rem !important;
+    }
+    .u-lg-width-29rem {
+      width: 29rem !important;
+    }
+    .u-lg-width-30rem {
+      width: 30rem !important;
+    }
+    .u-lg-width-31rem {
+      width: 31rem !important;
+    }
+    .u-lg-width-32rem {
+      width: 32rem !important;
+    }
+    .u-lg-width-33rem {
+      width: 33rem !important;
+    }
+    .u-lg-width-34rem {
+      width: 34rem !important;
+    }
+    .u-lg-width-35rem {
+      width: 35rem !important;
+    }
+    .u-lg-width-36rem {
+      width: 36rem !important;
+    }
+    .u-lg-width-37rem {
+      width: 37rem !important;
+    }
+    .u-lg-width-38rem {
+      width: 38rem !important;
+    }
+    .u-lg-width-39rem {
+      width: 39rem !important;
+    }
+    .u-lg-width-40rem {
+      width: 40rem !important;
+    }
+    .u-lg-width-41rem {
+      width: 41rem !important;
+    }
+    .u-lg-width-42rem {
+      width: 42rem !important;
+    }
+    .u-lg-width-43rem {
+      width: 43rem !important;
+    }
+    .u-lg-width-44rem {
+      width: 44rem !important;
+    }
+    .u-lg-width-45rem {
+      width: 45rem !important;
+    }
+    .u-lg-width-46rem {
+      width: 46rem !important;
+    }
+    .u-lg-width-47rem {
+      width: 47rem !important;
+    }
+    .u-lg-width-48rem {
+      width: 48rem !important;
+    }
+    .u-lg-width-49rem {
+      width: 49rem !important;
+    }
+    .u-lg-width-50rem {
+      width: 50rem !important;
+    }
+  .u-lg-width-100 {
+    width: 100% !important;
+  }
+}
