@@ -1,0 +1,31 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+
+@media (--md-viewport) {
+  @each $position in static, relative, absolute, fixed {
+    .u-md-position-$(position) {
+      position: $(position) !important;
+    }
+  }
+  .u-md-top-right {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  .u-md-top-left {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .u-md-bottom-right {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  .u-md-bottom-left {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+}

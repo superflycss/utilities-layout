@@ -1,0 +1,35 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+
+@media (--md-viewport) {
+  @for $factor from 0 to 20 {
+    .u-sm-border-width-$(factor)px {
+      border-width: $(factor)px !important;
+    }
+  }
+  @for $factor from 0 to 20 {
+    .u-sm-border-radius-$(factor)px {
+      border-radius: $(factor)px !important;
+    }
+  }
+  @each $dimension in top, bottom, left, right {
+    @for $factor from 0 to 20 {
+      .u-sm-border-$(dimension)-width-$(factor)px {
+        border-$(dimension)-width: $(factor)px !important;
+      }
+    }
+  }
+  @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+    .u-sm-border-style-$(style) {
+      border-style: $(style) !important;
+    }
+  }
+  @each $dimension in top, bottom, left, right {
+    @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+      .u-sm-border-$(dimension)-style-$(style) {
+        border-$(dimension)-style: $(style) !important;
+      }
+    }
+  }
+}

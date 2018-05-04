@@ -1,0 +1,25 @@
+/** @define utilities */
+@import "@superflycss/variables-dimension";
+
+@media (--md-viewport) {
+  @each $dimension in left, right, top, bottom {
+    .u-md-margin-$(dimension)-halfrem {
+      margin-$(dimension): 0.5rem !important;
+    }
+  }
+  @each $dimension in left, right, top, bottom {
+    @for $factor from 0 to 20 {
+      .u-md-margin-$(dimension)-$(factor)rem {
+        margin-$(dimension): $(factor)rem !important;
+      }
+    }
+  }
+  .u-md-margin-halfrem {
+    margin: 0.5rem !important;
+  }
+  @for $factor from 0 to 20 {
+    .u-md-margin-$(factor)rem {
+      margin: $(factor)rem !important;
+    }
+  }
+}

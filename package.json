@@ -1,10 +1,16 @@
 {
   "name": "@superflycss/utilities-layout",
-  "version": "3.0.0",
+  "version": "2.0.27",
   "description": "Layout utilities",
-  "main": "index.css",
+  "main": "src/main/css/index.css",
   "scripts": {
-    "update": "ncu -a && npm i"
+    "update": "ncu -a && npm i",
+    "build": "gulp clean && gulp build:css",
+    "test": "gulp clean && gulp build:css && gulp test:css",
+    "clean": "gulp clean",
+    "watch:test": "onchange 'src/test/html/*.html' 'src/test/css/*.css' 'src/main/css/*.css' -- npm test",
+    "serve": "lite-server",
+    "deploy": "npm run test && gulp deploy:test:css && gulp deploy:test:html"
   },
   "repository": {
     "type": "git",
@@ -29,9 +35,16 @@
     "@superflycss/component-header": "^1.2.25",
     "@superflycss/component-test": "^2.0.32",
     "@superflycss/foundation": "^1.0.0",
+    "@superflycss/task-build": "^1.0.5",
+    "@superflycss/task-clean": "^1.0.2",
+    "@superflycss/task-deploy": "^2.0.4",
+    "@superflycss/task-lint": "^1.0.0",
+    "@superflycss/task-test": "^1.0.4",
     "@superflycss/utilities-colors": "^2.1.1",
     "@superflycss/utilities-fonts": "^3.0.2",
     "@superflycss/utilities-format": "^1.0.0",
+    "gulp": "^3.9.1",
+    "lite-server": "^2.3.0",
     "npm-check-updates": "^2.12.1",
     "onchange": "^3.2.1"
   },

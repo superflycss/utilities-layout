@@ -1,0 +1,31 @@
+/** @define utilities */
+
+@each $position in static, relative, absolute, fixed {
+  .u-position-$(position) {
+      position: $(position) !important;
+  }
+}
+
+.u-top-right {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.u-top-left {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.u-bottom-right {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.u-bottom-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
