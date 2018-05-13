@@ -34,7 +34,7 @@
     "@superflycss/task-deploy": "^2.0.4",
     "@superflycss/task-lint": "^1.0.0",
     "@superflycss/task-test": "^1.0.4",
-    "@superflycss/utilities-colors": "^2.1.1",
+    "@superflycss/utilities-colors": "^3.0.0",
     "@superflycss/utilities-fonts": "^3.0.2",
     "@superflycss/utilities-format": "^1.0.0",
     "npm-check-updates": "^2.12.1"
