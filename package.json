@@ -40,6 +40,6 @@
     "npm-check-updates": "^2.12.1"
   },
   "dependencies": {
-    "@superflycss/variables-dimension": "^1.0.1"
+    "@superflycss/variables-dimension": "^2.0.0"
   }
 }
