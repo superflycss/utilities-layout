@@ -2,6 +2,8 @@
 @import "../../main/css/index.css";
 @import "@superflycss/utilities-fonts";
 @import "@superflycss/utilities-colors";
+@import "@superflycss/utilities-colors/browser/";
+@import "@superflycss/utilities-colors/superfly/";
 @import "@superflycss/component-display";
 @import "@superflycss/component-body";
 @import "@superflycss/component-test";

@@ -26,20 +26,20 @@
   "devDependencies": {
     "@superflycss/component-body": "^1.0.1",
     "@superflycss/component-display": "^1.0.2",
-    "@superflycss/component-header": "^1.2.25",
+    "@superflycss/component-header": "^2.1.0",
     "@superflycss/component-test": "^2.0.32",
-    "@superflycss/foundation": "^1.0.0",
+    "@superflycss/foundation": "^2.0.3",
     "@superflycss/task-build": "^1.0.5",
     "@superflycss/task-clean": "^1.0.2",
-    "@superflycss/task-deploy": "^2.0.4",
+    "@superflycss/task-deploy": "^2.1.2",
     "@superflycss/task-lint": "^1.0.0",
-    "@superflycss/task-test": "^1.0.4",
-    "@superflycss/utilities-colors": "^2.1.1",
-    "@superflycss/utilities-fonts": "^3.0.2",
-    "@superflycss/utilities-format": "^1.0.0",
-    "npm-check-updates": "^2.12.1"
+    "@superflycss/task-test": "^1.0.7",
+    "@superflycss/utilities-colors": "^3.0.6",
+    "@superflycss/utilities-fonts": "^3.3.7",
+    "@superflycss/utilities-format": "^1.1.1",
+    "npm-check-updates": "^2.14.2"
   },
   "dependencies": {
-    "@superflycss/variables-dimension": "^1.0.1"
+    "@superflycss/variables-dimension": "^2.0.0"
   }
 }
