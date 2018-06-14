@@ -63,6 +63,7 @@ body {
   /** TEST CONTAINER */
   --TestContainer-background-color: var(--Palette--Test_container-background-color);
   --TestUtilities-text-color: #E8887D;
+  --TestOutput-text-color:white;
 
   /** TEST COUNTER */
   --TestCounter-text-color: #1C3C4B;
