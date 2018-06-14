@@ -3,34 +3,31 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test @superflycss/layout-utilities</title>
-  <link href="../css/index.css"
-        rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="Header--column">
     <h1 class="Display--fs400fw600 u-font-roboto">Layout Utility Tests</h1>
-    <a class="Header_link"
-       href="https://github.com/superflycss/utilities-layout/">Github</a>
+    <a class="Header_link" href="https://github.com/superflycss/utilities-layout/">Github</a>
   </header>
 
   <!-- FLEX UTILITIES -->
 
-  <div class="Test">
-
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Flex Layout</span>
-    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestHeader">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer ">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex </code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex">
   <div class="u-background-color-orange
@@ -44,48 +41,51 @@
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="TestThen"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-inline </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-inline </code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
-  <div class="u-flex-inline
-              u-background-color-orange
-              u-padding-1rem
-              u-border-right-style-solid
-              u-border-right-width-2px">
-              First container</div>
-  <div class="u-flex-inline
-              u-background-color-orange
-              u-padding-1rem">
-              Second container</div>
+<div class="u-flex-inline
+            u-background-color-orange
+            u-padding-1rem
+            u-border-right-style-solid
+            u-border-right-width-2px">
+            First container</div>
+<div class="u-flex-inline
+            u-background-color-orange
+            u-padding-1rem">
+            Second container</div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The flex <em class="Test_em">containers</em> are laid out inline.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The flex
+        <em class="Test_em">containers</em> are laid out inline.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-row </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-row </code> is applied.</div>
+      <pre class="TestMarkup">
 <code class="html">
   <div class="u-flex u-flex-row">
       <div class="u-background-color-orange
@@ -106,21 +106,22 @@
   </div>
 </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-row-reverse </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-row-reverse </code> is applied.</div>
+      <pre class="TestMarkup">
 <code class="html">
   <div class="u-flex u-flex-row-reverse">
       <div class="u-background-color-orange
@@ -141,21 +142,22 @@
    </div>
 </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a row reversed.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row reversed.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-column </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-column </code> is applied.</div>
+      <pre class="TestMarkup">
 <code class="html">
   <div class="u-flex u-flex-column">
       <div class="u-background-color-orange
@@ -176,21 +178,22 @@
    </div>
 </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a column.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a column.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-column-reverse </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-column-reverse </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex u-flex-column-reverse">
           <div class="u-background-color-orange
@@ -211,21 +214,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are laid out in a column reversed.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a column reversed.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-wrap </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-wrap </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex u-flex-wrap u-width-25rem">
           <div class="u-background-color-orange
@@ -246,21 +250,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items wrap onto the next line.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items wrap onto the next line.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-wrap-reverse </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-wrap-reverse </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex u-flex-wrap-reverse u-width-25rem">
           <div class="u-background-color-orange
@@ -281,21 +286,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items wrap onto the next line in reverse.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items wrap onto the next line in reverse.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-no-wrap </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-no-wrap </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex u-flex-no-wrap u-width-20rem">
           <div class="u-background-color-orange
@@ -316,21 +322,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items don't wrap onto the next line.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items don't wrap onto the next line.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-start </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-start </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-start
@@ -355,21 +362,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the left side of the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the left side of the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-end </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-end </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-end
@@ -394,20 +402,21 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the right side of the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the right side of the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-center </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-center </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-center
@@ -432,20 +441,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the center side of the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the center side of the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-center </code> and <code class="u-text-color-md-pink-400">u-flex-column</code> are applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-center </code> and
+        <code class="u-text-color-md-pink-400">u-flex-column</code> are applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-center
@@ -472,21 +483,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are aligned to the center of the cross axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the center of the cross axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-between </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-between </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-between
@@ -511,21 +523,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items have space between eachother on the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items have space between eachother on the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-justify-around </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-justify-around </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-justify-around
@@ -550,21 +563,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-stretch </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-items-stretch </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-align-items-stretch
@@ -590,21 +604,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-start </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-items-start </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-align-items-start
@@ -630,21 +645,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The cross-start margin edge of the items is placed on the cross-start line.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The cross-start margin edge of the items is placed on the cross-start line.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-end </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-items-end </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-align-items-end
@@ -670,21 +686,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The cross-end margin edge of the items is placed on the cross-end line.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The cross-end margin edge of the items is placed on the cross-end line.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-center </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-items-center </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-align-items-center
@@ -710,21 +727,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are centered in the cross-axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are centered in the cross-axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-items-baseline </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-items-baseline </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-align-items-baseline
@@ -757,21 +775,22 @@
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items have their baselines aligned on the cross axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items have their baselines aligned on the cross axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-start </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-start </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -827,21 +846,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the start of the container.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the start of the container.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-end </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-end </code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -899,21 +919,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the end of the container.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the end of the container.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -969,21 +990,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are packed to the center of the container.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the center of the container.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -1039,21 +1061,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item stretch to take up the remaining space.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item stretch to take up the remaining space.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -1109,21 +1132,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items evenly distributed with the first item at the start of the container and the last one at the end.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items evenly distributed with the first item at the start of the container and the last one at the end.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.</div>
+      <pre class="TestMarkup">
     <code class="html">
       <div class="u-flex
                   u-flex-wrap
@@ -1179,20 +1203,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
        </div>
     </code>
             </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items evenly distributed with equal space around each line.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items evenly distributed with equal space around each line.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex
             u-min-height-10rem
@@ -1211,20 +1236,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis start.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis start.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex
             u-min-height-10rem
@@ -1243,20 +1269,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis end.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis end.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex
             u-min-height-10rem
@@ -1275,21 +1302,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is aligned at cross axis center.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis center.</div>
+    </div>
+  </div>
 
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex
             u-min-height-10rem
@@ -1308,22 +1336,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item stretches from cross axis start to end.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item stretches from cross axis start to end.</div>
+    </div>
+  </div>
 
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.</div>
+      <pre class="TestMarkup">
 <code class="html">
   <div class="u-flex">
       <div class="u-background-color-orange
@@ -1345,21 +1374,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
    </div>
 </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is positioned at the start.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is positioned at the start.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.</div>
+      <pre class="TestMarkup">
 <code class="html">
   <div class="u-flex">
       <div class="u-flex-order-last
@@ -1381,21 +1411,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
    </div>
 </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is positioned last.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is positioned last.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex u-width-40rem">
                   <div class="u-flex-grow4
@@ -1419,21 +1450,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items grow according to the flex grow factor.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items grow according to the flex grow factor.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
-    <!-- u-flex-row -->
+  <hr class="TestSeparator"></hr>
+  <!-- u-flex-row -->
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are <em class="Test_em">larger</em> than their container.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are
+        <em class="Test_em">larger</em> than their container.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex u-width-40rem">
                   <div class="u-flex-shrink5
@@ -1460,20 +1493,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items shrink according to the flex shrink factor.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items shrink according to the flex shrink factor.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-width-40rem
@@ -1496,20 +1530,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is pushed to the right side.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is pushed to the right side.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-width-40rem
@@ -1532,20 +1567,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is pushed to the right side.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is pushed to the right side.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-flex-column
@@ -1570,20 +1606,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-flex-column
@@ -1608,20 +1645,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-width-40rem
@@ -1644,20 +1682,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is centered using remaining space along the main axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is centered using remaining space along the main axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-flex-column
@@ -1682,20 +1721,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is centered using remaining space along the main and cross axis.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is centered using remaining space along the main and cross axis.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-width-30rem
@@ -1735,21 +1775,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is using the width and height properties.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is using the width and height properties.</div>
+    </div>
+  </div>
 
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-auto</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-auto</code> is applied.</div>
+      <pre class="TestMarkup">
             <code class="html">
               <div class="u-flex
                           u-width-30rem
@@ -1791,20 +1832,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 </div>
             </code>
                     </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item is using the width and height properties and absorb additional main axis space proportionally.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item is using the width and height properties and absorb additional main axis space proportionally.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-flex-none</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-flex-none</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
             <div class="u-flex
                         u-width-30rem
@@ -1842,26 +1884,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               </div>
           </code>
                   </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The item sizes the item according to the width/height properties however the <em class="Test_em">flex item is no longer flexible</em>.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The item sizes the item according to the width/height properties however the
+        <em class="Test_em">flex item is no longer flexible</em>.</div>
+    </div>
+  </div>
 
-    <!-- End of Test div-->
+  <!-- End of Test div-->
   </div>
 
   <!-- BORDER UTILITIES -->
 
-  <div class="Test">
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Border</span>
-    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestHeader">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Border</span>
+  </div>
+  <div class="TestContainer u-margin-top-6rem">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for i in range(0, 21) -%}
@@ -1875,20 +1920,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct border width renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct border width renders.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for i in range(0, 21) -%}
@@ -1903,20 +1949,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct border radius renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct border radius renders.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-[side]-style-solid and u-border-[side]-width-[factor]px</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-[side]-style-solid and u-border-[side]-width-[factor]px</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
@@ -1933,20 +1980,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct border radius renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct border radius renders.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for i in range(0, 21) -%}
@@ -1960,20 +2008,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct border width renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct border width renders.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
@@ -1987,20 +2036,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The border style renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The border style renders.</div>
+    </div>
+  </div>
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
@@ -2017,27 +2067,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The border style renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The border style renders.</div>
+    </div>
+  </div>
 
 
-    <!-- End of Test div-->
+  <!-- End of Test div-->
   </div>
 
   <!-- PADDING UTILITIES -->
-  <div class="Test">
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Padding</span>
+  <div class="TestHeader">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Padding</span>
+  </div>
 
-    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-padding-halfrem</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer u-margin-top-6rem">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-padding-halfrem</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   <div class="u-background-color-orange
@@ -2057,21 +2109,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
   </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct padding dimension renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct padding dimension renders.</div>
+    </div>
+  </div>
 
 
-    <hr class="Test_separator"></hr>
+  <hr class="TestSeparator"></hr>
 
-    <div class="Test_container u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
@@ -2087,27 +2140,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct padding dimension renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct padding dimension renders.</div>
+    </div>
+  </div>
 
-    <!-- End of Test div-->
+  <!-- End of Test div-->
   </div>
 
   <!-- MARGIN UTILITIES -->
 
-  <div class="Test">
-    <span class="Test_counter"></span>
-    <span class="Test_utilities">Margin</span>
+  <div class="TestHeader">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Margin</span>
+  </div>
 
-    <div class="Test_container u-margin-top-6rem u-width-100 u-md-flex-justify-start u-md-flex-row u-md-flex-align-items-start">
-      <div class="Test_input">
-        <div class="Test_when"></div>
-        <div class="Test_description"><code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.</div>
-        <pre class="Test_markup">
+  <div class="TestContainer u-margin-top-6rem">
+    <div class="TestInput">
+      <div class="TestWhen"></div>
+      <div class="TestDescription">
+        <code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.</div>
+      <pre class="TestMarkup">
           <code class="html">
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
@@ -2129,15 +2184,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
           </code>
         </pre>
-      </div>
-      <div class="Test_output">
-        <div class="Test_then"></div>
-        <div class="Test_description u-md-margin-bottom-2x">The correct margin dimension renders.</div>
-      </div>
     </div>
+    <div class="TestOutput">
+      <div class="Test_then"></div>
+      <div class="TestDescription u-md-margin-bottom-2x">The correct margin dimension renders.</div>
+    </div>
+  </div>
 
 
-    <!-- End of Test div-->
+  <!-- End of Test div-->
   </div>
 
 </body>

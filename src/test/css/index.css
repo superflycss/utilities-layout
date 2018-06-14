@@ -22,8 +22,8 @@ body {
   --Palette--Header_link_onHover-text-color: #859aa5;;
   --Palette--Header_link_onHover-border-color: #00BCD4;
 
-  --Palette--Test-background-color: #CDDC38;
-  --Palette--Test_container-background-color: #9E9E9E;
+  --Palette--TestHeader-background-color: #CDDC38;
+  --Palette--TestContainer-background-color: #9E9E9E;
 
   --Palette--Display-text-color: #EE5B6C;
 
@@ -56,23 +56,23 @@ body {
   --Header_link_onHover-text-color: var(--Palette--Header_link_onHover-text-color);
   --Header_link_onHover-border-color: var(--Palette--Header_link_onHover-border-color);
 
-  /** TEST */
-  --Test-background-color: rgb(99, 99, 99);
-  --Test-text-color: white;
+  /** TEST HEADER */
+  --TestHeader-background-color: rgb(99, 99, 99);
+  --TestHeader-text-color: white;
 
   /** TEST CONTAINER */
-  --Test_container-background-color: var(--Palette--Test_container-background-color);
-  --Test_utilities-text-color: #E8887D;
+  --TestContainer-background-color: var(--Palette--Test_container-background-color);
+  --TestUtilities-text-color: #E8887D;
 
   /** TEST COUNTER */
-  --Test_counter-text-color: #1C3C4B;
+  --TestCounter-text-color: #1C3C4B;
 
   /** TEST SEPARATOR */
-  --Test_separator-border-color: var(--Palette-white);
-  --Test_separator-background-color: var(--Palette-orange);
+  --TestSeparator-border-color: var(--Palette-white);
+  --TestSeparator-background-color: var(--Palette-orange);
 
   /** TEST EM */
-  --Test_em-text-color: #1C3C4C;
+  --TestEm-text-color: #1C3C4C;
 }
 
 
