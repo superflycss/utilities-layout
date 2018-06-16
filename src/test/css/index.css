@@ -2,6 +2,8 @@
 @import "../../main/css/index.css";
 @import "@superflycss/utilities-fonts";
 @import "@superflycss/utilities-colors";
+@import "@superflycss/variables-colors/superfly/";
+@import "@superflycss/utilities-colors/material/";
 @import "@superflycss/utilities-colors/browser/";
 @import "@superflycss/utilities-colors/superfly/";
 @import "@superflycss/component-display";
@@ -22,8 +24,8 @@ body {
   --Palette--Header_link_onHover-text-color: #859aa5;;
   --Palette--Header_link_onHover-border-color: #00BCD4;
 
-  --Palette--TestHeader-background-color: #CDDC38;
-  --Palette--TestContainer-background-color: #9E9E9E;
+  --Palette--TestHeader-background-color:  rgb(99, 99, 99);
+  --Palette--TestContainer-text-color: var(--color-sf-charcoal-blue);
 
   --Palette--Display-text-color: #EE5B6C;
 
@@ -40,7 +42,6 @@ body {
 :root {
   /** HEADER */
   --Header-background-color: var(--Palette--Header-background-color);
-  --Header-padding-bottom: 3rem;
 
    /** HEADER LINK */
   --Header_link-padding-left: 5rem;
@@ -57,13 +58,13 @@ body {
   --Header_link_onHover-border-color: var(--Palette--Header_link_onHover-border-color);
 
   /** TEST HEADER */
-  --TestHeader-background-color: rgb(99, 99, 99);
+  --TestHeader-background-color:var(--Palette--TestHeader-background-color);
   --TestHeader-text-color: white;
 
   /** TEST CONTAINER */
-  --TestContainer-background-color: var(--Palette--Test_container-background-color);
+  --TestContainer-text-color: var(--Palette--TestContainer-text-color);
   --TestUtilities-text-color: #E8887D;
-  --TestOutput-text-color:white;
+  --TestRender-text-color:white;
 
   /** TEST COUNTER */
   --TestCounter-text-color: #1C3C4B;
@@ -74,8 +75,16 @@ body {
 
   /** TEST EM */
   --TestEm-text-color: #1C3C4C;
+
+  /** TEST BOX */
+  --TestBox-border-color: #1C3C4C;
+  --TestBox-background-color: #1AC0BA;
 }
 
+ /** TEST BOX */
+ :root {
+  --TestCanvas-background-color: var(--color-md-blue-grey-100);
+}
 
 /** Customize the Display component */
 :root {

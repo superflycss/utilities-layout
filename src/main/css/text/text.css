@@ -7,6 +7,12 @@
 .u-word-break {
   word-wrap: break-word !important;
 }
+/**
+ * Keep the word from breaking
+ */
+.u-word-whole {
+  word-wrap: keep-all !important;
+}
 
 /**
  * Horizontal text alignment
