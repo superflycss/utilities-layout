@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test @superflycss/layout-utilities</title>
-  <link href="../css/index.css" rel="stylesheet">
-</head>
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.utility( 'layout' ) }}
 
 <body>
 
-  <header class="Header--column">
-    <h1 class="Display--fs400fw600 u-font-roboto">Layout Utility Tests</h1>
-    <a class="Header_link" href="https://github.com/superflycss/utilities-layout/">Github</a>
-  </header>
+{{ TestHeader.utility( 'layout' ) }}
 
-  <!-- FLEX UTILITIES -->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer ">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex </code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a row.' ) %}
 <div class="u-flex">
    <div class="TestBoxLeft">
                First item in row</div>
    <div class="TestBox">
                Second item in row</div>
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row.</div>
-    </div>
-  </div>
+{% endcall %}
 
-    <!-- END TEST 1 FLEX UTILITIES -->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-inline </code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a row.' ) %}
+<div class="u-flex">
+   <div class="TestBoxLeft">
+               First item in row</div>
+   <div class="TestBox">
+               Second item in row</div>
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-inline </code> is applied.
+{% endset %}
+{% set then %}
+The flex containers are laid out in a row.  Note that if the 
+container adjacent sides <code class="u-text-color-md-pink-400">
+{{ "</div><div></code>" | escape }}</code>
+do not appear on the same line in the as shown, space is introduced 
+between the containers.  See the second rendered row for an illustration.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, then ) %}
 <div class="TestBoxLeft
             u-flex-inline
             u-background-color-orange">
@@ -65,36 +60,26 @@
             u-flex-inline
             u-background-color-orange">
             Second container</div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The flex
-        <em class="TestEm">containers</em> are laid out inline.
-        <br>
-        <br>
-        <em class="TestEm">Note</em> that in order to keep document white space from
-        rendering between the boxes, the <code>TestBox</code>elements must be 
-        marked up with no space between them.
+<br/>
+<br/>
+<div class="TestBoxLeft
+            u-flex-inline
+            u-background-color-orange">
+            First container
+</div>
+<div class="TestBox
+            u-flex-inline
+            u-background-color-orange">
+            Second container</div>
 
-      </div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END TEST 2 FLEX UTILITIES -->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-row </code> is applied.</div>
-      <pre class="TestMarkup">
-<code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-row </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a row.' ) %}
 <div class="TestCanvas
             u-flex 
             u-flex-row">
@@ -105,28 +90,14 @@
     <div class="TestBox">
     Third item in row</div>
 </div>
-</code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 3 FLEX UTILITIES -->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-row-reverse </code> is applied.</div>
-      <pre class="TestMarkup">
-<code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-row-reverse </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a row reversed.' ) %}
 <div class="TestCanvas
             u-flex 
             u-flex-row-reverse">
@@ -140,28 +111,14 @@
               u-background-color-sf-charcoal-blue">
     Third item in row</div>
 </div>
-</code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a row reversed.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END TEST 3 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-column </code> is applied.</div>
-      <pre class="TestMarkup">
-<code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-column </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a column.' ) %}
 <div class="TestCanvas 
             u-min-height-20rem
             u-flex 
@@ -173,29 +130,15 @@
       <div class="TestBox
                   u-background-color-sf-charcoal-blue">
         Third item in row</div>
-  </div>
-</code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a column.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 4 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-column-reverse </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-column-reverse </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are laid out in a column reversed.' ) %}
 <div class="TestCanvas 
             u-min-height-20rem
             u-flex 
@@ -210,28 +153,14 @@
                   u-background-color-sf-charcoal-blue">
       Third item in row</div>
 </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are laid out in a column reversed.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 5 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-wrap </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-wrap </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items wrap onto the next line.' ) %}
 <div class="TestCanvas
             u-flex 
             u-flex-wrap 
@@ -245,29 +174,15 @@
                 u-background-color-orange
                 u-border-style-none">
       Third item in row</div>
-  </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items wrap onto the next line.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 6 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-wrap-reverse </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-wrap-reverse </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items wrap onto the next line in reverse.' ) %}
 <div class="TestCanvas
             u-flex 
             u-flex-wrap-reverse 
@@ -281,136 +196,82 @@
     <div class="TestBoxTop
                 u-background-color-sf-charcoal-blue">
       Third item in row</div>
-  </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items wrap onto the next line in reverse.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 7 FLEX UTILITIES -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-no-wrap </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex 
-                  u-flex-no-wrap 
-                  u-width-20rem
-                  u-height-20rem">
-          <div class="TestBoxLeft">
-            First item in row</div>
-          <div class="TestBoxLeft
-                      u-background-color-orange">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items don't wrap onto the next line.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 8 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-no-wrap </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items do not wrap onto the next line.' ) %}
+<div class="TestCanvas
+          u-flex 
+          u-flex-no-wrap 
+          u-width-20rem
+          u-height-20rem">
+  <div class="TestBoxLeft">
+    First item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-start </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-justify-start
-                  u-min-width-40rem
-                  u-min-height-10rem">
-          <div class="TestBoxLeft
-                      u-background-color-orange">
-            First item in row</div>
-          <div class="TestBoxLeft">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the left side of the main axis.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 9 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-start </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are aligned to the left side of the main axis.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-start
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-end </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-justify-end
-                  u-min-width-40rem">
-          <div class="TestBoxLeft">
-            First item in row</div>
-          <div class="TestBoxLeft
-                      u-background-color-orange">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the right side of the main axis.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 10 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-end </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are aligned to the right side of the main axis.' ) %}
+<div class="TestCanvas
+          u-flex
+          u-flex-justify-end
+          u-min-width-40rem
+          u-min-height-10rem">
+  <div class="TestBoxLeft">
+    First item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-center </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-center </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are centered on the main axis.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-justify-center
@@ -425,108 +286,47 @@
     <div class="TestBox
                 u-background-color-sf-charcoal-blue">
       Third item in row</div>
-  </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are centered on the main axis.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 11 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-center </code> and
-        <code class="u-text-color-md-pink-400">u-flex-column</code> are applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-justify-center
-                  u-flex-column
-                  u-min-width-40rem
-                  u-min-height-20rem
-                  u-border-style-solid
-                  u-border-width-2px">
-          <div class="TestBoxTop
-                      u-background-color-orange">
-            First item in row</div>
-          <div class="TestBoxTop
-                      u-background-color-orange">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are aligned to the center of the cross axis.</div>
-    </div>
-  </div>
-
-   <!-- END TEST 12 FLEX UTILITIES -->
-
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-between </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-justify-between
-                  u-min-width-40rem">
-          <div class="TestBox">
-            First item in row</div>
-          <div class="TestBox">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items have space between eachother on the main axis.</div>
-    </div>
-  </div>
-
-   <!-- END TEST 13 FLEX UTILITIES -->
-
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-justify-around </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-center </code> and
+<code class="u-text-color-md-pink-400">u-flex-column</code> are applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are aligned to the center of the cross axis.' ) %}
 <div class="TestCanvas
             u-flex
-            u-flex-justify-around
-            u-min-width-40rem">
+            u-flex-justify-center
+            u-flex-column
+            u-min-width-40rem
+            u-min-height-20rem
+            u-border-style-solid
+            u-border-width-2px">
+    <div class="TestBoxTop
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxTop
+                u-background-color-orange">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-between </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items have space between eachother on the main axis.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-between
+            u-min-width-40rem
+            u-min-height-10rem">
     <div class="TestBox">
       First item in row</div>
     <div class="TestBox">
@@ -534,220 +334,159 @@
     <div class="TestBox
                 u-background-color-sf-charcoal-blue">
       Third item in row</div>
-  </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items have space around eachother on the main axis.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 14 FLEX UTILITIES -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-items-stretch </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-align-items-stretch
-                  u-min-width-40rem
-                  u-min-height-10rem">
-          <div class="u-background-color-orange
-                      u-padding-1rem
-                      u-border-right-style-solid
-                      u-border-right-width-2px">
-            First item in row</div>
-          <div class="u-background-color-orange
-                      u-padding-1rem
-                      u-border-right-style-solid
-                      u-border-right-width-2px">
-            Second item in row</div>
-          <div class="u-padding-1rem
-                      u-border-right-style-solid
-                      u-border-right-width-2px
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items stretch out along the cross axis to fill the container.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 15 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-justify-around </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items have space around eachother on the main axis.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-around
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBox">
+      First item in row</div>
+    <div class="TestBox">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-items-start </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas 
-                  u-flex
-                  u-flex-align-items-start
-                  u-min-width-40rem
-                  u-min-height-10rem">
-          <div class="TestBoxLeft">
-            First item in row</div>
-          <div class="TestBoxLeft">
-            Second item in row</div>
-          <div class="TestBox
-                      u-background-color-sf-charcoal-blue">
-            Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The cross-start margin edge of the items is placed on the cross-start line.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 16 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-items-stretch </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items stretch out along the cross axis to fill the container.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-stretch
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px">
+      First item in row</div>
+    <div class="u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px">
+      Second item in row</div>
+    <div class="u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-items-end </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-align-items-end
-                  u-min-width-40rem
-                  u-min-height-10rem">
-          <div class="TestBoxLeft">
-            First item in row</div>
-          <div class="TestBoxLeft">
-            Second item in row</div>
-            <div class="TestBox
-                        u-background-color-sf-charcoal-blue">
-              Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The cross-end margin edge of the items is placed on the cross-end line.</div>
-    </div>
-  </div>
+<!-- START TEST -->
 
-   <!-- END TEST 17 FLEX UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-items-start </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The cross-start margin edge of the items is placed on the cross-start line.' ) %}
+<div class="TestCanvas 
+            u-flex
+            u-flex-align-items-start
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+{% endcall %}
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-items-center </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-align-items-center
-                  u-min-width-40rem
-                  u-min-height-10rem">
-          <div class="TestBoxLeft">
-            First item in row</div>
-          <div class="TestBoxLeft">
-            Second item in row</div>
-            <div class="TestBox
-                        u-background-color-sf-charcoal-blue">
-              Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are centered in the cross-axis.</div>
-    </div>
-  </div>
 
-   <!-- END TEST 18 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-items-baseline </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-align-items-baseline
-                  u-min-width-40rem
-                  u-min-height-20rem">
-          <div class="TestBox
-                      u-padding-top-5rem
-                      u-height-8rem
-                      u-background-color-sf-charcoal-blue">
-            First item in row</div>
-          <div class="TestBox
-                      u-padding-top-3rem
-                      u-height-10rem
-                      u-background-color-sf-charcoal-blue">
-            Second item in row</div>
-            <div class="TestBox
-                        u-padding-top-6rem
-                        u-height-8rem
-                        u-background-color-sf-charcoal-blue">
-              Third item in row</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items have their baselines aligned on the cross axis.</div>
-    </div>
-  </div>
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-items-end </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The cross-end margin edge of the items is placed on the cross-end line.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-end
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+      <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 19 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-start </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-items-center </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are centered in the cross-axis.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-center
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+      <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-items-baseline </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items have their baselines aligned on the cross axis.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-baseline
+            u-min-width-40rem
+            u-min-height-20rem">
+    <div class="TestBox
+                u-padding-top-5rem
+                u-height-8rem
+                u-background-color-sf-charcoal-blue">
+      First item in row</div>
+    <div class="TestBox
+                u-padding-top-3rem
+                u-height-10rem
+                u-background-color-sf-charcoal-blue">
+      Second item in row</div>
+      <div class="TestBox
+                  u-padding-top-6rem
+                  u-height-8rem
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-start </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are packed to the start of the container.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-wrap
@@ -765,28 +504,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
       u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the start of the container.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 20 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-end </code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-end </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are packed to the end of the container.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-wrap
@@ -806,67 +531,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                   u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the end of the container.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 21 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
-      <div class="TestCanvas
-                  u-flex
-                  u-flex-wrap
-                  u-flex-align-content-center
-                  u-min-height-25rem">
-          <div class="TestBoxTop
-                      u-background-color-orange">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          <div class="TestBoxTop">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-          <div class="TestBoxTop
-                      u-background-color-sf-charcoal-blue">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are packed to the center of the container.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-center
+            u-min-height-25rem">
+    <div class="TestBoxTop
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 <div class="TestBox
             u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are packed to the center of the container.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 22 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item stretch to take up the remaining space.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-wrap
@@ -881,28 +578,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item stretch to take up the remaining space.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 23 FLEX UTILITIES -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items evenly distributed with the first item at the start of the container and the last one at the end.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-wrap
@@ -922,29 +606,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             <div class="TestBox
                         u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items evenly distributed with the first item at the start of the container and the last one at the end.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 24 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.</div>
-      <pre class="TestMarkup">
-    <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items evenly distributed with equal space around each line.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-wrap
@@ -958,29 +628,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="TestBox
                 u-background-color-sf-charcoal-blue">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-       </div>
-    </code>
-            </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items evenly distributed with equal space around each line.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 25 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is aligned at cross axis start.' ) %}
 <div class="TestCanvas 
             u-flex
             u-min-height-10rem">
@@ -993,28 +649,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-background-color-sf-charcoal-blue">
               u-flex-align-self-end</div>
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis start.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 26 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is aligned at cross axis end.' ) %}
 <div class="TestCanvas
             u-flex
             u-min-height-20rem">
@@ -1027,28 +669,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-background-color-sf-charcoal-blue">
               u-flex-align-self-start</div>
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis end.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 27 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is aligned at cross axis center.' ) %}
 <div class="TestCanvas
             u-flex
             u-min-height-20rem">
@@ -1061,28 +689,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-background-color-sf-charcoal-blue">
               u-flex-align-self-start</div>
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is aligned at cross axis center.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 28 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item stretches from cross axis start to end.' ) %}
 <div class="TestCanvas 
             u-flex
             u-min-height-20rem">
@@ -1095,64 +709,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-background-color-sf-charcoal-blue">
               u-flex-align-self-start</div>
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item stretches from cross axis start to end.</div>
-    </div>
-  </div>
+{% endcall %}
 
 
-   <!-- END TEST 29 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.</div>
-      <pre class="TestMarkup">
-<code class="html">
-  <div class="TestCanvas
-              u-flex
-              u-min-height-10rem">
-      <div class="TestBoxLeft
-                  u-background-color-orange">
-        First item</div>
-      <div class="TestBox">
-        Second item</div>
-      <div class="TestBoxLeft
-                  u-flex-order-first
-                  u-background-color-sf-charcoal-blue">
-        Third item in content order</div>
-   </div>
-</code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is positioned at the start.</div>
-    </div>
-  </div>
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is positioned at the start.' ) %}
+<div class="TestCanvas
+            u-flex
+            u-min-height-10rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      First item</div>
+    <div class="TestBox">
+      Second item</div>
+    <div class="TestBoxLeft
+                u-flex-order-first
+                u-background-color-sf-charcoal-blue">
+      Third item in content order</div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 30 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.</div>
-      <pre class="TestMarkup">
-<code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is positioned last.' ) %}
 <div class="TestCanvas
           u-flex
           u-min-height-10rem">
@@ -1166,28 +752,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-background-color-sf-charcoal-blue">
     Third item in row</div>
 </div>
-</code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is positioned last.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 31 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items grow according to the flex grow factor.' ) %}
 <div class="TestCanvas
             u-flex 
             u-width-40rem
@@ -1203,30 +775,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 u-flex-grow5
                 u-background-color-sf-charcoal-blue">
       u-flex-grow5</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items grow according to the flex grow factor.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 32 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are
-        <em class="Test_em">larger</em> than their container.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are
+<em class="Test_em">larger</em> than their container.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items shrink according to the flex shrink factor.' ) %}
 <div class="TestCanvas
             u-flex 
             u-width-40rem">
@@ -1245,29 +803,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 u-width-100
                 u-background-color-orange">
       u-flex-shrink5</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items shrink according to the flex shrink factor.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 33 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.
+<em class="Test_em">larger</em> than their container.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is pushed to the right side.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-40rem">
@@ -1280,29 +825,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="TestBox
                 u-flex-expand-left">
       Push it good!</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is pushed to the right side.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 34 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.
+<em class="Test_em">larger</em> than their container.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is pushed to the right side.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-40rem">
@@ -1315,29 +847,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="TestBox
                 u-padding-1rem">
       Push it good!</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is pushed to the right side.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 35 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.
+<em class="Test_em">larger</em> than their container.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are pushed away from the item to the bottom.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-column
@@ -1353,28 +872,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 u-background-color-orange">
       Push it good!</div>
   </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
-    </div>
-  </div>
+{% endcall %}
 
-   <!-- END TEST 36 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The items are pushed away from the item to the bottom.The items are pushed away from the item to the bottom.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-column
@@ -1390,29 +895,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                 u-padding-1rem
                 u-background-color-orange">
       Push it good!</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The items are pushed away from the item to the bottom.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 37 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is centered using remaining space along the main axis.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-40rem">
@@ -1424,29 +915,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
       It</div>
     <div class="TestBox">
       Push it good!</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is centered using remaining space along the main axis.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 38 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is centered using remaining space along the main and cross axis.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-column
@@ -1461,29 +938,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="TestBox
                 u-background-color-orange">
       Push it good!</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is centered using remaining space along the main and cross axis.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 39 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is using the width and height properties.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-30rem
@@ -1510,29 +973,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                   u-background-color-sf-charcoal-blue">
         CUATRO</div>
   </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is using the width and height properties.</div>
-    </div>
-  </div>
+  {% endcall %}
 
+<!-- START TEST -->
 
-   <!-- END TEST 40 FLEX UTILITIES -->
-
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-auto</code> is applied.</div>
-      <pre class="TestMarkup">
-            <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-auto</code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item is using the width and height properties and absorb additional main axis space proportionally.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-30rem
@@ -1560,29 +1008,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                   u-width-10rem
                   u-background-color-sf-charcoal-blue">
         CUATRO</div>
-  </div>
-            </code>
-                    </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item is using the width and height properties and absorb additional main axis space proportionally.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-   <!-- END TEST 41 FLEX UTILITIES -->
+<!-- START TEST -->
 
-   <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Flex Layout</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-flex-none</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-none</code> is applied.
+{% endset %}
+{% set then %}
+The item sizes the item according to the width/height properties however the
+<em class="Test_em">flex item is no longer flexible</em>.
+{% endset %}
+
+{% call Test.utility( 'Flex Layout', when, then ) %}
 <div class="TestCanvas
             u-flex
             u-width-30rem
@@ -1611,98 +1050,110 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                   u-width-30rem
                   u-background-color-sf-charcoal-blue">
         CUATRO</div>
-  </div>
-          </code>
-                  </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The item sizes the item according to the width/height properties however the
-        <em class="Test_em">flex item is no longer flexible</em>.</div>
-    </div>
-  </div>
+</div>
+{% endcall %}
 
-  <!-- End of Test div-->
-  </div>
-
-  <!-- BORDER UTILITIES -->
-
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer u-margin-top-6rem">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
-<div class="u-flex u-flex-column u-width-40rem">
+<!-- BORDER UTILITIES -->
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border width renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
   {% for i in range(0, 21) -%}
-  <div class="u-background-color-orange
-              u-margin-bottom-1rem
-              u-padding-1rem
-              u-border-style-solid
+  <div class="TestBox
               u-border-width-{{i}}px">
-              u-border-width-{{i}}px</div>
+              u-border-width-{{i}}px
+  </div>
+  <br>
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct border width renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END OF FIRST BORDER UTILITIES TEST-->
-
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
-<div class="u-flex u-flex-column u-width-40rem">
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-bw[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border width renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
   {% for i in range(0, 21) -%}
-  <div class="u-background-color-sf-charcoal-blue
-              u-margin-bottom-1rem
-              u-padding-1rem
-              u-border-style-solid
+  <div class="TestBox
+              u-bw{{i}}px">
+              u-bw{{i}}px
+  </div>
+  <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border radius renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue
               u-border-width-4px
               u-border-radius-{{i}}px">
-              u-border-radius-{{i}}px</div>
+              u-border-radius-{{i}}px
+    </div>
+    <br>
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct border radius renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END OF SECOND BORDER UTILITIES TEST-->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-[side]-style-solid and u-border-[side]-width-[factor]px</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-br[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border radius renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue
+              u-border-width-4px
+              u-border-radius-{{i}}px">
+              u-br{{i}}px
+    </div>
+    <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-[side]-style-solid</code>
+and <code class="u-text-color-md-pink-400">u-border-[side]-width-[factor]px</code> 
+is applied.
+{% endset %}
+{% set then %}
+The parameterized border renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for i in range(0, 21) -%}
@@ -1710,66 +1161,53 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-margin-bottom-1rem
               u-padding-1rem
               u-border-{{side}}-style-solid
+              u-border-color-md-orange-900
               u-border-{{side}}-width-{{i}}px">
-              u-border-{{side}}-style-solid
-              &nbsp u-border-{{side}}-width-{{i}}px</div>
+              u-border-{{side}}-style-solid </br>
+              u-border-{{side}}-width-{{i}}px</div>
   {%- endfor %}
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct border radius renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END OF THIRD BORDER UTILITIES TEST-->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-bs[side]-solid</code>
+and <code class="u-text-color-md-pink-400">u-bw[side][factor]px</code> 
+is applied.
+{% endset %}
+{% set then %}
+The parameterized border renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
-  {% for i in range(0, 21) -%}
-  <div class="u-background-color-orange
+{% for side in ['t', 'b', 'l', 'r'] %}
+{% for i in range(0, 21) -%}
+<div class="u-background-color-sf-charcoal-blue
               u-margin-bottom-1rem
               u-padding-1rem
-              u-border-style-solid
-              u-border-width-{{i}}px">
-              u-border-width-{{i}}px</div>
-  {%- endfor %}
+              u-bs{{side}}-solid
+              u-border-color-md-orange-900
+              u-bw{{side}}{{i}}px">
+              u-bs{{side}}-solid</br>
+              u-bw{{side}}{{i}}px
+</div>          
+{%- endfor %}
+{%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct border width renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END OF FOURTH BORDER UTILITIES TEST-->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-style-[style]</code>
+is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
   <div class="u-background-color-sf-charcoal-blue
@@ -1780,28 +1218,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-border-style-{{style}}</div>
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The border style renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- END OF FIFTH BORDER UTILITIES TEST-->
+<!-- START TEST -->
 
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Border</span>
-  </div>
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-border-style-[style]</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-[side]-style-[style]</code> 
+and <code class="u-text-color-md-pink-400">u-border-[side]-width-5px</code>  is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
@@ -1811,36 +1239,47 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
               u-border-{{side}}-style-{{style}}
               u-border-{{side}}-width-5px">
               u-border-{{side}}-style-{{style}}
-              &nbsp u-border-{{side}}-width-5px</div>
+              u-border-{{side}}-width-5px</div>
   {%- endfor %}
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The border style renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
+<!-- START TEST -->
 
-  <!-- End of Test div-->
-  </div>
+{% set when %}
+<code class="u-text-color-md-pink-400">u-bs[side]-[style]</code> 
+and <code class="u-text-color-md-pink-400">u-bw[side]5px</code>  is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['t', 'b', 'l', 'r'] %}
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-bs{{side}}-{{style}}
+              u-bw{{side}}5px">
+              u-bs{{side}}-{{style}}
+              </br>
+              u-bw{{side}}5px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+{% endcall %}
 
-  <!-- PADDING UTILITIES -->
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Padding</span>
-  </div>
-
-  <div class="TestContainer u-margin-top-6rem">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-padding-halfrem</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+<!-- PADDING UTILITIES -->
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-padding-halfrem</code> is applied.
+{% endset %}
+{% set then %}
+The padding style renders.
+{% endset %}
+{% call Test.utility( 'Padding', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   <div class="u-background-color-orange
               u-margin-bottom-1rem
@@ -1857,25 +1296,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                           u-padding-{{side}}-halfrem</div>
               {%- endfor %}
   </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct padding dimension renders.</div>
-    </div>
-  </div>
+  {% endcall %}
 
-
-  <hr class="TestSeparator"></hr>
-
-  <div class="TestContainer">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.
+{% endset %}
+{% set then %}
+The correct padding dimension renders.
+{% endset %}
+{% call Test.utility( 'Padding', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for i in range(0, 21) -%}
@@ -1888,32 +1318,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
   {%- endfor %}
   {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct padding dimension renders.</div>
-    </div>
-  </div>
+{% endcall %}
 
-  <!-- End of Test div-->
-  </div>
-
-  <!-- MARGIN UTILITIES -->
-
-  <div class="TestHeader">
-    <span class="TestCounter"></span>
-    <span class="TestUtilities">Margin</span>
-  </div>
-
-  <div class="TestContainer u-margin-top-6rem">
-    <div class="TestInput">
-      <div class="TestWhen"></div>
-      <div class="TestDescription">
-        <code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.</div>
-      <pre class="TestMarkup">
-          <code class="html">
+<!-- START TEST -->
+<!-- MARGIN UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.
+{% endset %}
+{% set then %}
+The correct padding dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for i in range(0, 21) -%}
@@ -1932,19 +1347,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 {%- endfor %}
 {%- endfor %}
 </div>
-          </code>
-        </pre>
-    </div>
-    <div class="TestOutput">
-      <div class="TestThen"></div>
-      <div class="TestDescription u-md-margin-bottom-2x">The correct margin dimension renders.</div>
-    </div>
-  </div>
-
-
-  <!-- End of Test div-->
-  </div>
+{% endcall %}
 
 </body>
-
 </html>

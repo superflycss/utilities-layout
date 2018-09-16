@@ -7,7 +7,19 @@
 }
 
 @for $factor from 0 to 20 {
+  .u-bw$(factor)px {
+    border-width: $(factor)px !important;
+  }
+}
+
+@for $factor from 0 to 20 {
   .u-border-radius-$(factor)px {
+    border-radius: $(factor)px !important;
+  }
+}
+
+@for $factor from 0 to 20 {
+  .u-br$(factor)px {
     border-radius: $(factor)px !important;
   }
 }
@@ -20,8 +32,39 @@
   }
 }
 
+@for $factor from 0 to 20 {
+  .u-bwt$(factor)px {
+    border-top-width: $(factor)px !important;
+  }
+}
+
+@for $factor from 0 to 20 {
+  .u-bwb$(factor)px {
+    border-bottom-width: $(factor)px !important;
+  }
+}
+
+@for $factor from 0 to 20 {
+  .u-bwl$(factor)px {
+    border-left-width: $(factor)px !important;
+  }
+}
+
+@for $factor from 0 to 20 {
+  .u-bwr$(factor)px {
+    border-right-width: $(factor)px !important;
+  }
+}
+
+
 @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
   .u-border-style-$(style) {
+    border-style: $(style) !important;
+  }
+}
+
+@each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+  .u-bs-$(style) {
     border-style: $(style) !important;
   }
 }
@@ -31,5 +74,29 @@
     .u-border-$(dimension)-style-$(style) {
       border-$(dimension)-style: $(style) !important;
     }
+  }
+}
+
+@each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+  .u-bst-$(style) {
+    border-top-style: $(style) !important;
+  }
+}
+
+@each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+  .u-bsb-$(style) {
+    border-bottom-style: $(style) !important;
+  }
+}
+
+@each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+  .u-bsl-$(style) {
+    border-left-style: $(style) !important;
+  }
+}
+
+@each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+  .u-bsr-$(style) {
+    border-right-style: $(style) !important;
   }
 }
