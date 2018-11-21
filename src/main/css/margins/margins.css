@@ -4,30 +4,60 @@
   margin: 0.5rem !important;
 }
 
+.u-m-halfrem {
+  margin: 0.5rem !important;
+}
+
+.u-ml-halfrem {
+  margin-left: 0.5rem !important;
+}
+
+.u-mr-halfrem {
+  margin-right: 0.5rem !important;
+}
+
+.u-mt-halfrem {
+  margin-top: 0.5rem !important;
+}
+
+.u-mb-halfrem {
+  margin-bottom: 0.5rem !important;
+}
+
 @each $dimension in left, right, top, bottom {
   .u-margin-$(dimension)-halfrem {
     margin-$(dimension): 0.5rem !important;
   }
-}
 
-@each $dimension in left, right, top, bottom {
-  @for $factor from 0 to 20 {
-    .u-margin-$(dimension)-$(factor)rem {
-      margin-$(dimension): $(factor)rem !important;
-    }
-  }
-}
-
-@for $factor from 0 to 20 {
   .u-margin-$(factor)rem {
     margin: $(factor)rem !important;
   }
+
+  .u-m$(factor)rem {
+    margin: $(factor)rem !important;
+  }
+
+  .u-ml$(factor)rem {
+    margin-left: $(factor) rem !important;
+  }
+
+  .u-mr$(factor)rem {
+    margin-right: $(factor) rem !important;
+  }
+
+  .u-mt$(factor)rem {
+    margin-top: $(factor) rem !important;
+  }
+
+  .u-mb$(factor)rem {
+    margin-bottom: $(factor) rem !important;
+  }
 }
 
 @each $dimension in left, right, top, bottom {
   @for $factor from 0 to 20 {
     .u-margin-$(dimension)-$(factor)rem {
-      margin-$(dimension): $(factor)rem !important;
+      margin-$(dimension): $(factor) rem !important;
     }
   }
 }

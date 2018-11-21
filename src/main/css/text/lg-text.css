@@ -1,35 +1,69 @@
 /** @define utilities */
 
 @import "@superflycss/variables-dimension";
-
 @media (--lg-viewport) {
-  /**
-   * Word breaking
-   *
-   * Break strings when their length exceeds the width of their container.
-   */
-
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
   .u-lg-word-break {
     word-wrap: break-word !important;
   }
+
+  .u-lg-wb {
+    word-wrap: break-word !important;
+  }
+
+  /**
+ * Keep the word from breaking
+ */
+  .u-lg-word-whole {
+    word-wrap: keep-all !important;
+  }
+
+  .u-lg-ww {
+    word-wrap: keep-all !important;
+  }
+
   /**
  * Horizontal text alignment
  */
   .u-lg-text-center {
     text-align: center !important;
   }
+
+  .u-lg-tc {
+    text-align: center !important;
+  }
+
   .u-lg-text-left {
     text-align: left !important;
   }
+
+  .u-lg-tl {
+    text-align: left !important;
+  }
+
   .u-lg-text-right {
     text-align: right !important;
   }
+
+  .u-lg-tr {
+    text-align: right !important;
+  }
+
   /**
  * Prevent whitespace wrapping
  */
   .u-lg-text-no-wrap {
     white-space: nowrap !important;
   }
+
+  .u-lg-tnw {
+    white-space: nowrap !important;
+  }
+
   /**
  * Text truncation
  *
@@ -41,13 +75,20 @@
  * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
  *    nodes.
  */
+
   .u-lg-text-truncate {
-    max-width: 100% !important;
-    /* 1 */
+    max-width: 100% !important; /* 1 */
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
-    word-wrap: normal !important;
-    /* 2 */
+    word-wrap: normal !important; /* 2 */
+  }
+
+  .u-lg-tt {
+    max-width: 100% !important; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
   }
 }

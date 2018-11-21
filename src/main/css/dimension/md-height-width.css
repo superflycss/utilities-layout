@@ -5,55 +5,97 @@
   .u-md-height-halfrem {
     height: 0.5rem !important;
   }
+  
+  .u-md-h-halfrem {
+    height: 0.5rem !important;
+  }
+  
+  .u-md-min-height-halfrem {
+    min-height: 0.5rem !important;
+  }
+  
+  .u-md-mh-halfrem {
+    min-height: 0.5rem !important;
+  }
+  
+  .u-md-max-height-halfrem {
+    max-height: 0.5rem !important;
+  }
+  
+  .u-md-mxh-halfrem {
+    max-height: 0.5rem !important;
+  }
+  
+  .u-md-height-100 {
+    height: 100% !important;
+  }
+  
+  .u-md-h100 {
+    height: 100% !important;
+  }
+  
+  .u-md-min-width-halfrem {
+    min-width: 0.5rem !important;
+  }
+  
+  .u-md-mw-halfrem {
+    min-width: 0.5rem !important;
+  }
+  
+  .u-md-max-width-halfrem {
+    max-width: 0.5rem !important;
+  }
+  
+  .u-md-mxw-halfrem {
+    max-width: 0.5rem !important;
+  }
+  
+  .u-md-width-halfrem {
+    width: 0.5rem !important;
+  }
+  
+  .u-md-w-halfrem {
+    width: 0.5rem !important;
+  }
+  
+  .u-md-width-100 {
+    width: 100% !important;
+  }
+  
+  .u-md-w100 {
+    width: 100% !important;
+  }
+  
   @for $factor from 0 to 50 {
     .u-md-height-$(factor)rem {
       height: $(factor)rem !important;
     }
-  }
-  .u-md-min-height-halfrem {
-    min-height: 0.5rem !important;
-  }
-  @for $factor from 0 to 50 {
-    .u-md-min-height-$(factor)rem {
+    .u-md-h$(factor)rem {
+      height: $(factor)rem !important;
+    }
+    .u-md-mh$(factor)rem {
       min-height: $(factor)rem !important;
     }
-  }
-  .u-md-max-height-halfrem {
-    max-height: 0.5rem !important;
-  }
-  .u-md-height-100 {
-    height: 100% !important;
-  }
-  @for $factor from 0 to 50 {
     .u-md-max-height-$(factor)rem {
       max-height: $(factor)rem !important;
     }
-  }
-  .u-md-min-width-halfrem {
-    min-width: 0.5rem !important;
-  }
-  @for $factor from 0 to 50 {
+    .u-md-mxh$(factor)rem {
+      max-height: $(factor)rem !important;
+    }
     .u-md-min-width-$(factor)rem {
       min-width: $(factor)rem !important;
     }
-  }
-  @for $factor from 0 to 50 {
+    .u-md-mw$(factor)rem {
+      min-width: $(factor)rem !important;
+    }
     .u-md-max-width-$(factor)rem {
       max-width: $(factor)rem !important;
     }
-  }
-  .u-md-max-width-halfrem {
-    max-width: 0.5rem !important;
-  }
-  .u-md-width-halfrem {
-    width: 0.5rem !important;
-  }
-  @for $factor from 0 to 50 {
     .u-md-width-$(factor)rem {
       width: $(factor)rem !important;
     }
-  }
-  .u-md-width-100 {
-    width: 100% !important;
+    .u-md-w$(factor)rem {
+      width: $(factor)rem !important;
+    }
   }
 }

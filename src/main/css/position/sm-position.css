@@ -4,26 +4,54 @@
 
 @media (--sm-viewport) {
   @each $position in static, relative, absolute, fixed {
-    .u-sm-position-$(position) {
-      position: $(position) !important;
+    .-u-sm-position-$(position) {
+        position: $(position) !important;
     }
   }
-  .u-sm-top-right {
+  
+  .-u-sm-top-right {
     position: absolute !important;
     top: 0 !important;
     right: 0 !important;
   }
-  .u-sm-top-left {
+  
+  .-u-sm-tr {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-sm-top-left {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
   }
-  .u-sm-bottom-right {
+  
+  .-u-sm-tl {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-sm-bottom-right {
     position: absolute !important;
     bottom: 0 !important;
     right: 0 !important;
   }
-  .u-sm-bottom-left {
+  
+  .-u-sm-br {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-sm-bottom-left {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-sm-bl {
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;

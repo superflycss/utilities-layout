@@ -3,6 +3,27 @@
 .u-padding-halfrem {
   padding: 0.5rem !important;
 }
+.u-p-halfrem {
+  padding: 0.5rem !important;
+}
+.u-pt-halfrem {
+  padding-top: 0.5rem !important;
+}
+.u-pb-halfrem {
+  padding-bottom: 0.5rem !important;
+}
+.u-pl-halfrem {
+  padding-left: 0.5rem !important;
+}
+.u-pr-halfrem {
+  padding-right: 0.5rem !important;
+}
+
+@each $dimension in left, right, top, bottom {
+  .u-padding-$(dimension)-halfrem {
+    padding-$(dimension): 0.5rem !important;
+  }
+}
 
 @for $factor from 0 to 20 {
   .u-padding-$(factor)rem {
@@ -10,9 +31,21 @@
   }
 }
 
-@each $dimension in left, right, top, bottom {
-  .u-padding-$(dimension)-halfrem {
-    padding-$(dimension): 0.5rem !important;
+@for $factor from 0 to 20 {
+  .u-p$(factor)rem {
+    padding: $(factor)rem !important;
+  }
+  .u-pt$(factor)rem {
+    padding-top: $(factor)rem !important;
+  }
+  .u-pb$(factor)rem {
+    padding-bottom: $(factor)rem !important;
+  }
+  .u-pl$(factor)rem {
+    padding-left: $(factor)rem !important;
+  }
+  .u-pr$(factor)rem {
+    padding-right: $(factor)rem !important;
   }
 }
 

@@ -15,33 +15,33 @@ body {
   counter-reset: test-counter;
 }
 
-/** Define a color palette */
+/** Define a color Palette (--P-- prefix */
 :root {
-  --Palette--Header-background-color: #F4F3FE;
+  --P--Header-background-color: #F4F3FE;
 
-  --Palette--Header_link-text-color: #10658e;
-  --Palette--Header_link-border-color: #859aa5;;
-  --Palette--Header_link_onHover-text-color: #859aa5;;
-  --Palette--Header_link_onHover-border-color: #00BCD4;
+  --P--Header_link-text-color: #10658e;
+  --P--Header_link-border-color: #859aa5;;
+  --P--Header_link_onHover-text-color: #859aa5;;
+  --P--Header_link_onHover-border-color: #00BCD4;
 
-  --Palette--TestHeader-background-color:  rgb(99, 99, 99);
-  --Palette--TestContainer-text-color: var(--color-sf-charcoal-blue);
+  --P--TestHeader-background-color:  rgb(99, 99, 99);
+  --P--TestContainer-text-color: var(--color-sf-charcoal-blue);
 
-  --Palette--Display-text-color: #EE5B6C;
+  --P--Display-text-color: #EE5B6C;
 
-  --Palette-border-color:  #1AC0BA;
-  --Palette-text-color: #1AC0BA;
-  --Palette_onHover-text-color: #e91eaa;
-  --Palette_onHover-border-color: #e91eaa;
+  --P-border-color:  #1AC0BA;
+  --P-text-color: #1AC0BA;
+  --P_onHover-text-color: #e91eaa;
+  --P_onHover-border-color: #e91eaa;
 
-  --Palette-white: white;
-  --Palette-orange: orange;
+  --P-white: white;
+  --P-orange: orange;
 }
 
 /** Customize the header */
 :root {
   /** HEADER */
-  --Header-background-color: var(--Palette--Header-background-color);
+  --Header-background-color: var(--P--Header-background-color);
 
    /** HEADER LINK */
   --Header_link-padding-left: 5rem;
@@ -49,20 +49,20 @@ body {
   --Header_link-padding-top: 0.5rem;
   --Header_link-padding-bottom: 0.5rem;
   --Header_link-border-radius: 4px;
-  --Header_link-border-color: var(--Palette--Header_link-text-color);
-  --Header_link-text-color: var(--Palette--Header_link-border-color);
+  --Header_link-border-color: var(--P--Header_link-text-color);
+  --Header_link-text-color: var(--P--Header_link-border-color);
 
   /** HEADER LINK ON HOVER*/
   --Header_link_onHover-text-decoration: none;
-  --Header_link_onHover-text-color: var(--Palette--Header_link_onHover-text-color);
-  --Header_link_onHover-border-color: var(--Palette--Header_link_onHover-border-color);
+  --Header_link_onHover-text-color: var(--P--Header_link_onHover-text-color);
+  --Header_link_onHover-border-color: var(--P--Header_link_onHover-border-color);
 
   /** TEST HEADER */
-  --TestHeader-background-color:var(--Palette--TestHeader-background-color);
+  --TestHeader-background-color:var(--P--TestHeader-background-color);
   --TestHeader-text-color: white;
 
   /** TEST CONTAINER */
-  --TestContainer-text-color: var(--Palette--TestContainer-text-color);
+  --TestContainer-text-color: var(--P--TestContainer-text-color);
   --TestUtilities-text-color: #E8887D;
   --TestRender-text-color:white;
 
@@ -70,8 +70,8 @@ body {
   --TestCounter-text-color: #1C3C4B;
 
   /** TEST SEPARATOR */
-  --TestSeparator-border-color: var(--Palette-white);
-  --TestSeparator-background-color: var(--Palette-orange);
+  --TestSeparator-border-color: var(--P-white);
+  --TestSeparator-background-color: var(--P-orange);
 
   /** TEST EM */
   --TestEm-text-color: #1C3C4C;
@@ -88,5 +88,5 @@ body {
 
 /** Customize the Display component */
 :root {
-  --Display-text-color: var(--Palette--Display-text-color);
+  --Display-text-color: var(--P--Display-text-color);
 }

@@ -12,7 +12,19 @@
   right: 0 !important;
 }
 
+.u-tr {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
 .u-top-left {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.u-tl {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -24,7 +36,19 @@
   right: 0 !important;
 }
 
+.u-br {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
 .u-bottom-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.u-bl {
   position: absolute !important;
   bottom: 0 !important;
   left: 0 !important;

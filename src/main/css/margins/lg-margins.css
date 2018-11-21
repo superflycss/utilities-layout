@@ -2,24 +2,65 @@
 @import "@superflycss/variables-dimension";
 
 @media (--lg-viewport) {
+  .u-lg-margin-halfrem {
+    margin: 0.5rem !important;
+  }
+  
+  .u-lg-m-halfrem {
+    margin: 0.5rem !important;
+  }
+  
+  .u-lg-ml-halfrem {
+    margin-left: 0.5rem !important;
+  }
+  
+  .u-lg-mr-halfrem {
+    margin-right: 0.5rem !important;
+  }
+  
+  .u-lg-mt-halfrem {
+    margin-top: 0.5rem !important;
+  }
+  
+  .u-lg-mb-halfrem {
+    margin-bottom: 0.5rem !important;
+  }
+  
   @each $dimension in left, right, top, bottom {
     .u-lg-margin-$(dimension)-halfrem {
       margin-$(dimension): 0.5rem !important;
     }
+  
+    .u-lg-margin-$(factor)rem {
+      margin: $(factor)rem !important;
+    }
+  
+    .u-lg-m$(factor)rem {
+      margin: $(factor)rem !important;
+    }
+  
+    .u-lg-ml$(factor)rem {
+      margin-left: $(factor) rem !important;
+    }
+  
+    .u-lg-mr$(factor)rem {
+      margin-right: $(factor) rem !important;
+    }
+  
+    .u-lg-mt$(factor)rem {
+      margin-top: $(factor) rem !important;
+    }
+  
+    .u-lg-mb$(factor)rem {
+      margin-bottom: $(factor) rem !important;
+    }
   }
+  
   @each $dimension in left, right, top, bottom {
     @for $factor from 0 to 20 {
       .u-lg-margin-$(dimension)-$(factor)rem {
-        margin-$(dimension): $(factor)rem !important;
+        margin-$(dimension): $(factor) rem !important;
       }
-    }
-  }
-  .u-lg-margin-halfrem {
-    margin: 0.5rem !important;
-  }
-  @for $factor from 0 to 20 {
-    .u-lg-margin-$(factor)rem {
-      margin: $(factor)rem !important;
     }
   }
 }

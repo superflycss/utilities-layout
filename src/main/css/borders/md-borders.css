@@ -7,12 +7,29 @@
     .u-md-border-width-$(factor)px {
       border-width: $(factor)px !important;
     }
-  }
-  @for $factor from 0 to 20 {
+    .u-md-bw$(factor)px {
+      border-width: $(factor)px !important;
+    }
     .u-md-border-radius-$(factor)px {
       border-radius: $(factor)px !important;
     }
+    .u-md-br$(factor)px {
+      border-radius: $(factor)px !important;
+    }
+    .u-md-btw$(factor)px {
+      border-top-width: $(factor)px !important;
+    }
+    .u-md-bbw$(factor)px {
+      border-bottom-width: $(factor)px !important;
+    }
+    .u-md-blw$(factor)px {
+      border-left-width: $(factor)px !important;
+    }
+    .u-md-brw$(factor)px {
+      border-right-width: $(factor)px !important;
+    }
   }
+  
   @each $dimension in top, bottom, left, right {
     @for $factor from 0 to 20 {
       .u-md-border-$(dimension)-width-$(factor)px {
@@ -20,11 +37,28 @@
       }
     }
   }
+  
   @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
     .u-md-border-style-$(style) {
       border-style: $(style) !important;
     }
+    .u-md-bs-$(style) {
+      border-style: $(style) !important;
+    }
+    .u-md-bts-$(style) {
+      border-top-style: $(style) !important;
+    }
+    .u-md-bbs-$(style) {
+      border-bottom-style: $(style) !important;
+    }
+    .u-md-bls-$(style) {
+      border-left-style: $(style) !important;
+    }
+    .u-md-brs-$(style) {
+      border-right-style: $(style) !important;
+    }
   }
+  
   @each $dimension in top, bottom, left, right {
     @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
       .u-md-border-$(dimension)-style-$(style) {

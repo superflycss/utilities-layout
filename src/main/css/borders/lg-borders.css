@@ -5,28 +5,66 @@
 @media (--lg-viewport) {
   @for $factor from 0 to 20 {
     .u-lg-border-width-$(factor)px {
-      border-width: $(factor)px !important;
+      border-width: $(factor) px !important;
     }
-  }
-  @for $factor from 0 to 20 {
+    .u-lg-bw$(factor)px {
+      border-width: $(factor) px !important;
+    }
     .u-lg-border-radius-$(factor)px {
-      border-radius: $(factor)px !important;
+      border-radius: $(factor) px !important;
+    }
+    .u-lg-br$(factor)px {
+      border-radius: $(factor) px !important;
+    }
+    .u-lg-btw$(factor)px {
+      border-top-width: $(factor) px !important;
+    }
+    .u-lg-bbw$(factor)px {
+      border-bottom-width: $(factor) px !important;
+    }
+    .u-lg-blw$(factor)px {
+      border-left-width: $(factor) px !important;
+    }
+    .u-lg-brw$(factor)px {
+      border-right-width: $(factor) px !important;
     }
   }
+
   @each $dimension in top, bottom, left, right {
     @for $factor from 0 to 20 {
       .u-lg-border-$(dimension)-width-$(factor)px {
-        border-$(dimension)-width: $(factor)px !important;
+        border-$(dimension)-width: $(factor) px !important;
       }
     }
   }
-  @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+
+  @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge,
+    inset, outset, initial, inherit
+  {
     .u-lg-border-style-$(style) {
       border-style: $(style) !important;
     }
+    .u-lg-bs-$(style) {
+      border-style: $(style) !important;
+    }
+    .u-lg-bts-$(style) {
+      border-top-style: $(style) !important;
+    }
+    .u-lg-bbs-$(style) {
+      border-bottom-style: $(style) !important;
+    }
+    .u-lg-bls-$(style) {
+      border-left-style: $(style) !important;
+    }
+    .u-lg-brs-$(style) {
+      border-right-style: $(style) !important;
+    }
   }
+
   @each $dimension in top, bottom, left, right {
-    @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, initial, inherit {
+    @each $style in none, hidden, dotted, dashed, solid, double, groove, ridge,
+      inset, outset, initial, inherit
+    {
       .u-lg-border-$(dimension)-style-$(style) {
         border-$(dimension)-style: $(style) !important;
       }
