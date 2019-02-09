@@ -30,7 +30,9 @@
     .u-md-margin-$(dimension)-halfrem {
       margin-$(dimension): 0.5rem !important;
     }
+  }
   
+  @for $factor from 0 to 20 {
     .u-md-margin-$(factor)rem {
       margin: $(factor)rem !important;
     }
