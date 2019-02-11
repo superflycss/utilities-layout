@@ -32,7 +32,7 @@
 
   @for $factor from 0 to 20 {
     .u-sm-padding-$(factor)rem {
-      padding: $(factor) rem !important;
+      padding: $(factor)rem !important;
     }
   }
 
@@ -41,23 +41,23 @@
       padding: $(factor) rem !important;
     }
     .u-sm-pt$(factor)rem {
-      padding-top: $(factor) rem !important;
+      padding-top: $(factor)rem !important;
     }
     .u-sm-pb$(factor)rem {
-      padding-bottom: $(factor) rem !important;
+      padding-bottom: $(factor)rem !important;
     }
     .u-sm-pl$(factor)rem {
-      padding-left: $(factor) rem !important;
+      padding-left: $(factor)rem !important;
     }
     .u-sm-pr$(factor)rem {
-      padding-right: $(factor) rem !important;
+      padding-right: $(factor)rem !important;
     }
   }
 
   @each $dimension in left, right, top, bottom {
     @for $factor from 0 to 20 {
       .u-sm-padding-$(dimension)-$(factor)rem {
-        padding-$(dimension): $(factor) rem !important;
+        padding-$(dimension): $(factor)rem !important;
       }
     }
   }

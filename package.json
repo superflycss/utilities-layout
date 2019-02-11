@@ -1,6 +1,6 @@
 {
   "name": "@superflycss/utilities-layout",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "description": "Layout utilities",
   "main": "index.css",
   "scripts": {
@@ -27,7 +27,7 @@
     "@superflycss/component-body": "^1.0.1",
     "@superflycss/component-display": "^1.0.2",
     "@superflycss/component-header": "^2.1.0",
-    "@superflycss/component-test": "^3.6.15",
+    "@superflycss/component-test": "^3.6.18",
     "@superflycss/foundation": "^2.0.3",
     "@superflycss/task-build": "^1.0.5",
     "@superflycss/task-clean": "^1.0.2",

@@ -42,26 +42,26 @@
     }
   
     .u-lg-ml$(factor)rem {
-      margin-left: $(factor) rem !important;
+      margin-left: $(factor)rem !important;
     }
   
     .u-lg-mr$(factor)rem {
-      margin-right: $(factor) rem !important;
+      margin-right: $(factor)rem !important;
     }
   
     .u-lg-mt$(factor)rem {
-      margin-top: $(factor) rem !important;
+      margin-top: $(factor)rem !important;
     }
   
     .u-lg-mb$(factor)rem {
-      margin-bottom: $(factor) rem !important;
+      margin-bottom: $(factor)rem !important;
     }
   }
   
   @each $dimension in left, right, top, bottom {
     @for $factor from 0 to 20 {
       .u-lg-margin-$(dimension)-$(factor)rem {
-        margin-$(dimension): $(factor) rem !important;
+        margin-$(dimension): $(factor)rem !important;
       }
     }
   }

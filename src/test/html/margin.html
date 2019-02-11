@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.utility( 'layout' ) }}
+
+<body>
+<!-- MARGIN UTILITIES -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-margin-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-margin-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-margin-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-m-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-m-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-m-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-ml-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-ml-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-ml-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-mr-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-mr-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-mr-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-mt-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-mt-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-mt-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-mb-halfrem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue">
+
+      <div class="u-mb-halfrem
+                  u-background-color-orange
+                  u-border-style-solid
+                  u-border-width-2px">
+                  u-mb-halfrem
+      </div>
+  </div>
+</div>
+{% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.
+{% endset %}
+{% set then %}
+The correct padding dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for i in range(0, 21) -%}
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue
+              u-margin-bottom-1rem">
+
+  <div class="u-margin-{{side}}-{{i}}rem
+              u-background-color-orange
+              u-border-style-solid
+              u-border-width-2px">
+              u-margin-{{side}}-{{i}}rem
+  </div>
+</div>
+{%- endfor %}
+{%- endfor %}
+</div>
+{% endcall %}
+
+</body>
+</html>
