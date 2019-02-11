@@ -73,6 +73,9 @@
     .u-md-h$(factor)rem {
       height: $(factor)rem !important;
     }
+    .u-md-min-height-$(factor)rem {
+      min-height: $(factor)rem !important;
+    }
     .u-md-mh$(factor)rem {
       min-height: $(factor)rem !important;
     }
