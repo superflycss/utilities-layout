@@ -195,7 +195,8 @@ between the containers.  See the second rendered row for an illustration.
           u-flex-no-wrap 
           u-width-20rem
           u-height-20rem">
-  <div class="TestBoxLeft">
+  <div class="TestBoxLeft 
+              u-h6rem">
     First item in row</div>
   <div class="TestBoxLeft
               u-background-color-orange">
@@ -285,9 +286,7 @@ between the containers.  See the second rendered row for an illustration.
             u-flex-justify-center
             u-flex-column
             u-min-width-40rem
-            u-min-height-20rem
-            u-border-style-solid
-            u-border-width-2px">
+            u-min-height-25rem">
     <div class="TestBoxTop
                 u-background-color-orange">
       First item in row</div>
@@ -353,7 +352,7 @@ between the containers.  See the second rendered row for an illustration.
             u-flex
             u-flex-align-items-stretch
             u-min-width-40rem
-            u-min-height-10rem">
+            u-min-height-40rem">
     <div class="u-background-color-orange
                 u-padding-1rem
                 u-border-right-style-solid
@@ -545,7 +544,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 <!-- START TEST -->
 
 {% set when %}
-<code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.
+<code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.
 {% endset %}
 {% call Test.utility( 'Flex Layout', when, 'The item stretch to take up the remaining space.' ) %}
 <div class="TestCanvas

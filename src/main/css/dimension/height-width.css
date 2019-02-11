@@ -71,6 +71,9 @@
   .u-h$(factor)rem {
     height: $(factor)rem !important;
   }
+  .u-min-height-$(factor)rem {
+    min-height: $(factor)rem !important;
+  }
   .u-mh$(factor)rem {
     min-height: $(factor)rem !important;
   }
