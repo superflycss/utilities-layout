@@ -64,7 +64,6 @@ The correct border radius renders.
             u-width-40rem">
   {% for i in range(0, 21) -%}
   <div class="TestBox
-              u-background-color-sf-charcoal-blue
               u-border-width-4px
               u-border-radius-{{i}}px">
               u-border-radius-{{i}}px
@@ -88,7 +87,6 @@ The correct border radius renders.
             u-width-40rem">
   {% for i in range(0, 21) -%}
   <div class="TestBox
-              u-background-color-sf-charcoal-blue
               u-border-width-4px
               u-border-radius-{{i}}px">
               u-br{{i}}px
@@ -112,7 +110,7 @@ The parameterized border renders.
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for i in range(0, 21) -%}
-  <div class="u-background-color-sf-charcoal-blue
+  <div class="TestBox
               u-margin-bottom-1rem
               u-padding-1rem
               u-border-{{side}}-style-solid
@@ -128,8 +126,8 @@ The parameterized border renders.
 <!-- START TEST -->
 
 {% set when %}
-<code class="u-text-color-md-pink-400">u-bs[side]-solid</code>
-and <code class="u-text-color-md-pink-400">u-bw[side][factor]px</code> 
+<code class="u-text-color-md-pink-400">u-b[side]s-solid</code>
+and <code class="u-text-color-md-pink-400">u-b[side]w[factor]px</code> 
 is applied.
 {% endset %}
 {% set then %}
@@ -139,14 +137,14 @@ The parameterized border renders.
 <div class="u-flex u-flex-column u-width-40rem">
 {% for side in ['t', 'b', 'l', 'r'] %}
 {% for i in range(0, 21) -%}
-<div class="u-background-color-sf-charcoal-blue
-              u-margin-bottom-1rem
-              u-padding-1rem
-              u-bs{{side}}-solid
-              u-border-color-md-orange-900
-              u-bw{{side}}{{i}}px">
-              u-bs{{side}}-solid</br>
-              u-bw{{side}}{{i}}px
+<div class="TestBox
+            u-margin-bottom-1rem
+            u-padding-1rem
+            u-b{{side}}s-solid
+            u-border-color-md-orange-900
+            u-b{{side}}w{{i}}px">
+            u-b{{side}}s-solid</br>
+            u-b{{side}}w{{i}}px
 </div>          
 {%- endfor %}
 {%- endfor %}
@@ -188,7 +186,7 @@ The border style renders.
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['top', 'bottom', 'left', 'right'] %}
   {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
-  <div class="u-background-color-sf-charcoal-blue
+  <div class="TestBox
               u-margin-bottom-1rem
               u-padding-1rem
               u-border-{{side}}-style-{{style}}
@@ -203,8 +201,8 @@ The border style renders.
 <!-- START TEST -->
 
 {% set when %}
-<code class="u-text-color-md-pink-400">u-bs[side]-[style]</code> 
-and <code class="u-text-color-md-pink-400">u-bw[side]5px</code>  is applied.
+<code class="u-text-color-md-pink-400">u-b[side]s-[style]</code> 
+and <code class="u-text-color-md-pink-400">u-b[side]w5px</code>  is applied.
 {% endset %}
 {% set then %}
 The border style renders.
@@ -213,94 +211,16 @@ The border style renders.
 <div class="u-flex u-flex-column u-width-40rem">
   {% for side in ['t', 'b', 'l', 'r'] %}
   {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
-  <div class="u-background-color-sf-charcoal-blue
+  <div class="TestBox
               u-margin-bottom-1rem
               u-padding-1rem
-              u-bs{{side}}-{{style}}
-              u-bw{{side}}5px">
-              u-bs{{side}}-{{style}}
+              u-b{{side}}s-{{style}}
+              u-b{{side}}w5px">
+              u-b{{side}}s-{{style}}
               </br>
               u-bw{{side}}5px</div>
   {%- endfor %}
   {%- endfor %}
-</div>
-{% endcall %}
-
-<!-- PADDING UTILITIES -->
-<!-- START TEST -->
-{% set when %}
-<code class="u-text-color-md-pink-400">u-padding-halfrem</code> is applied.
-{% endset %}
-{% set then %}
-The padding style renders.
-{% endset %}
-{% call Test.utility( 'Padding', when, then ) %}
-<div class="u-flex u-flex-column u-width-40rem">
-  <div class="u-background-color-orange
-              u-margin-bottom-1rem
-              u-padding-halfrem
-              u-border-style-solid
-              u-border-width-2px">
-              u-padding-halfrem</div>
-              {% for side in ['top', 'bottom', 'left', 'right'] %}
-              <div class="u-background-color-orange
-                          u-margin-bottom-1rem
-                          u-padding-{{side}}-halfrem
-                          u-border-style-solid
-                          u-border-width-2px">
-                          u-padding-{{side}}-halfrem</div>
-              {%- endfor %}
-  </div>
-  {% endcall %}
-
-<!-- START TEST -->
-{% set when %}
-<code class="u-text-color-md-pink-400">u-padding-[side]-[factor]rem</code> is applied.
-{% endset %}
-{% set then %}
-The correct padding dimension renders.
-{% endset %}
-{% call Test.utility( 'Padding', when, then ) %}
-<div class="u-flex u-flex-column u-width-40rem">
-  {% for side in ['top', 'bottom', 'left', 'right'] %}
-  {% for i in range(0, 21) -%}
-  <div class="u-background-color-orange
-              u-margin-bottom-1rem
-              u-padding-{{side}}-{{i}}rem
-              u-border-style-solid
-              u-border-width-2px">
-              u-padding-{{side}}-{{i}}rem</div>
-  {%- endfor %}
-  {%- endfor %}
-</div>
-{% endcall %}
-
-<!-- START TEST -->
-<!-- MARGIN UTILITIES -->
-{% set when %}
-<code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.
-{% endset %}
-{% set then %}
-The correct padding dimension renders.
-{% endset %}
-{% call Test.utility( 'Margin', when, then ) %}
-<div class="u-flex u-flex-column u-width-40rem">
-  {% for side in ['top', 'bottom', 'left', 'right'] %}
-  {% for i in range(0, 21) -%}
-  <div class="u-border-style-solid
-              u-border-width-2px
-              u-border-color-sf-charcoal-blue
-              u-margin-bottom-1rem">
-
-  <div class="u-margin-{{side}}-{{i}}rem
-              u-background-color-orange
-              u-border-style-solid
-              u-border-width-2px">
-              u-margin-{{side}}-{{i}}rem
-  </div>
-</div>
-{%- endfor %}
-{%- endfor %}
 </div>
 {% endcall %}
 
