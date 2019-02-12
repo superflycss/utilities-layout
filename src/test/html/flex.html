@@ -793,9 +793,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.
-<em class="Test_em">larger</em> than their container.
 {% endset %}
-{% call Test.utility( 'Flex Layout', when, 'The item is pushed to the right side.' ) %}
+{% call Test.utility( 'Flex Layout', when, 'The "Push it good!" item is pushed to the right side.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-40rem">
@@ -815,9 +814,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.
-<em class="Test_em">larger</em> than their container.
 {% endset %}
-{% call Test.utility( 'Flex Layout', when, 'The item is pushed to the right side.' ) %}
+{% call Test.utility( 'Flex Layout', when, 'The "It" item is pushed to the right side.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-40rem">
@@ -837,7 +835,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.
-<em class="Test_em">larger</em> than their container.
 {% endset %}
 {% call Test.utility( 'Flex Layout', when, 'The items are pushed away from the item to the bottom.' ) %}
 <div class="TestCanvas
@@ -862,7 +859,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.
 {% endset %}
-{% call Test.utility( 'Flex Layout', when, 'The items are pushed away from the item to the bottom.The items are pushed away from the item to the bottom.' ) %}
+{% call Test.utility( 'Flex Layout', when, 'The items are pushed away from the item to the bottom.' ) %}
 <div class="TestCanvas
             u-flex
             u-flex-column
@@ -929,7 +926,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.
 {% endset %}
-{% call Test.utility( 'Flex Layout', when, 'The item is using the width and height properties.' ) %}
+{% call Test.utility( 'Flex Layout', when, 'The "QUATRO" item is using the width and height properties.' ) %}
 <div class="TestCanvas
             u-flex
             u-width-30rem
@@ -952,9 +949,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
       <div class="TestBox
                   u-flex-grow1
                   u-flex-initial
-                  u-width-6rem
+                  u-width-20rem
                   u-background-color-sf-charcoal-blue">
-        CUATRO</div>
+        QUATRO</div>
   </div>
   {% endcall %}
 
@@ -974,7 +971,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
     <div class="TestBox
                 u-flex-grow1
                 u-flex-auto
-                u-width-5rem
+                u-width-1rem
                 u-background-color-sf-charcoal-blue">
       DOS</div>
   </div>
@@ -988,7 +985,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
       <div class="TestBox
                   u-flex-grow1
                   u-flex-auto
-                  u-width-10rem
+                  u-width-15rem
                   u-background-color-sf-charcoal-blue">
         CUATRO</div>
 </div>
