@@ -147,7 +147,7 @@ The correct margin dimension renders.
 <code class="u-text-color-md-pink-400">u-margin-[side]-[factor]rem </code> is applied.
 {% endset %}
 {% set then %}
-The correct padding dimension renders.
+The correct margin dimension renders.
 {% endset %}
 {% call Test.utility( 'Margin', when, then ) %}
 <div class="u-flex u-flex-column u-width-40rem">
@@ -158,17 +158,97 @@ The correct padding dimension renders.
               u-border-color-sf-charcoal-blue
               u-margin-bottom-1rem">
 
-  <div class="u-margin-{{side}}-{{i}}rem
+      <div class="u-margin-{{side}}-{{i}}rem
               u-background-color-orange
               u-border-style-solid
               u-border-width-2px">
               u-margin-{{side}}-{{i}}rem
-  </div>
+      </div>
 </div>
 {%- endfor %}
 {%- endfor %}
 </div>
 {% endcall %}
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-margin-[factor]rem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue
+              u-margin-bottom-1rem">
+
+      <div class="u-margin-{{i}}rem
+              u-background-color-orange
+              u-border-style-solid
+              u-border-width-2px">
+              u-margin-{{i}}rem
+      </div>
+</div>
+{%- endfor %}
+</div>
+{% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-m[factor]rem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue
+              u-margin-bottom-1rem">
+
+      <div class="u-m{{i}}rem
+              u-background-color-orange
+              u-border-style-solid
+              u-border-width-2px">
+              u-m{{i}}rem
+      </div>
+</div>
+{%- endfor %}
+</div>
+{% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-m[side][factor]rem </code> is applied.
+{% endset %}
+{% set then %}
+The correct margin dimension renders.
+{% endset %}
+{% call Test.utility( 'Margin', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['t', 'b', 'l', 'r'] %}
+  {% for i in range(0, 21) -%}
+  <div class="u-border-style-solid
+              u-border-width-2px
+              u-border-color-sf-charcoal-blue
+              u-margin-bottom-1rem">
+
+      <div class="u-m{{side}}{{i}}rem
+              u-background-color-orange
+              u-border-style-solid
+              u-border-width-2px">
+              u-m{{side}}{{i}}rem
+      </div>
+</div>
+{%- endfor %}
+{%- endfor %}
+</div>
+{% endcall %}
+
 
 </body>
 </html>
