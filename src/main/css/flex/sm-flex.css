@@ -9,7 +9,11 @@
   .u-sm-flex {
     display: flex !important;
   }
-
+  .u-sm-flex-bullseye {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   .u-sm-flex-inline {
     display: inline-flex !important;
   }

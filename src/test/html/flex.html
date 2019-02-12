@@ -8,9 +8,6 @@
 {{ TestHead.utility( 'layout' ) }}
 
 <body>
-
-<a href="flex.html"></a>
-
 {% set when %}
 <code class="u-text-color-md-pink-400">u-flex </code> is applied.
 {% endset %}
@@ -22,6 +19,20 @@
                Second item in row</div>
 </div>
 {% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-flex-bullseye </code> is applied.
+{% endset %}
+{% call Test.utility( 'Flex Layout', when, 'The item(s) are centered both horizontally and vertically.' ) %}
+<div class="TestCanvas 
+            u-flex-bullseye
+            u-min-height-15rem">
+   <div class="TestBox">
+               BULLSEYE</div>
+</div>
+{% endcall %}
+
 
 <!-- START TEST -->
 

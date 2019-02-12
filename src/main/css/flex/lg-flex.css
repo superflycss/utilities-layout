@@ -8,7 +8,11 @@
   .u-lg-flex {
     display: flex !important;
   }
-
+  .u-lg-flex-bullseye {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }  
   .u-lg-flex-inline {
     display: inline-flex !important;
   }
