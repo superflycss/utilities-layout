@@ -15,6 +15,16 @@ body {
   counter-reset: test-counter;
 }
 
+.u-fullWidthFlex {
+    flex: 0 0 100%;
+}
+
+.Box {
+  background: black;
+  height: 50px;
+  width: 50px;
+}
+
 /** Define a color Palette (--P-- prefix */
 :root {
   --P--Header-background-color: #F4F3FE;
