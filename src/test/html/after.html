@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.utility( 'layout' ) }}
+
+<body>
+
+<!-- SIZE UTILITIES -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-afterXofY </code> is applied.
+{% endset %}
+{% set then %}
+offsets by X/Y of the parent container.
+{% endset %}
+{% call Test.utility( 'u-afterXofY', when, then ) %}
+<div class="TestBoxTop u-after1of2 dev-Box">1of2</div>
+<div class="TestBox u-after1of3 dev-Box">1of3</div>
+<div class="TestBox u-after2of3 dev-Box">2of3</div>
+
+<div class="TestBox u-after1of4 dev-Box">1of4</div>
+<div class="TestBox u-after2of4 dev-Box">2of4</div>
+<div class="TestBox u-after3of4 dev-Box">3of4</div>    
+
+<div class="TestBox u-after1of6 dev-Box">1of6</div>
+<div class="TestBox u-after2of6 dev-Box">2of6</div>
+<div class="TestBox u-after3of6 dev-Box">3of6</div>
+<div class="TestBox u-after4of6 dev-Box">4of6</div>
+<div class="TestBox u-after5of6 dev-Box">5of6</div>
+
+<div class="TestBox u-after1of8 dev-Box">1of8</div>
+<div class="TestBox u-after2of8 dev-Box">2of8</div>
+<div class="TestBox u-after3of8 dev-Box">3of8</div>
+<div class="TestBox u-after4of8 dev-Box">4of8</div>
+<div class="TestBox u-after5of8 dev-Box">5of8</div>
+<div class="TestBox u-after6of8 dev-Box">6of8</div>
+<div class="TestBox u-after7of8 dev-Box">7of8</div>
+
+<div class="TestBox u-after1of10 dev-Box">1of10</div>
+<div class="TestBox u-after2of10 dev-Box">2of10</div>
+<div class="TestBox u-after3of10 dev-Box">3of10</div>
+<div class="TestBox u-after4of10 dev-Box">4of10</div>
+<div class="TestBox u-after5of10 dev-Box">5of10</div>
+<div class="TestBox u-after6of10 dev-Box">6of10</div>
+<div class="TestBox u-after7of10 dev-Box">7of10</div>
+<div class="TestBox u-after8of10 dev-Box">8of10</div>
+<div class="TestBox u-after9of10 dev-Box">9of10</div>
+
+<div class="TestBox u-after1of12 dev-Box">1of12</div>
+<div class="TestBox u-after2of12 dev-Box">2of12</div>
+<div class="TestBox u-after3of12 dev-Box">3of12</div>
+<div class="TestBox u-after4of12 dev-Box">4of12</div>
+<div class="TestBox u-after5of12 dev-Box">5of12</div>
+<div class="TestBox u-after6of12 dev-Box">6of12</div>
+<div class="TestBox u-after7of12 dev-Box">7of12</div>
+<div class="TestBox u-after8of12 dev-Box">8of12</div>
+<div class="TestBox u-after9of12 dev-Box">9of12</div>
+<div class="TestBox u-after10of12 dev-Box">10of12</div>
+<div class="TestBox u-after11of12 dev-Box">11of12</div>
+
+{% endcall %}
+
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-afterNone </code> is applied.
+{% endset %}
+{% set then %}
+it removes any margin space after.
+{% endset %}
+{% call Test.utility( 'u-afterNone', when, then ) %}
+<div class="TestBox 
+            u-after4of12 
+            u-afterNone 
+            u-sm-afterNone 
+            u-md-afterNone 
+            u-lg-afterNone">
+4of12 / beforeNone
+</div>
+{% endcall %}
+
+</body>
+</html>

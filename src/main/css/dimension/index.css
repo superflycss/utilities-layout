@@ -1,7 +1,11 @@
-@import "./before.css";
-@import "./sm-before.css";
-@import "./md-before.css";
-@import "./lg-before.css";
+@import "./before/before.css";
+@import "./before/sm-before.css";
+@import "./before/md-before.css";
+@import "./before/lg-before.css";
+@import "./after/after.css";
+@import "./after/sm-after.css";
+@import "./after/md-after.css";
+@import "./after/lg-after.css";
 @import "./height-width.css";
 @import "./sm-height-width.css";
 @import "./md-height-width.css";
