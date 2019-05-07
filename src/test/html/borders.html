@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.utility( 'layout' ) }}
+
+<body>
+<!-- BORDER UTILITIES -->
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-width-[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border width renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-border-width-{{i}}px">
+              u-border-width-{{i}}px
+  </div>
+  <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-bw[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border width renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-bw{{i}}px">
+              u-bw{{i}}px
+  </div>
+  <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-radius-[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border radius renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-border-width-4px
+              u-border-radius-{{i}}px">
+              u-border-radius-{{i}}px
+    </div>
+    <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-br[i]px</code> is applied.
+{% endset %}
+{% set then %}
+The correct border radius renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex 
+            u-flex-column 
+            u-width-40rem">
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-border-width-4px
+              u-border-radius-{{i}}px">
+              u-br{{i}}px
+    </div>
+    <br>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-[side]-style-solid</code>
+and <code class="u-text-color-md-pink-400">u-border-[side]-width-[factor]px</code> 
+is applied.
+{% endset %}
+{% set then %}
+The parameterized border renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for i in range(0, 21) -%}
+  <div class="TestBox
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-{{side}}-style-solid
+              u-border-color-md-orange-900
+              u-border-{{side}}-width-{{i}}px">
+              u-border-{{side}}-style-solid </br>
+              u-border-{{side}}-width-{{i}}px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-b[side]s-solid</code>
+and <code class="u-text-color-md-pink-400">u-b[side]w[factor]px</code> 
+is applied.
+{% endset %}
+{% set then %}
+The parameterized border renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+{% for side in ['t', 'b', 'l', 'r'] %}
+{% for i in range(0, 21) -%}
+<div class="TestBox
+            u-margin-bottom-1rem
+            u-padding-1rem
+            u-b{{side}}s-solid
+            u-border-color-md-orange-900
+            u-b{{side}}w{{i}}px">
+            u-b{{side}}s-solid</br>
+            u-b{{side}}w{{i}}px
+</div>          
+{%- endfor %}
+{%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-style-[style]</code>
+is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="u-background-color-sf-charcoal-blue
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-style-{{style}}
+              u-border-width-5px">
+              u-border-style-{{style}}</div>
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-border-[side]-style-[style]</code> 
+and <code class="u-text-color-md-pink-400">u-border-[side]-width-5px</code>  is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['top', 'bottom', 'left', 'right'] %}
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="TestBox
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-border-{{side}}-style-{{style}}
+              u-border-{{side}}-width-5px">
+              u-border-{{side}}-style-{{style}}
+              u-border-{{side}}-width-5px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+{% endcall %}
+
+<!-- START TEST -->
+
+{% set when %}
+<code class="u-text-color-md-pink-400">u-b[side]s-[style]</code> 
+and <code class="u-text-color-md-pink-400">u-b[side]w5px</code>  is applied.
+{% endset %}
+{% set then %}
+The border style renders.
+{% endset %}
+{% call Test.utility( 'Border', when, then ) %}
+<div class="u-flex u-flex-column u-width-40rem">
+  {% for side in ['t', 'b', 'l', 'r'] %}
+  {% for style in ['none','dotted','dashed','solid','double','groove','ridge','inset','outset','initial','inherit'] %}
+  <div class="TestBox
+              u-margin-bottom-1rem
+              u-padding-1rem
+              u-b{{side}}s-{{style}}
+              u-b{{side}}w5px">
+              u-b{{side}}s-{{style}}
+              </br>
+              u-bw{{side}}5px</div>
+  {%- endfor %}
+  {%- endfor %}
+</div>
+{% endcall %}
+
+</body>
+</html>

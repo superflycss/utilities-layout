@@ -1,0 +1,41 @@
+/** @define utilities */
+/*! superflycss/variables-dimension | MIT License | https://github.com/superflycss/variables-dimension/blob/master/LICENSE.md */
+/*! bootstrap v4.0.0-alpha | MIT License | https://github.com/twbs/bootstrap/blob/master/LICENSE */
+/*
+=======================================
+ DIMENSION VARIABLES
+=======================================
+ 0:  Spacers.
+ 1:  Borders.
+ 2:  Z-Index
+ 3:  Default Media Breakpoints
+================================
+*/
+/* 0 */
+/* 1 */
+/* 2 */
+/* 3 */
+.u-zindex-dropdown-backdrop {
+    z-index: 990 !important;
+  }
+.u-zindex-navbar {
+    z-index: 1000 !important;
+  }
+.u-zindex-dropdown {
+    z-index: 1000 !important;
+  }
+.u-zindex-fixed {
+    z-index: 1030 !important;
+  }
+.u-zindex-modal-backdrop {
+    z-index: 1040 !important;
+  }
+.u-zindex-modal {
+    z-index: 1050 !important;
+  }
+.u-zindex-popover {
+    z-index: 1060 !important;
+  }
+.u-zindex-tooltip {
+    z-index: 1070 !important;
+  }

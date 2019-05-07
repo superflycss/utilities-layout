@@ -1,0 +1,2773 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tests for @superflycss/utilities-layout</title>
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+               First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+               Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are laid out in a row.</div>
+     <div class="TestRender">
+
+<div class="u-flex">
+   <div class="TestBoxLeft">
+               First item in row</div>
+   <div class="TestBox">
+               Second item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-bullseye </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-flex-bullseye
+            u-min-height-15rem"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+               BULLSEYE<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item(s) are centered both horizontally and vertically.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-flex-bullseye
+            u-min-height-15rem">
+   <div class="TestBox">
+               BULLSEYE</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-inline </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+            u-flex-inline
+            u-background-color-orange"</span>&gt;</span>
+            First container
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+            u-flex-inline
+            u-background-color-orange"</span>&gt;</span>
+            Second container<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+            u-flex-inline
+            u-background-color-orange"</span>&gt;</span>
+            First container
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+            u-flex-inline
+            u-background-color-orange"</span>&gt;</span>
+            Second container<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The flex containers are laid out in a row.  Note that if the 
+container adjacent sides <code class="u-text-color-md-pink-400">
+&lt;/div&gt;&lt;div&gt;&lt;/code&gt;</code>
+do not appear on the same line in the as shown, space is introduced 
+between the containers.  See the second rendered row for an illustration.
+</div>
+     <div class="TestRender">
+
+<div class="TestBoxLeft
+            u-flex-inline
+            u-background-color-orange">
+            First container
+</div><div class="TestBox
+            u-flex-inline
+            u-background-color-orange">
+            Second container</div>
+<br>
+<br>
+<div class="TestBoxLeft
+            u-flex-inline
+            u-background-color-orange">
+            First container
+</div>
+<div class="TestBox
+            u-flex-inline
+            u-background-color-orange">
+            Second container</div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-row </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-flex-row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+    Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are laid out in a row.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-flex-row">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+    <div class="TestBox">
+    Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-row-reverse </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-flex-row-reverse"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-orange"</span>&gt;</span>
+    First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+              u-background-color-orange"</span>&gt;</span>
+    Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+    Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are laid out in a row reversed.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-flex-row-reverse">
+  <div class="TestBox
+              u-background-color-orange">
+    First item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-column </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-min-height-20rem
+            u-flex 
+            u-flex-column"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are laid out in a column.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-min-height-20rem
+            u-flex 
+            u-flex-column">
+    <div class="TestBoxTop">
+      First item in row</div>
+    <div class="TestBoxTop">
+      Second item in row</div>
+      <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-column-reverse </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-min-height-20rem
+            u-flex 
+            u-flex-column-reverse"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are laid out in a column reversed.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-min-height-20rem
+            u-flex 
+            u-flex-column-reverse">
+    <div class="TestBox
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxTop
+                u-background-color-orange">
+      Second item in row</div>
+      <div class="TestBoxTop
+                  u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-wrap </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-flex-wrap 
+            u-width-25rem
+            u-height-25rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange
+                u-border-style-none"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items wrap onto the next line.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-flex-wrap 
+            u-width-25rem
+            u-height-25rem">
+    <div class="TestBox">
+      First item in row</div>
+    <div class="TestBox">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-orange
+                u-border-style-none">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-wrap-reverse </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-flex-wrap-reverse 
+            u-width-25rem
+            u-height-25rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items wrap onto the next line in reverse.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-flex-wrap-reverse 
+            u-width-25rem
+            u-height-25rem">
+    <div class="TestBox">
+      First item in row</div>
+    <div class="TestBox
+                u-background-color-orange">
+      Second item in row</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-no-wrap </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+          u-flex 
+          u-flex-no-wrap 
+          u-width-20rem
+          u-height-20rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft 
+              u-h6rem"</span>&gt;</span>
+    First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+              u-background-color-orange"</span>&gt;</span>
+    Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+    Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items do not wrap onto the next line.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+          u-flex 
+          u-flex-no-wrap 
+          u-width-20rem
+          u-height-20rem">
+  <div class="TestBoxLeft 
+              u-h6rem">
+    First item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-start </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-justify-start
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-orange"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are aligned to the left side of the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-start
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-end </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+          u-flex
+          u-flex-justify-end
+          u-min-width-40rem
+          u-min-height-10rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+    First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+              u-background-color-orange"</span>&gt;</span>
+    Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+    Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are aligned to the right side of the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+          u-flex
+          u-flex-justify-end
+          u-min-width-40rem
+          u-min-height-10rem">
+  <div class="TestBoxLeft">
+    First item in row</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBox
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-center </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-justify-center
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-orange"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-orange"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are centered on the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-center
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-center </code> and
+<code class="u-text-color-md-pink-400">u-flex-column</code> are applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-justify-center
+            u-flex-column
+            u-min-width-40rem
+            u-min-height-25rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are aligned to the center of the cross axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-center
+            u-flex-column
+            u-min-width-40rem
+            u-min-height-25rem">
+    <div class="TestBoxTop
+                u-background-color-orange">
+      First item in row</div>
+    <div class="TestBoxTop
+                u-background-color-orange">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-between </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-justify-between
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items have space between eachother on the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-between
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBox">
+      First item in row</div>
+    <div class="TestBox">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-justify-around </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-justify-around
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items have space around eachother on the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-justify-around
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBox">
+      First item in row</div>
+    <div class="TestBox">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-items-stretch </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-align-items-stretch
+            u-min-width-40rem
+            u-min-height-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items stretch out along the cross axis to fill the container.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-stretch
+            u-min-width-40rem
+            u-min-height-40rem">
+    <div class="u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px">
+      First item in row</div>
+    <div class="u-background-color-orange
+                u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px">
+      Second item in row</div>
+    <div class="u-padding-1rem
+                u-border-right-style-solid
+                u-border-right-width-2px
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-items-start </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-flex
+            u-flex-align-items-start
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The cross-start margin edge of the items is placed on the cross-start line.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-flex
+            u-flex-align-items-start
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-items-end </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-align-items-end
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The cross-end margin edge of the items is placed on the cross-end line.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-end
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+      <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-items-center </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-align-items-center
+            u-min-width-40rem
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are centered in the cross-axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-center
+            u-min-width-40rem
+            u-min-height-10rem">
+    <div class="TestBoxLeft">
+      First item in row</div>
+    <div class="TestBoxLeft">
+      Second item in row</div>
+      <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-items-baseline </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-align-items-baseline
+            u-min-width-40rem
+            u-min-height-20rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-padding-top-5rem
+                u-height-8rem
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      First item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-padding-top-3rem
+                u-height-10rem
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-padding-top-6rem
+                  u-height-8rem
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items have their baselines aligned on the cross axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-align-items-baseline
+            u-min-width-40rem
+            u-min-height-20rem">
+    <div class="TestBox
+                u-padding-top-5rem
+                u-height-8rem
+                u-background-color-sf-charcoal-blue">
+      First item in row</div>
+    <div class="TestBox
+                u-padding-top-3rem
+                u-height-10rem
+                u-background-color-sf-charcoal-blue">
+      Second item in row</div>
+      <div class="TestBox
+                  u-padding-top-6rem
+                  u-height-8rem
+                  u-background-color-sf-charcoal-blue">
+        Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-start </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-start
+            u-min-height-30rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+      u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are packed to the start of the container.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-start
+            u-min-height-30rem">
+    <div class="TestBoxTop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+      u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-end </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-end
+            u-min-height-20rem
+            u-border-style-solid
+            u-border-width-2px"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are packed to the end of the container.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-end
+            u-min-height-20rem
+            u-border-style-solid
+            u-border-width-2px">
+    <div class="TestBoxTop
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+                  u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-center</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-center
+            u-min-height-25rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+            u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are packed to the center of the container.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-center
+            u-min-height-25rem">
+    <div class="TestBoxTop
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+<div class="TestBox
+            u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-stretch</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-stretch
+            u-min-height-25rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item stretch to take up the remaining space.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-stretch
+            u-min-height-25rem">
+    <div class="TestBoxTop">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBoxTop
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-between</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-between
+            u-min-height-30rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                        u-background-color-orange"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                        u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items evenly distributed with the first item at the start of the container and the last one at the end.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-between
+            u-min-height-30rem">
+    <div class="TestBox">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="TestBox
+                        u-background-color-orange">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="TestBox
+                        u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-content-around</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-around
+            u-min-height-26rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items evenly distributed with equal space around each line.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-wrap
+            u-flex-align-content-around
+            u-min-height-26rem">
+    <div class="TestBox">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+                u-background-color-orange">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-self-start</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-flex
+            u-min-height-10rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-orange
+              u-flex-align-self-start"</span>&gt;</span>
+              u-flex-align-self-start<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex-align-self-end
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+              u-flex-align-self-end<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is aligned at cross axis start.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-flex
+            u-min-height-10rem">
+  <div class="TestBox
+              u-background-color-orange
+              u-flex-align-self-start">
+              u-flex-align-self-start</div>
+  <div class="TestBox
+              u-flex-align-self-end
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-end</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-self-end</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-min-height-20rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-orange
+              u-flex-align-self-end"</span>&gt;</span>
+              u-flex-align-self-end<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+              u-flex-align-self-start<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is aligned at cross axis end.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-min-height-20rem">
+  <div class="TestBox
+              u-background-color-orange
+              u-flex-align-self-end">
+              u-flex-align-self-end</div>
+  <div class="TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-self-center</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-min-height-20rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-orange
+              u-flex-align-self-center"</span>&gt;</span>
+              u-flex-align-self-center<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+              u-flex-align-self-start<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is aligned at cross axis center.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-min-height-20rem">
+  <div class="TestBox
+              u-background-color-orange
+              u-flex-align-self-center">
+              u-flex-align-self-center</div>
+  <div class="TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-align-self-stretch</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas 
+            u-flex
+            u-min-height-20rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-background-color-orange
+              u-flex-align-self-stretch"</span>&gt;</span>
+              u-flex-align-self-stretch<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+              u-flex-align-self-start<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item stretches from cross axis start to end.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas 
+            u-flex
+            u-min-height-20rem">
+  <div class="TestBox
+              u-background-color-orange
+              u-flex-align-self-stretch">
+              u-flex-align-self-stretch</div>
+  <div class="TestBox
+              u-flex-align-self-start
+              u-background-color-sf-charcoal-blue">
+              u-flex-align-self-start</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-order-first</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-min-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-orange"</span>&gt;</span>
+      First item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Second item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-order-first
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      Third item in content order<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is positioned at the start.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-min-height-10rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      First item</div>
+    <div class="TestBox">
+      Second item</div>
+    <div class="TestBoxLeft
+                u-flex-order-first
+                u-background-color-sf-charcoal-blue">
+      Third item in content order</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-order-last</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+          u-flex
+          u-min-height-10rem"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex-order-last"</span>&gt;</span>
+    First item in content order<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+              u-background-color-orange"</span>&gt;</span>
+    Second item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft 
+              u-background-color-sf-charcoal-blue"</span>&gt;</span>
+    Third item in row<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is positioned last.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+          u-flex
+          u-min-height-10rem">
+  <div class="TestBox
+              u-flex-order-last">
+    First item in content order</div>
+  <div class="TestBoxLeft
+              u-background-color-orange">
+    Second item in row</div>
+  <div class="TestBoxLeft 
+              u-background-color-sf-charcoal-blue">
+    Third item in row</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-grow</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-width-40rem
+            u-height-10rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-grow4
+                u-background-color-orange"</span>&gt;</span>
+      u-flex-grow3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-grow2"</span>&gt;</span>
+      u-flex-grow2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox 
+                u-flex-grow5
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      u-flex-grow5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items grow according to the flex grow factor.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-width-40rem
+            u-height-10rem">
+    <div class="TestBoxLeft
+                u-flex-grow4
+                u-background-color-orange">
+      u-flex-grow3</div>
+    <div class="TestBoxLeft
+                u-flex-grow2">
+      u-flex-grow2</div>
+    <div class="TestBox 
+                u-flex-grow5
+                u-background-color-sf-charcoal-blue">
+      u-flex-grow5</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-shrink</code> is applied to items that are
+<em class="Test_em">larger</em> than their container.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex 
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-shrink5
+                u-width-100
+                u-background-color-orange"</span>&gt;</span>
+      u-flex-shrink5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-shrink3
+                u-width-100
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      u-flex-shrink3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-shrink5
+                u-width-100
+                u-background-color-orange"</span>&gt;</span>
+      u-flex-shrink5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items shrink according to the flex shrink factor.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex 
+            u-width-40rem">
+    <div class="TestBoxLeft
+                u-flex-shrink5
+                u-width-100
+                u-background-color-orange">
+      u-flex-shrink5</div>
+    <div class="TestBoxLeft
+                u-flex-shrink3
+                u-width-100
+                u-background-color-sf-charcoal-blue">
+      u-flex-shrink3</div>
+    <div class="TestBox
+                u-flex-shrink5
+                u-width-100
+                u-background-color-orange">
+      u-flex-shrink5</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand-left</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-orange"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-expand-left"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The "Push it good!" item is pushed to the right side.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-40rem">
+    <div class="TestBoxLeft
+                u-background-color-orange">
+      Push</div>
+    <div class="TestBox
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox
+                u-flex-expand-left">
+      Push it good!</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand-right</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-expand-right"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-padding-1rem"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The "It" item is pushed to the right side.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-40rem">
+    <div class="TestBox
+                u-flex-expand-right">
+      Push</div>
+    <div class="TestBoxLeft
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox
+                u-padding-1rem">
+      Push it good!</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand-top</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop
+                u-flex-expand-top
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are pushed away from the item to the bottom.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem">
+    <div class="TestBox">
+      Push</div>
+    <div class="TestBoxTop
+                u-flex-expand-top
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox
+                u-background-color-orange">
+      Push it good!</div>
+  </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand-bottom</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-expand-bottom
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-padding-1rem
+                u-background-color-orange"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The items are pushed away from the item to the bottom.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem">
+    <div class="TestBoxTop">
+      Push</div>
+    <div class="TestBox
+                u-flex-expand-bottom
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox
+                u-padding-1rem
+                u-background-color-orange">
+      Push it good!</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-expand
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is centered using remaining space along the main axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-40rem">
+    <div class="TestBox">
+      Push</div>
+    <div class="TestBox
+                u-flex-expand
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox">
+      Push it good!</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-expand</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-expand
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-background-color-orange"</span>&gt;</span>
+      Push it good!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is centered using remaining space along the main and cross axis.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-flex-column
+            u-height-20rem
+            u-width-40rem">
+    <div class="TestBox">
+      Push</div>
+    <div class="TestBox
+                u-flex-expand
+                u-background-color-sf-charcoal-blue">
+      It</div>
+    <div class="TestBox
+                u-background-color-orange">
+      Push it good!</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-initial</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-30rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-grow1"</span>&gt;</span>
+      UNO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-grow1
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      DOS<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex
+              u-width-30rem"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                  u-flex-grow1
+                  u-background-color-orange"</span>&gt;</span>
+        TRES<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-flex-grow1
+                  u-flex-initial
+                  u-width-20rem
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        QUATRO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The "QUATRO" item is using the width and height properties.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-30rem">
+    <div class="TestBoxLeft
+                u-flex-grow1">
+      UNO</div>
+    <div class="TestBox
+                u-flex-grow1
+                u-background-color-sf-charcoal-blue">
+      DOS</div>
+  </div>
+  <div class="TestBox
+              u-flex
+              u-width-30rem">
+      <div class="TestBoxLeft
+                  u-flex-grow1
+                  u-background-color-orange">
+        TRES</div>
+      <div class="TestBox
+                  u-flex-grow1
+                  u-flex-initial
+                  u-width-20rem
+                  u-background-color-sf-charcoal-blue">
+        QUATRO</div>
+  </div>
+  
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-auto</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-20rem"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft
+                u-flex-grow1"</span>&gt;</span>
+      UNO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-grow1
+                u-flex-auto
+                u-width-1rem
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      DOS<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex
+              u-width-30rem"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-flex-grow1
+                  u-background-color-orange"</span>&gt;</span>
+        TRES<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-flex-grow1
+                  u-flex-auto
+                  u-width-15rem
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        CUATRO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The item is using the width and height properties and absorb additional main axis space proportionally.</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-20rem">
+    <div class="TestBoxLeft
+                u-flex-grow1">
+      UNO</div>
+    <div class="TestBox
+                u-flex-grow1
+                u-flex-auto
+                u-width-1rem
+                u-background-color-sf-charcoal-blue">
+      DOS</div>
+  </div>
+  <div class="TestBox
+              u-flex
+              u-width-30rem">
+      <div class="TestBox
+                  u-flex-grow1
+                  u-background-color-orange">
+        TRES</div>
+      <div class="TestBox
+                  u-flex-grow1
+                  u-flex-auto
+                  u-width-15rem
+                  u-background-color-sf-charcoal-blue">
+        CUATRO</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!-- START TEST -->
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">Flex Layout</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-flex-none</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-30rem
+            u-border-style-solid
+            u-border-width-2px"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-grow1
+                u-background-color-orange"</span>&gt;</span>
+      UNO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                u-flex-grow1
+                u-background-color-sf-charcoal-blue"</span>&gt;</span>
+      DOS<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+              u-flex
+              u-width-30rem"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-flex-grow1
+                  u-background-color-orange"</span>&gt;</span>
+        TRES<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox
+                  u-flex-grow1
+                  u-flex-none
+                  u-width-30rem
+                  u-background-color-sf-charcoal-blue"</span>&gt;</span>
+        CUATRO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The item sizes the item according to the width/height properties however the
+<em class="Test_em">flex item is no longer flexible</em>.
+</div>
+     <div class="TestRender">
+
+<div class="TestCanvas
+            u-flex
+            u-width-30rem
+            u-height-30rem
+            u-border-style-solid
+            u-border-width-2px">
+    <div class="TestBox
+                u-flex-grow1
+                u-background-color-orange">
+      UNO</div>
+    <div class="TestBox
+                u-flex-grow1
+                u-background-color-sf-charcoal-blue">
+      DOS</div>
+  </div>
+  <div class="TestBox
+              u-flex
+              u-width-30rem">
+      <div class="TestBox
+                  u-flex-grow1
+                  u-background-color-orange">
+        TRES</div>
+      <div class="TestBox
+                  u-flex-grow1
+                  u-flex-none
+                  u-width-30rem
+                  u-background-color-sf-charcoal-blue">
+        CUATRO</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+</body></html>

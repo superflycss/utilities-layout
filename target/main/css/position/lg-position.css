@@ -1,0 +1,87 @@
+/** @define utilities */
+
+/*! superflycss/variables-dimension | MIT License | https://github.com/superflycss/variables-dimension/blob/master/LICENSE.md */
+
+/*! bootstrap v4.0.0-alpha | MIT License | https://github.com/twbs/bootstrap/blob/master/LICENSE */
+
+/*
+=======================================
+ DIMENSION VARIABLES
+=======================================
+ 0:  Spacers.
+ 1:  Borders.
+ 2:  Z-Index
+ 3:  Default Media Breakpoints
+================================
+*/
+
+/* 0 */
+
+/* 1 */
+
+/* 2 */
+
+/* 3 */
+
+@media (min-width: 992px) {
+    .-u-lg-position-static {
+        position: static !important;
+    }
+    .-u-lg-position-relative {
+        position: relative !important;
+    }
+    .-u-lg-position-absolute {
+        position: absolute !important;
+    }
+    .-u-lg-position-fixed {
+        position: fixed !important;
+    }
+  
+  .-u-lg-top-right {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-tr {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-top-left {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-tl {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-bottom-right {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-br {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-bottom-left {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-bl {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+}

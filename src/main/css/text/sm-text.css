@@ -1,0 +1,94 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+@media (--sm-viewport) {
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+  .u-sm-word-break {
+    word-wrap: break-word !important;
+  }
+
+  .u-sm-wb {
+    word-wrap: break-word !important;
+  }
+
+  /**
+ * Keep the word from breaking
+ */
+  .u-sm-word-whole {
+    word-wrap: keep-all !important;
+  }
+
+  .u-sm-ww {
+    word-wrap: keep-all !important;
+  }
+
+  /**
+ * Horizontal text alignment
+ */
+  .u-sm-text-center {
+    text-align: center !important;
+  }
+
+  .u-sm-tc {
+    text-align: center !important;
+  }
+
+  .u-sm-text-left {
+    text-align: left !important;
+  }
+
+  .u-sm-tl {
+    text-align: left !important;
+  }
+
+  .u-sm-text-right {
+    text-align: right !important;
+  }
+
+  .u-sm-tr {
+    text-align: right !important;
+  }
+
+  /**
+ * Prevent whitespace wrapping
+ */
+  .u-sm-text-no-wrap {
+    white-space: nowrap !important;
+  }
+
+  .u-sm-tnw {
+    white-space: nowrap !important;
+  }
+
+  /**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+  .u-sm-text-truncate {
+    max-width: 100% !important; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
+  }
+
+  .u-sm-tt {
+    max-width: 100% !important; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
+  }
+}

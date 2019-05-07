@@ -1,0 +1,65 @@
+/** @define utilities */
+
+.u-position-static {
+      position: static !important;
+  }
+
+.u-position-relative {
+      position: relative !important;
+  }
+
+.u-position-absolute {
+      position: absolute !important;
+  }
+
+.u-position-fixed {
+      position: fixed !important;
+  }
+
+.u-top-right {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.u-tr {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.u-top-left {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.u-tl {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.u-bottom-right {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.u-br {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.u-bottom-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.u-bl {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}

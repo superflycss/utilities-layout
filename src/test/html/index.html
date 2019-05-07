@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.utility( 'layout' ) }}
+
+<body>
+
+{{ TestHeader.utility( 'layout' ) }}
+
+{% include "flex.html" %}
+{% include "margin.html" %}
+{% include "padding.html" %}
+{% include "borders.html" %}
+{% include "width-height.html" %}
+{% include "before.html" %}
+{% include "after.html" %}
+
+</body>
+</html>

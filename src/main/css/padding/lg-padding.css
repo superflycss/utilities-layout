@@ -1,0 +1,64 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+
+@media (--lg-viewport) {
+  /** @define utilities */
+
+  .u-lg-padding-halfrem {
+    padding: 0.5rem !important;
+  }
+  .u-lg-p-halfrem {
+    padding: 0.5rem !important;
+  }
+  .u-lg-pt-halfrem {
+    padding-top: 0.5rem !important;
+  }
+  .u-lg-pb-halfrem {
+    padding-bottom: 0.5rem !important;
+  }
+  .u-lg-pl-halfrem {
+    padding-left: 0.5rem !important;
+  }
+  .u-lg-pr-halfrem {
+    padding-right: 0.5rem !important;
+  }
+
+  @each $dimension in left, right, top, bottom {
+    .u-lg-padding-$(dimension)-halfrem {
+      padding-$(dimension): 0.5rem !important;
+    }
+  }
+
+  @for $factor from 0 to 20 {
+    .u-lg-padding-$(factor)rem {
+      padding: $(factor)rem !important;
+    }
+  }
+
+  @for $factor from 0 to 20 {
+    .u-lg-p$(factor)rem {
+      padding: $(factor)rem !important;
+    }
+    .u-lg-pt$(factor)rem {
+      padding-top: $(factor)rem !important;
+    }
+    .u-lg-pb$(factor)rem {
+      padding-bottom: $(factor)rem !important;
+    }
+    .u-lg-pl$(factor)rem {
+      padding-left: $(factor)rem !important;
+    }
+    .u-lg-pr$(factor)rem {
+      padding-right: $(factor)rem !important;
+    }
+  }
+
+  @each $dimension in left, right, top, bottom {
+    @for $factor from 0 to 20 {
+      .u-lg-padding-$(dimension)-$(factor)rem {
+        padding-$(dimension): $(factor)rem !important;
+      }
+    }
+  }
+}

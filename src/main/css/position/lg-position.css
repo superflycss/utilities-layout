@@ -1,0 +1,59 @@
+/** @define utilities */
+
+@import "@superflycss/variables-dimension";
+
+@media (--lg-viewport) {
+  @each $position in static, relative, absolute, fixed {
+    .-u-lg-position-$(position) {
+        position: $(position) !important;
+    }
+  }
+  
+  .-u-lg-top-right {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-tr {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-top-left {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-tl {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-bottom-right {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-br {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+  
+  .-u-lg-bottom-left {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+  
+  .-u-lg-bl {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+}

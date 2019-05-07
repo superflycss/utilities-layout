@@ -1,0 +1,133 @@
+/*! superflycss/variables-dimension | MIT License | https://github.com/superflycss/variables-dimension/blob/master/LICENSE.md */
+/*! bootstrap v4.0.0-alpha | MIT License | https://github.com/twbs/bootstrap/blob/master/LICENSE */
+/*
+=======================================
+ DIMENSION VARIABLES
+=======================================
+ 0:  Spacers.
+ 1:  Borders.
+ 2:  Z-Index
+ 3:  Default Media Breakpoints
+================================
+*/
+/* 0 */
+/* 1 */
+/* 2 */
+/* 3 */
+@media (min-width: 992px) {
+    
+    .u-lg-afterNone {
+      margin-right: 0 !important;
+    }
+  
+    .u-lg-after1of12 {
+      margin-right: 8.33333% !important;
+    }
+  
+    .u-lg-after1of10 {
+      margin-right: 10% !important;
+    }
+  
+    .u-lg-after1of8 {
+      margin-right: 12.5% !important;
+    }
+  
+    .u-lg-after1of6,
+    .u-lg-after2of12 {
+      margin-right: 16.66667% !important;
+    }
+  
+    .u-lg-after1of5,
+    .u-lg-after2of10 {
+      margin-right: 20% !important;
+    }
+  
+    .u-lg-after1of4,
+    .u-lg-after2of8,
+    .u-lg-after3of12 {
+      margin-right: 25% !important;
+    }
+  
+    .u-lg-after3of10 {
+      margin-right: 30% !important;
+    }
+  
+    .u-lg-after1of3,
+    .u-lg-after2of6,
+    .u-lg-after4of12 {
+      margin-right: 33.33333% !important;
+    }
+  
+    .u-lg-after3of8 {
+      margin-right: 37.5% !important;
+    }
+  
+    .u-lg-after2of5,
+    .u-lg-after4of10 {
+      margin-right: 40% !important;
+    }
+  
+    .u-lg-after5of12 {
+      margin-right: 41.66667% !important;
+    }
+  
+    .u-lg-after1of2,
+    .u-lg-after2of4,
+    .u-lg-after3of6,
+    .u-lg-after4of8,
+    .u-lg-after5of10,
+    .u-lg-after6of12 {
+      margin-right: 50% !important;
+    }
+  
+    .u-lg-after7of12 {
+      margin-right: 58.33333% !important;
+    }
+  
+    .u-lg-after3of5,
+    .u-lg-after6of10 {
+      margin-right: 60% !important;
+    }
+  
+    .u-lg-after5of8 {
+      margin-right: 62.5% !important;
+    }
+  
+    .u-lg-after2of3,
+    .u-lg-after4of6,
+    .u-lg-after8of12 {
+      margin-right: 66.66667% !important;
+    }
+  
+    .u-lg-after7of10 {
+      margin-right: 70% !important;
+    }
+  
+    .u-lg-after3of4,
+    .u-lg-after6of8,
+    .u-lg-after9of12 {
+      margin-right: 75% !important;
+    }
+  
+    .u-lg-after4of5,
+    .u-lg-after8of10 {
+      margin-right: 80% !important;
+    }
+  
+    .u-lg-after5of6,
+    .u-lg-after10of12 {
+      margin-right: 83.33333% !important;
+    }
+  
+    .u-lg-after7of8 {
+      margin-right: 87.5% !important;
+    }
+  
+    .u-lg-after9of10 {
+      margin-right: 90% !important;
+    }
+  
+    .u-lg-after11of12 {
+      margin-right: 91.66667% !important;
+    }
+  }

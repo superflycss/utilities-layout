@@ -1,0 +1,136 @@
+/*! superflycss/variables-dimension | MIT License | https://github.com/superflycss/variables-dimension/blob/master/LICENSE.md */
+/*! bootstrap v4.0.0-alpha | MIT License | https://github.com/twbs/bootstrap/blob/master/LICENSE */
+/*
+=======================================
+ DIMENSION VARIABLES
+=======================================
+ 0:  Spacers.
+ 1:  Borders.
+ 2:  Z-Index
+ 3:  Default Media Breakpoints
+================================
+*/
+/* 0 */
+/* 1 */
+/* 2 */
+/* 3 */
+@media (min-width: 768px) {
+
+    .u-md-beforeNone {
+      margin-left: 0 !important;
+    }
+  
+    .u-md-before1of12 {
+      margin-left: 8.33333% !important;
+    }
+  
+    .u-md-before1of10 {
+      margin-left: 10% !important;
+    }
+  
+    .u-md-before1of8 {
+      margin-left: 12.5% !important;
+    }
+  
+    .u-md-before1of6,
+    .u-md-before2of12 {
+      margin-left: 16.66667% !important;
+    }
+  
+    .u-md-before1of5,
+    .u-md-before2of10 {
+      margin-left: 20% !important;
+    }
+  
+    .u-md-before1of4,
+    .u-md-before2of8,
+    .u-md-before3of12 {
+      margin-left: 25% !important;
+    }
+  
+    .u-md-before3of10 {
+      margin-left: 30% !important;
+    }
+  
+    .u-md-before1of3,
+    .u-md-before2of6,
+    .u-md-before4of12 {
+      margin-left: 33.33333% !important;
+    }
+  
+    .u-md-before3of8 {
+      margin-left: 37.5% !important;
+    }
+  
+    .u-md-before2of5,
+    .u-md-before4of10 {
+      margin-left: 40% !important;
+    }
+  
+    .u-md-before5of12 {
+      margin-left: 41.66667% !important;
+    }
+  
+    .u-md-before1of2,
+    .u-md-before2of4,
+    .u-md-before3of6,
+    .u-md-before4of8,
+    .u-md-before5of10,
+    .u-md-before6of12 {
+      margin-left: 50% !important;
+    }
+  
+    .u-md-before7of12 {
+      margin-left: 58.33333% !important;
+    }
+  
+    .u-md-before3of5,
+    .u-md-before6of10 {
+      margin-left: 60% !important;
+    }
+  
+    .u-md-before5of8 {
+      margin-left: 62.5% !important;
+    }
+  
+    .u-md-before2of3,
+    .u-md-before4of6,
+    .u-md-before8of12 {
+      margin-left: 66.66667% !important;
+    }
+  
+    .u-md-before7of10 {
+      margin-left: 70% !important;
+    }
+  
+    .u-md-before3of4,
+    .u-md-before6of8,
+    .u-md-before9of12 {
+      margin-left: 75% !important;
+    }
+  
+    .u-md-before4of5,
+    .u-md-before8of10 {
+      margin-left: 80% !important;
+    }
+  
+    .u-md-before5of6,
+    .u-md-before10of12 {
+      margin-left: 83.33333% !important;
+    }
+  
+    .u-md-before7of8 {
+      margin-left: 87.5% !important;
+    }
+  
+    .u-md-before9of10 {
+      margin-left: 90% !important;
+    }
+  
+    .u-md-before11of12 {
+      margin-left: 91.66667% !important;
+    }
+    .u-md-beforeNone {
+        margin-left: 0 !important;
+    }      
+  }

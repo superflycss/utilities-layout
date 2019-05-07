@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tests for @superflycss/utilities-layout</title>
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<!-- SIZE UTILITIES -->
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-beforeXofY</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-beforeXofY </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxTop u-before1of2 dev-Box"</span>&gt;</span>1of2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of3 dev-Box"</span>&gt;</span>1of3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of3 dev-Box"</span>&gt;</span>2of3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of4 dev-Box"</span>&gt;</span>1of4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of4 dev-Box"</span>&gt;</span>2of4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before3of4 dev-Box"</span>&gt;</span>3of4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of6 dev-Box"</span>&gt;</span>1of6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of6 dev-Box"</span>&gt;</span>2of6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before3of6 dev-Box"</span>&gt;</span>3of6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before4of6 dev-Box"</span>&gt;</span>4of6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before5of6 dev-Box"</span>&gt;</span>5of6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of8 dev-Box"</span>&gt;</span>1of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of8 dev-Box"</span>&gt;</span>2of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before3of8 dev-Box"</span>&gt;</span>3of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before4of8 dev-Box"</span>&gt;</span>4of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before5of8 dev-Box"</span>&gt;</span>5of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before6of8 dev-Box"</span>&gt;</span>6of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before7of8 dev-Box"</span>&gt;</span>7of8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of10 dev-Box"</span>&gt;</span>1of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of10 dev-Box"</span>&gt;</span>2of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before3of10 dev-Box"</span>&gt;</span>3of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before4of10 dev-Box"</span>&gt;</span>4of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before5of10 dev-Box"</span>&gt;</span>5of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before6of10 dev-Box"</span>&gt;</span>6of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before7of10 dev-Box"</span>&gt;</span>7of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before8of10 dev-Box"</span>&gt;</span>8of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before9of10 dev-Box"</span>&gt;</span>9of10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before1of12 dev-Box"</span>&gt;</span>1of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before2of12 dev-Box"</span>&gt;</span>2of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before3of12 dev-Box"</span>&gt;</span>3of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before4of12 dev-Box"</span>&gt;</span>4of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before5of12 dev-Box"</span>&gt;</span>5of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before6of12 dev-Box"</span>&gt;</span>6of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before7of12 dev-Box"</span>&gt;</span>7of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before8of12 dev-Box"</span>&gt;</span>8of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before9of12 dev-Box"</span>&gt;</span>9of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before10of12 dev-Box"</span>&gt;</span>10of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-before11of12 dev-Box"</span>&gt;</span>11of12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+offsets by X/Y of the parent container.
+</div>
+     <div class="TestRender">
+
+<div class="TestBoxTop u-before1of2 dev-Box">1of2</div>
+<div class="TestBox u-before1of3 dev-Box">1of3</div>
+<div class="TestBox u-before2of3 dev-Box">2of3</div>
+
+<div class="TestBox u-before1of4 dev-Box">1of4</div>
+<div class="TestBox u-before2of4 dev-Box">2of4</div>
+<div class="TestBox u-before3of4 dev-Box">3of4</div>    
+
+<div class="TestBox u-before1of6 dev-Box">1of6</div>
+<div class="TestBox u-before2of6 dev-Box">2of6</div>
+<div class="TestBox u-before3of6 dev-Box">3of6</div>
+<div class="TestBox u-before4of6 dev-Box">4of6</div>
+<div class="TestBox u-before5of6 dev-Box">5of6</div>
+
+<div class="TestBox u-before1of8 dev-Box">1of8</div>
+<div class="TestBox u-before2of8 dev-Box">2of8</div>
+<div class="TestBox u-before3of8 dev-Box">3of8</div>
+<div class="TestBox u-before4of8 dev-Box">4of8</div>
+<div class="TestBox u-before5of8 dev-Box">5of8</div>
+<div class="TestBox u-before6of8 dev-Box">6of8</div>
+<div class="TestBox u-before7of8 dev-Box">7of8</div>
+
+<div class="TestBox u-before1of10 dev-Box">1of10</div>
+<div class="TestBox u-before2of10 dev-Box">2of10</div>
+<div class="TestBox u-before3of10 dev-Box">3of10</div>
+<div class="TestBox u-before4of10 dev-Box">4of10</div>
+<div class="TestBox u-before5of10 dev-Box">5of10</div>
+<div class="TestBox u-before6of10 dev-Box">6of10</div>
+<div class="TestBox u-before7of10 dev-Box">7of10</div>
+<div class="TestBox u-before8of10 dev-Box">8of10</div>
+<div class="TestBox u-before9of10 dev-Box">9of10</div>
+
+<div class="TestBox u-before1of12 dev-Box">1of12</div>
+<div class="TestBox u-before2of12 dev-Box">2of12</div>
+<div class="TestBox u-before3of12 dev-Box">3of12</div>
+<div class="TestBox u-before4of12 dev-Box">4of12</div>
+<div class="TestBox u-before5of12 dev-Box">5of12</div>
+<div class="TestBox u-before6of12 dev-Box">6of12</div>
+<div class="TestBox u-before7of12 dev-Box">7of12</div>
+<div class="TestBox u-before8of12 dev-Box">8of12</div>
+<div class="TestBox u-before9of12 dev-Box">9of12</div>
+<div class="TestBox u-before10of12 dev-Box">10of12</div>
+<div class="TestBox u-before11of12 dev-Box">11of12</div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-beforeNone</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-beforeNone </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox 
+            u-before4of12 
+            u-beforeNone 
+            u-sm-beforeNone 
+            u-md-beforeNone 
+            u-lg-beforeNone"</span>&gt;</span>
+4of12 / beforeNone
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+it removes any margin space before.
+</div>
+     <div class="TestRender">
+
+<div class="TestBox 
+            u-before4of12 
+            u-beforeNone 
+            u-sm-beforeNone 
+            u-md-beforeNone 
+            u-lg-beforeNone">
+4of12 / beforeNone
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+</body></html>

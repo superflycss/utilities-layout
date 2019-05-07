@@ -1,0 +1,1921 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tests for @superflycss/utilities-layout</title>
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<!-- SIZE UTILITIES -->
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeFit</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeFit </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-sizeFit 
+                u-background-color-md-amber-900"</span>&gt;</span>u-sizeFit me.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The the flex item is shrink wrapped and does not expand.
+</div>
+     <div class="TestRender">
+
+<div class="u-flex TestCanvas">
+  <div class="TestBox u-sizeFit 
+                u-background-color-md-amber-900">u-sizeFit me.</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeFill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeFill </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex  TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft u-sizeFit 
+                u-background-color-md-amber-900"</span>&gt;</span>u-sizeFit me.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill TestBox"</span>&gt;</span>
+    u-sizeFill me.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The the flex item expands to the end of the container.
+</div>
+     <div class="TestRender">
+
+<div class="u-flex  TestCanvas">
+  <div class="TestBoxLeft u-sizeFit 
+                u-background-color-md-amber-900">u-sizeFit me.</div>
+  <div class="u-sizeFill TestBox">
+    u-sizeFill me.
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">.u-[size]-sizeFit</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">.u-[size]-sizeFit</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-size3of4 u-sizeFit u-background-color-md-amber-900"</span>&gt;</span>
+    u-sizeFit Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-size3of4 u-md-size-sizeFit u-background-color-md-amber-900"</span>&gt;</span>
+    u-sm-sizeFit Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-size3of4 u-md-sizeFit u-background-color-md-amber-900"</span>&gt;</span>
+    u-md-sizeFit Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-size3of4 u-lg-sizeFit u-background-color-md-amber-900"</span>&gt;</span>
+    u-lg-sizeFit Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The TestBox should sizeFit when the viewport is bigger than [size]-viewport.
+<i><b>Downsize</b> the viewport to see the responsive fit switch off</i> 
+and the <code class="u-text-color-md-pink-400">u-size3of4</code> switch on.
+</div>
+     <div class="TestRender">
+
+
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-size3of4 u-sizeFit u-background-color-md-amber-900">
+    u-sizeFit Me
+  </div>
+</div>
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-size3of4 u-md-size-sizeFit u-background-color-md-amber-900">
+    u-sm-sizeFit Me
+  </div>
+</div>
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-size3of4 u-md-sizeFit u-background-color-md-amber-900">
+    u-md-sizeFit Me
+  </div>
+</div>
+
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-size3of4 u-lg-sizeFit u-background-color-md-amber-900">
+    u-lg-sizeFit Me
+  </div>
+</div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">.u-[size]-sizeFill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">.u-[size]-sizeFill</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-sizeFill u-background-color-md-amber-900"</span>&gt;</span>
+    u-sizeFill Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-sm-sizeFill u-background-color-md-amber-900"</span>&gt;</span>
+    u-sm-sizeFill Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-md-sizeFill u-background-color-md-amber-900"</span>&gt;</span>
+    u-md-sizeFill Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TextBox u-lg-sizeFill u-background-color-md-amber-900"</span>&gt;</span>
+    u-lg-sizeFill Me
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The TestBox should sizeFill when the viewport is bigger than [size]-viewport.
+<i><b>Downsize</b> the viewport to see the responsive fit switch off.</i>
+</div>
+     <div class="TestRender">
+
+
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-sizeFill u-background-color-md-amber-900">
+    u-sizeFill Me
+  </div>
+</div>
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-sm-sizeFill u-background-color-md-amber-900">
+    u-sm-sizeFill Me
+  </div>
+</div>
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-md-sizeFill u-background-color-md-amber-900">
+    u-md-sizeFill Me
+  </div>
+</div>
+
+<div class="u-flex TestCanvas">
+  <div class="TextBox u-lg-sizeFill u-background-color-md-amber-900">
+    u-lg-sizeFill Me
+  </div>
+</div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeFill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeFill</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill TestBoxLeft"</span>&gt;</span>
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill TestBoxLeft"</span>&gt;</span>
+        content
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill TestBox"</span>&gt;</span>
+        content
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+Space is distributed evenly regardless of contained content.
+</div>
+     <div class="TestRender">
+
+ <div class="u-flex TestCanvas">
+      <div class="u-sizeFill TestBoxLeft">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+      <div class="u-sizeFill TestBoxLeft">
+        content
+      </div>
+      <div class="u-sizeFill TestBox">
+        content
+      </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeFillAlt</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeFillAlt </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBoxLeft"</span>&gt;</span>
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBoxLeft"</span>&gt;</span>
+        content
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBox"</span>&gt;</span>
+        even more content in here
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBoxLeft"</span>&gt;</span>
+        aliquip nec. Atqui diceret ceteros.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBoxLeft"</span>&gt;</span>
+        content
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFillAlt TestBox"</span>&gt;</span>
+        even more content in here
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The space is distributed based on the width taken up by content content.
+</div>
+     <div class="TestRender">
+
+ <div class="u-flex TestCanvas">
+      <div class="u-sizeFillAlt TestBoxLeft">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+      <div class="u-sizeFillAlt TestBoxLeft">
+        content
+      </div>
+      <div class="u-sizeFillAlt TestBox">
+        even more content in here
+      </div>
+</div>
+ <div class="u-flex TestCanvas">
+      <div class="u-sizeFillAlt TestBoxLeft">
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+      <div class="u-sizeFillAlt TestBoxLeft">
+        content
+      </div>
+      <div class="u-sizeFillAlt TestBox">
+        even more content in here
+      </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeFull</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeFull </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFull TestBox"</span>&gt;</span>
+        Lorem ipsum.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The elements width is set to 100% and it expands to the full width of the container.
+</div>
+     <div class="TestRender">
+
+ <div class="TestCanvas">
+      <div class="u-sizeFull TestBox">
+        Lorem ipsum.
+      </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sizeXofY</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sizeXofY</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+The flex item size to x/y width of the parent container.
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2 TestBox"</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3 TestBox"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of3 TestBox"</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4 TestBox"</span>&gt;</span>1 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of4 TestBox"</span>&gt;</span>2 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of4 TestBox"</span>&gt;</span>3 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of6 TestBox"</span>&gt;</span>1 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of6 TestBox"</span>&gt;</span>2 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of6 TestBox"</span>&gt;</span>3 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size4of6 TestBox"</span>&gt;</span>4 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size5of6 TestBox"</span>&gt;</span>5 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of8 TestBox"</span>&gt;</span>1 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of8 TestBox"</span>&gt;</span>2 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of8 TestBox"</span>&gt;</span>3 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size4of8 TestBox"</span>&gt;</span>4 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size5of8 TestBox"</span>&gt;</span>5 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size6of8 TestBox"</span>&gt;</span>6 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size7of8 TestBox"</span>&gt;</span>7 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of6 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of10 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of10 TestBox"</span>&gt;</span>2 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of10 TestBox"</span>&gt;</span>3 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size4of10 TestBox"</span>&gt;</span>4 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size5of10 TestBox"</span>&gt;</span>5 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size6of10 TestBox"</span>&gt;</span>6 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size7of10 TestBox"</span>&gt;</span>7 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size8of10 TestBox"</span>&gt;</span>8 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size9of10 TestBox"</span>&gt;</span>9 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of12 TestBox"</span>&gt;</span>1 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of12 TestBox"</span>&gt;</span>2 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of12 TestBox"</span>&gt;</span>3 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size4of12 TestBox"</span>&gt;</span>4 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size5of12 TestBox"</span>&gt;</span>5 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size6of12 TestBox"</span>&gt;</span>6 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size7of12 TestBox"</span>&gt;</span>7 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size8of12 TestBox"</span>&gt;</span>8 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size9of12 TestBox"</span>&gt;</span>9 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size10of12 TestBox"</span>&gt;</span>10 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size11of12 TestBox"</span>&gt;</span>11 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The item is sized by the ratio.
+</div>
+     <div class="TestRender">
+
+The flex item size to x/y width of the parent container.
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of2 TestBox">1 of 2</div>
+</div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of3 TestBox">1 of 3</div>
+ </div>
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of3 TestBox">2 of 3</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of4 TestBox">1 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of4 TestBox">2 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size3of4 TestBox">3 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of6 TestBox">1 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of6 TestBox">2 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size3of6 TestBox">3 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size4of6 TestBox">4 of 6</div>
+ </div>
+
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size5of6 TestBox">5 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+   <div class="u-size1of8 TestBox">1 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of8 TestBox">2 of 8</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size3of8 TestBox">3 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size4of8 TestBox">4 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size5of8 TestBox">5 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size6of8 TestBox">6 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size7of8 TestBox">7 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of6 TestBox">1 of 10</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of10 TestBox">1 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of10 TestBox">2 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size3of10 TestBox">3 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size4of10 TestBox">4 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size5of10 TestBox">5 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size6of10 TestBox">6 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size7of10 TestBox">7 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size8of10 TestBox">8 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size9of10 TestBox">9 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size1of12 TestBox">1 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size2of12 TestBox">2 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size3of12 TestBox">3 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size4of12 TestBox">4 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size5of12 TestBox">5 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size6of12 TestBox">6 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size7of12 TestBox">7 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size8of12 TestBox">8 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size9of12 TestBox">9 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size10of12 TestBox">10 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-size11of12 TestBox">11 of 12</div>
+ </div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-sm-sizeXofY</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-sm-sizeXofY</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+The flex item size to x/y width of the parent container.
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of2 TestBox"</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of3 TestBox"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of3 TestBox"</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of4 TestBox"</span>&gt;</span>1 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of4 TestBox"</span>&gt;</span>2 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size3of4 TestBox"</span>&gt;</span>3 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of6 TestBox"</span>&gt;</span>1 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of6 TestBox"</span>&gt;</span>2 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size3of6 TestBox"</span>&gt;</span>3 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size4of6 TestBox"</span>&gt;</span>4 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size5of6 TestBox"</span>&gt;</span>5 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of8 TestBox"</span>&gt;</span>1 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of8 TestBox"</span>&gt;</span>2 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size3of8 TestBox"</span>&gt;</span>3 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size4of8 TestBox"</span>&gt;</span>4 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size5of8 TestBox"</span>&gt;</span>5 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size6of8 TestBox"</span>&gt;</span>6 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size7of8 TestBox"</span>&gt;</span>7 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of6 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of10 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of10 TestBox"</span>&gt;</span>2 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size3of10 TestBox"</span>&gt;</span>3 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size4of10 TestBox"</span>&gt;</span>4 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size5of10 TestBox"</span>&gt;</span>5 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size6of10 TestBox"</span>&gt;</span>6 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size7of10 TestBox"</span>&gt;</span>7 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size8of10 TestBox"</span>&gt;</span>8 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size9of10 TestBox"</span>&gt;</span>9 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size1of12 TestBox"</span>&gt;</span>1 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size2of12 TestBox"</span>&gt;</span>2 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size3of12 TestBox"</span>&gt;</span>3 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size4of12 TestBox"</span>&gt;</span>4 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size5of12 TestBox"</span>&gt;</span>5 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size6of12 TestBox"</span>&gt;</span>6 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size7of12 TestBox"</span>&gt;</span>7 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size8of12 TestBox"</span>&gt;</span>8 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size9of12 TestBox"</span>&gt;</span>9 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size10of12 TestBox"</span>&gt;</span>10 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sm-size11of12 TestBox"</span>&gt;</span>11 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The item is sized by the ratio if the reponsive utility is triggered.
+</div>
+     <div class="TestRender">
+
+The flex item size to x/y width of the parent container.
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of2 TestBox">1 of 2</div>
+</div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of3 TestBox">1 of 3</div>
+ </div>
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of3 TestBox">2 of 3</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of4 TestBox">1 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of4 TestBox">2 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size3of4 TestBox">3 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of6 TestBox">1 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of6 TestBox">2 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size3of6 TestBox">3 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size4of6 TestBox">4 of 6</div>
+ </div>
+
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size5of6 TestBox">5 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+   <div class="u-sm-size1of8 TestBox">1 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of8 TestBox">2 of 8</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size3of8 TestBox">3 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size4of8 TestBox">4 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size5of8 TestBox">5 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size6of8 TestBox">6 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size7of8 TestBox">7 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of6 TestBox">1 of 10</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of10 TestBox">1 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of10 TestBox">2 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size3of10 TestBox">3 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size4of10 TestBox">4 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size5of10 TestBox">5 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size6of10 TestBox">6 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size7of10 TestBox">7 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size8of10 TestBox">8 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size9of10 TestBox">9 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size1of12 TestBox">1 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size2of12 TestBox">2 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size3of12 TestBox">3 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size4of12 TestBox">4 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size5of12 TestBox">5 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size6of12 TestBox">6 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size7of12 TestBox">7 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size8of12 TestBox">8 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size9of12 TestBox">9 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size10of12 TestBox">10 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-sm-size11of12 TestBox">11 of 12</div>
+ </div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-md-sizeXofY</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-md-sizeXofY</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+The flex item size to x/y width of the parent container.
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of2 TestBox"</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of3 TestBox"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of3 TestBox"</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of4 TestBox"</span>&gt;</span>1 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of4 TestBox"</span>&gt;</span>2 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size3of4 TestBox"</span>&gt;</span>3 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of6 TestBox"</span>&gt;</span>1 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of6 TestBox"</span>&gt;</span>2 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size3of6 TestBox"</span>&gt;</span>3 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size4of6 TestBox"</span>&gt;</span>4 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size5of6 TestBox"</span>&gt;</span>5 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of8 TestBox"</span>&gt;</span>1 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of8 TestBox"</span>&gt;</span>2 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size3of8 TestBox"</span>&gt;</span>3 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size4of8 TestBox"</span>&gt;</span>4 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size5of8 TestBox"</span>&gt;</span>5 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size6of8 TestBox"</span>&gt;</span>6 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size7of8 TestBox"</span>&gt;</span>7 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of6 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of10 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of10 TestBox"</span>&gt;</span>2 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size3of10 TestBox"</span>&gt;</span>3 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size4of10 TestBox"</span>&gt;</span>4 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size5of10 TestBox"</span>&gt;</span>5 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size6of10 TestBox"</span>&gt;</span>6 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size7of10 TestBox"</span>&gt;</span>7 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size8of10 TestBox"</span>&gt;</span>8 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size9of10 TestBox"</span>&gt;</span>9 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of12 TestBox"</span>&gt;</span>1 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size2of12 TestBox"</span>&gt;</span>2 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size3of12 TestBox"</span>&gt;</span>3 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size4of12 TestBox"</span>&gt;</span>4 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size5of12 TestBox"</span>&gt;</span>5 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size6of12 TestBox"</span>&gt;</span>6 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size7of12 TestBox"</span>&gt;</span>7 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size8of12 TestBox"</span>&gt;</span>8 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size9of12 TestBox"</span>&gt;</span>9 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size10of12 TestBox"</span>&gt;</span>10 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size11of12 TestBox"</span>&gt;</span>11 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The item is sized by the ratio if the reponsive utility is triggered.
+</div>
+     <div class="TestRender">
+
+The flex item size to x/y width of the parent container.
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of2 TestBox">1 of 2</div>
+</div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of3 TestBox">1 of 3</div>
+ </div>
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of3 TestBox">2 of 3</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of4 TestBox">1 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of4 TestBox">2 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size3of4 TestBox">3 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of6 TestBox">1 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of6 TestBox">2 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size3of6 TestBox">3 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size4of6 TestBox">4 of 6</div>
+ </div>
+
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size5of6 TestBox">5 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+   <div class="u-md-size1of8 TestBox">1 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of8 TestBox">2 of 8</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size3of8 TestBox">3 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size4of8 TestBox">4 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size5of8 TestBox">5 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size6of8 TestBox">6 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size7of8 TestBox">7 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of6 TestBox">1 of 10</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of10 TestBox">1 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of10 TestBox">2 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size3of10 TestBox">3 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size4of10 TestBox">4 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size5of10 TestBox">5 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size6of10 TestBox">6 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size7of10 TestBox">7 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size8of10 TestBox">8 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size9of10 TestBox">9 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size1of12 TestBox">1 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size2of12 TestBox">2 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size3of12 TestBox">3 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size4of12 TestBox">4 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size5of12 TestBox">5 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size6of12 TestBox">6 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size7of12 TestBox">7 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size8of12 TestBox">8 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size9of12 TestBox">9 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size10of12 TestBox">10 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-md-size11of12 TestBox">11 of 12</div>
+ </div>
+
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestUtilities">u-lg-sizeXofY</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">u-lg-sizeXofY</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+The flex item size to x/y width of the parent container.
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of2 TestBox"</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of3 TestBox"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of3 TestBox"</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of4 TestBox"</span>&gt;</span>1 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of4 TestBox"</span>&gt;</span>2 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size3of4 TestBox"</span>&gt;</span>3 of 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of6 TestBox"</span>&gt;</span>1 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of6 TestBox"</span>&gt;</span>2 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size3of6 TestBox"</span>&gt;</span>3 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size4of6 TestBox"</span>&gt;</span>4 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size5of6 TestBox"</span>&gt;</span>5 of 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of8 TestBox"</span>&gt;</span>1 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of8 TestBox"</span>&gt;</span>2 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size3of8 TestBox"</span>&gt;</span>3 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size4of8 TestBox"</span>&gt;</span>4 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size5of8 TestBox"</span>&gt;</span>5 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size6of8 TestBox"</span>&gt;</span>6 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size7of8 TestBox"</span>&gt;</span>7 of 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of6 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of10 TestBox"</span>&gt;</span>1 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of10 TestBox"</span>&gt;</span>2 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size3of10 TestBox"</span>&gt;</span>3 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size4of10 TestBox"</span>&gt;</span>4 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size5of10 TestBox"</span>&gt;</span>5 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size6of10 TestBox"</span>&gt;</span>6 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size7of10 TestBox"</span>&gt;</span>7 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size8of10 TestBox"</span>&gt;</span>8 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size9of10 TestBox"</span>&gt;</span>9 of 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of12 TestBox"</span>&gt;</span>1 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size2of12 TestBox"</span>&gt;</span>2 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size3of12 TestBox"</span>&gt;</span>3 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size4of12 TestBox"</span>&gt;</span>4 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size5of12 TestBox"</span>&gt;</span>5 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size6of12 TestBox"</span>&gt;</span>6 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size7of12 TestBox"</span>&gt;</span>7 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size8of12 TestBox"</span>&gt;</span>8 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size9of12 TestBox"</span>&gt;</span>9 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size10of12 TestBox"</span>&gt;</span>10 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex TestCanvas"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size11of12 TestBox"</span>&gt;</span>11 of 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">
+The item is sized by the ratio if the reponsive utility is triggered.
+</div>
+     <div class="TestRender">
+
+The flex item size to x/y width of the parent container.
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of2 TestBox">1 of 2</div>
+</div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of3 TestBox">1 of 3</div>
+ </div>
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of3 TestBox">2 of 3</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of4 TestBox">1 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of4 TestBox">2 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size3of4 TestBox">3 of 4</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of6 TestBox">1 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of6 TestBox">2 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size3of6 TestBox">3 of 6</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size4of6 TestBox">4 of 6</div>
+ </div>
+
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size5of6 TestBox">5 of 6</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+   <div class="u-lg-size1of8 TestBox">1 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of8 TestBox">2 of 8</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size3of8 TestBox">3 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size4of8 TestBox">4 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size5of8 TestBox">5 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size6of8 TestBox">6 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size7of8 TestBox">7 of 8</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of6 TestBox">1 of 10</div>
+ </div>
+
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of10 TestBox">1 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of10 TestBox">2 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size3of10 TestBox">3 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size4of10 TestBox">4 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size5of10 TestBox">5 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size6of10 TestBox">6 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size7of10 TestBox">7 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size8of10 TestBox">8 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size9of10 TestBox">9 of 10</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size1of12 TestBox">1 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size2of12 TestBox">2 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size3of12 TestBox">3 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size4of12 TestBox">4 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size5of12 TestBox">5 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size6of12 TestBox">6 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size7of12 TestBox">7 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size8of12 TestBox">8 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size9of12 TestBox">9 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size10of12 TestBox">10 of 12</div>
+ </div>
+
+ <div class="u-flex TestCanvas">
+    <div class="u-lg-size11of12 TestBox">11 of 12</div>
+ </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+</body></html>

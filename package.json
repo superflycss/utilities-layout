@@ -1,0 +1,47 @@
+{
+  "name": "@superflycss/utilities-layout",
+  "version": "4.0.23",
+  "description": "Layout utilities",
+  "main": "index.css",
+  "scripts": {
+    "update": "ncu -a && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superflycss/utilities-layout.git"
+  },
+  "keywords": [
+    "superflycss",
+    "layout",
+    "css",
+    "utilities",
+    "flexbox"
+  ],
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superflycss/utilities-layout/issues"
+  },
+  "homepage": "https://github.com/superflycss/utilities-layout#readme",
+  "devDependencies": {
+    "@superflycss/component-body": "^1.0.1",
+    "@superflycss/component-display": "^1.0.2",
+    "@superflycss/component-header": "^2.1.0",
+    "@superflycss/component-test": "^3.6.24",
+    "@superflycss/foundation": "^2.0.3",
+    "@superflycss/task-build": "^1.0.5",
+    "@superflycss/task-clean": "^1.0.2",
+    "@superflycss/task-deploy": "^2.1.2",
+    "@superflycss/task-lint": "^1.0.0",
+    "@superflycss/task-test": "^1.0.7",
+    "@superflycss/utilities-colors": "^3.1.0",
+    "@superflycss/utilities-fonts": "^3.3.7",
+    "@superflycss/utilities-format": "^1.2.6",
+    "@superflycss/variables-colors": "^3.1.12",
+    "match-all": "^1.2.5",
+    "npm-check-updates": "^2.15.0"
+  },
+  "dependencies": {
+    "@superflycss/variables-dimension": "^2.0.0"
+  }
+}
