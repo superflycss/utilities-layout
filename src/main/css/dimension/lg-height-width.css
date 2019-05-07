@@ -256,7 +256,7 @@
     width: 100% !important;
   }
 
-  @for $factor from 0 to 50 {
+  @for $factor from 0 to 100 {
     .u-lg-height-$(factor)rem {
       height: $(factor) rem !important;
     }
