@@ -28,7 +28,7 @@
     "@superflycss/component-display": "^1.0.2",
     "@superflycss/component-header": "^2.1.0",
     "@superflycss/component-test": "^3.6.24",
-    "@superflycss/foundation": "^2.0.3",
+    "@superflycss/foundation": "^2.0.4",
     "@superflycss/task-build": "^1.0.5",
     "@superflycss/task-clean": "^1.0.2",
     "@superflycss/task-deploy": "^2.1.2",
